@@ -35,9 +35,10 @@ lines:
     title:
       en: "Visual tourist attractions"
       es: "Atractivos turísticos visuales"
+    status: { en: "Work in progress", es: "Trabajo en curso" }
     text:
-      en: "My doctoral research. Selfie parks, giant benches and oversized sculptures in Colombian and European municipalities: how they are built, who visits them and what they change locally. Comparative case studies, ethnography, netnography and spatial data."
-      es: "Mi investigación doctoral. Parques selfie, bancas gigantes y esculturas monumentales en municipios de Colombia y Europa: cómo se construyen, quién los visita y qué cambian en lo local. Estudios de caso comparados, etnografía, netnografía y datos espaciales."
+      en: "Selfie parks, monumental sculptures and conspicuous consumption. How are they built, who visits them and what changes around them? Comparative case studies, ethnography, netnography and spatial data."
+      es: "Parques selfie, esculturas monumentales y consumo conspicuo. ¿Cómo se construyen, quién los visita y qué cambia en el entorno? Estudios de caso comparados, etnografía, netnografía y datos espaciales."
 
   - id: territorial
     period: "2019–"
@@ -49,8 +50,8 @@ lines:
       en: "Territorial development"
       es: "Desarrollo territorial"
     text:
-      en: "Latin American thinking on territory and development, with a focus on Sergio Boisier, and the economic situation of Boyacá."
-      es: "El pensamiento latinoamericano sobre territorio y desarrollo, con énfasis en Sergio Boisier, y la situación económica de Boyacá."
+      en: "Latin American thinking on territory and development, with a focus on Sergio Boisier."
+      es: "El pensamiento latinoamericano sobre el territorio y el desarrollo, con énfasis en Sergio Boisier."
 
   - id: social-capital
     period: "2019–"
@@ -75,8 +76,8 @@ lines:
       en: "Tourism and innovation"
       es: "Turismo e innovación"
     text:
-      en: "Community-based tourism, value added and co-creation of experiences in rural Boyacá."
-      es: "Turismo comunitario, valor agregado y cocreación de experiencias en la Boyacá rural."
+      en: "As part of the service sector, tourism needs its own framework for what «innovation» is and how it should be understood. In recent years, community-based tourism has emerged as an alternative economic activity; the case of Alto Ricaurte, in Boyacá, is analysed."
+      es: "Como parte del sector servicios, las actividades turísticas requieren un marco de análisis propio sobre qué es y cómo debería entenderse la «innovación» en ellas. El turismo de base comunitaria se ha erigido en los últimos años como una actividad económica alternativa; se analiza el caso del Alto Ricaurte, en Boyacá."
 
   - id: teaching
     period: "2018–"
@@ -88,5 +89,5 @@ lines:
       en: "Economics education"
       es: "Enseñanza de la economía"
     text:
-      en: "How economics is taught in Latin America and what that teaching does to the profession and to policy."
-      es: "Cómo se enseña la economía en América Latina y qué efectos tiene esa enseñanza en la profesión y en las políticas públicas."
+      en: "How economics is taught at Latin American universities (with a focus on Colombia) and its effects on the profession and on public policy."
+      es: "Cómo se enseña la economía en las universidades de América Latina (con énfasis en Colombia) y sus efectos en la profesión y en las políticas públicas."

@@ -57,7 +57,7 @@ const lines = projects.lines.map((l: any) => ({
             </figure>
             <div class="body">
               <div class="when">{l.period}</div>
-              <h3>{tr(l.title, lang)}</h3>
+              <h3>{tr(l.title, lang)}{l.status && <span class="badge">{tr(l.status, lang)}</span>}</h3>
               <p set:html={inline(tr(l.text, lang))} />
               {l.pubs.length > 0 && (
                 <div class="related">
