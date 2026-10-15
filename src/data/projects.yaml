@@ -1,0 +1,38 @@
+# Proyecto de tesis destacado y líneas de investigación.
+
+# Trabajo en curso que aparece destacado en la portada y en Projects.
+# Si tienes un mapa (por ejemplo exportado de QGIS), guárdalo en public/img/
+# y escribe su nombre en `image`. Mientras esté vacío no se muestra imagen.
+current:
+  label: "Work in progress · Thesis paper 1"
+  title: "Big Benches: giant benches as territorial attractions in Italy and Europe"
+  summary: "A georeferenced dataset of the giant benches built across Italy and Europe, with year of construction, cost, accessibility and nearby services, as the basis for studying where these installations spread and how much demand they attract."
+  image: ""
+  image_alt: ""
+
+# Líneas de investigación. El `id` enlaza con el campo `line` de publications.yaml.
+lines:
+  - id: visual
+    title: "Visual tourist attractions"
+    period: "2025–"
+    text: "My doctoral research. Selfie parks, giant benches and oversized sculptures in Colombian and European municipalities: how they are built, who visits them and what they change locally. Comparative case studies, ethnography, netnography and spatial data."
+
+  - id: territorial
+    title: "Territorial development"
+    period: "2019–"
+    text: "Latin American thinking on territory and development, with a focus on Sergio Boisier, and the economic situation of Boyacá."
+
+  - id: social-capital
+    title: "Social capital in rural communities"
+    period: "2019–"
+    text: "How trust and cooperation shape development in small Andean municipalities and producer organisations."
+
+  - id: tourism
+    title: "Tourism and innovation"
+    period: "2018–"
+    text: "Community-based tourism, value added and co-creation of experiences in rural Boyacá."
+
+  - id: teaching
+    title: "Economics education"
+    period: "2018–"
+    text: "How economics is taught in Latin America and what that teaching does to the profession and to policy."

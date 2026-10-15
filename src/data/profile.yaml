@@ -1,0 +1,58 @@
+# Datos generales del sitio. Edita los textos entre comillas.
+
+name: "Miguel Ángel Castillo-Reina"
+initials: "MCR"
+position: "PhD candidate in Regional Science and Economic Geography"
+institution: "Gran Sasso Science Institute (GSSI)"
+location: "L'Aquila, Italy"
+
+# Frase principal de la portada. Lo que va entre ** se resalta en color.
+tagline: "I study how **purpose-built visual attractions** (selfie parks, giant benches, oversized sculptures) reshape tourism and development in small towns."
+
+bio:
+  - "I am a Colombian economist and a PhD candidate in Regional Science and Economic Geography at the Gran Sasso Science Institute in L'Aquila, supervised by Maria Giovanna Brandano and Alessandra Faggian."
+  - "My thesis looks at attractions built to be photographed and asks what they do to visitor flows, local economies and the image of the places that build them. I combine comparative case studies, fieldwork and online data with spatial analysis."
+  - "I also write on territorial development theory, especially the work of Sergio Boisier, on social capital, and on how economics is taught in Latin America."
+
+interests:
+  - "Tourism economics"
+  - "Territorial development"
+  - "Economic geography"
+  - "Social capital"
+  - "History of economic thought"
+
+education:
+  - degree: "PhD, Regional Science and Economic Geography"
+    place: "GSSI, Italy"
+    years: "2025–"
+  - degree: "MSc Economics, thesis with distinction"
+    place: "UPTC, Colombia"
+    years: "2021"
+  - degree: "BA Economics"
+    place: "UPTC, Colombia"
+    years: "2016"
+
+languages: "Spanish (native) · English (C1) · Italian (beginner)"
+
+email: "miguelangel.castilloreina@gssi.it"
+address:
+  - "Gran Sasso Science Institute"
+  - "Viale Francesco Crispi 7"
+  - "67100 L'Aquila, Italy"
+
+links:
+  - label: "ORCID"
+    url: "https://orcid.org/0000-0002-9365-2467"
+  - label: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=VzCLHQoAAAAJ"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/miguel-castillo-reina/"
+  - label: "CvLAC (MinCiencias)"
+    url: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001537283"
+  - label: "GitHub"
+    url: "https://github.com/the3boy"
+
+# Novedades de la portada. La más reciente arriba.
+news:
+  - date: "Nov 2025"
+    text: "Started the PhD in Regional Science and Economic Geography at GSSI (cohort XLI), with a full scholarship."

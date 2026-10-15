@@ -1,0 +1,24 @@
+---
+import type { Publication } from '../lib/data';
+import { inline, authorsHtml } from '../lib/data';
+
+interface Props { pub: Publication }
+const { pub } = Astro.props;
+---
+<article class="pub" data-type={pub.type}>
+  <div class="yr">{pub.year}</div>
+  <div>
+    <div class="t">
+      <Fragment set:html={inline(pub.title)} />
+      {pub.status && <span class="badge">{pub.status}</span>}
+    </div>
+    {pub.authors.length > 0 && <div class="au" set:html={authorsHtml(pub.authors)} />}
+    <div class="v" set:html={inline(pub.venue)} />
+    {(pub.doi || pub.url) && (
+      <div class="links">
+        {pub.doi && <a href={`https://doi.org/${pub.doi}`}>doi:{pub.doi}</a>}
+        {pub.url && <a href={pub.url}>{pub.url_label ?? 'Link'} ↗</a>}
+      </div>
+    )}
+  </div>
+</article>
