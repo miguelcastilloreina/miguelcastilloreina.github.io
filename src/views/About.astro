@@ -82,15 +82,6 @@ const stats = order
       </ul>
     </section>
 
-    <section class="block sec">
-      <h2>{a.skills}</h2>
-      <dl class="skills">
-        {about.skills.map((x: any) => (
-          <div><dt>{tr(x.label, lang)}</dt><dd>{tr(x.value, lang)}</dd></div>
-        ))}
-      </dl>
-    </section>
-
     {about.music && (
       <section class="block sec">
         <h2>{a.music}</h2>
