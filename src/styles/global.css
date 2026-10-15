@@ -249,7 +249,10 @@ footer.site-foot { border-top: 1px solid var(--line); padding-block: 48px 64px; 
 footer.site-foot .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px 48px; }
 footer.site-foot ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px 20px; margin-top: 12px; }
 footer.site-foot ul a { display: inline-flex; align-items: center; gap: 8px; }
-footer.site-foot address { font-style: normal; margin-top: 10px; color: var(--muted); }
-footer.site-foot .mail { margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; overflow-wrap: anywhere; }
+footer.site-foot address.contact { font-style: normal; display: grid; gap: 8px; margin-top: 12px; }
+footer.site-foot .contact .who { font-weight: 700; color: var(--ink); }
+footer.site-foot .contact .row { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 10px; align-items: start; overflow-wrap: anywhere; }
+footer.site-foot .contact .row .icon { margin-top: 4px; color: var(--muted); }
+footer.site-foot .contact span.row { color: var(--muted); line-height: 1.55; }
 footer.site-foot .copy { grid-column: 1 / -1; color: var(--muted); font-size: 0.85rem; }
 @media (max-width: 720px) { footer.site-foot .wrap { grid-template-columns: 1fr; } }

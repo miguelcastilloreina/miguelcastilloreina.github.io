@@ -80,8 +80,11 @@ const address: string[] = tr(profile.address, lang);
       <div class="wrap">
         <div>
           <div class="label">{t.contact}</div>
-          <a class="mail" href={`mailto:${profile.email}`}><Icon name="mail" />{profile.email}</a>
-          <address>{address.map((l, i) => (<>{l}{i < address.length - 1 && <br />}</>))}</address>
+          <address class="contact">
+            <strong class="who">{profile.name}</strong>
+            <a class="row" href={`mailto:${profile.email}`}><Icon name="mail" /><span>{profile.email}</span></a>
+            <span class="row"><Icon name="pin" /><span>{address.map((l, i) => (<>{l}{i < address.length - 1 && <br />}</>))}</span></span>
+          </address>
         </div>
         <div>
           <div class="label">{t.elsewhere}</div>
