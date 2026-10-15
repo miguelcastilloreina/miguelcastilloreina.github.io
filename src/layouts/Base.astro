@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import { profile, url } from '../lib/data';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${profile.institution}`;
+const desc = description ?? `${profile.position}, ${profile.institution}. Research on visual tourist attractions and territorial development.`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const nav = [
+  { href: '/research', label: 'Research' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/activity', label: 'Activity' },
+  { href: '/cv', label: 'CV' },
+];
+const isCurrent = (href: string) => path === url(href).replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <meta name="theme-color" content="#2c5e50" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(url('/img/portrait.jpg'), Astro.site)} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="bar">
+      <div class="wrap">
+        <a class="brand" href={url('/')}>
+          <span class="disc" aria-hidden="true">{profile.initials}</span>
+          <span>{profile.name}</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          {nav.map((n) => (
+            <a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div>
+          <div class="label">Contact</div>
+          <a class="mail" href={`mailto:${profile.email}`}>{profile.email}</a>
+          <address>{profile.address.map((l: string, i: number) => (<>{l}{i < profile.address.length - 1 && <br />}</>))}</address>
+        </div>
+        <div>
+          <div class="label">Elsewhere</div>
+          <ul class="plain">
+            {profile.links.map((l: { label: string; url: string }) => (
+              <li><a href={l.url} rel="me noopener">{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <p class="copy">© {new Date().getFullYear()} {profile.name}</p>
+      </div>
+    </footer>
+  </body>
+</html>

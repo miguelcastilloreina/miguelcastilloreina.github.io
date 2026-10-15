@@ -1,0 +1,112 @@
+# Publicaciones. Cada entrada empieza con un guion.
+#
+# type: article | working | chapter | book | policy
+# status: texto opcional que aparece como etiqueta (por ejemplo "Submitted", "R&R", "Forthcoming")
+# selected: true  -> aparece en la portada
+# line: línea de investigación a la que pertenece (ver projects.yaml)
+# Para cursiva usa *asteriscos*. Tu nombre se resalta solo.
+
+- type: working
+  year: 2026
+  title: "The territory and the development: 40 years of Sergio Boisier's thinking"
+  authors: ["Castillo-Reina, M.", "Niño-Amézquita, J."]
+  venue: "Submitted to the *Journal of the History of Economic Thought*"
+  status: "Submitted"
+  selected: true
+  line: territorial
+
+- type: article
+  year: 2023
+  title: "Yellow pitahaya (*Selenicereus megalanthus*) in Miraflores, Boyacá, Colombia: a social capital approach in a producer organisation"
+  authors: ["Castillo-Reina, M.", "Pérez, N.", "Ruiz, I."]
+  venue: "*Acta Agronómica*, 71(4)"
+  doi: "10.15446/acag.v71n4.100152"
+  selected: true
+  line: social-capital
+
+- type: article
+  year: 2021
+  title: "Tourist sector innovation: an approach to the services and the co-creation of experiences"
+  authors: ["Castillo-Reina, M.", "Cruz-Vásquez, J."]
+  venue: "*Turismo y Sociedad*, 30, 25–49"
+  doi: "10.18601/01207555.n30.02"
+  selected: true
+  line: tourism
+
+- type: book
+  year: 2021
+  title: "Alternativas y potencialidades de valor agregado en iniciativas turísticas de tipo comunitario: lecciones a partir del caso de la subprovincia del Alto Ricaurte (Boyacá)"
+  authors: ["Dueñas, D.", "Vianchá, Z.", "Fraile, A.", "Castillo-Reina, M.", "et al."]
+  venue: "Editorial UPTC"
+  doi: "10.19053/9789586605380"
+  line: tourism
+
+- type: chapter
+  year: 2023
+  title: "¿Quiénes tienen el poder? La formación y la tecnocracia de economistas colombianos"
+  authors: ["Castillo-Reina, M.", "Pico, C."]
+  venue: "In I. Silva Neira & A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
+  url: "https://bit.ly/DAS_EconCrisis"
+  url_label: "Book"
+  line: teaching
+
+- type: chapter
+  year: 2020
+  title: "Boyacá: a la penumbra de las oportunidades"
+  authors: ["Castillo-Reina, M.", "Tobasura, E."]
+  venue: "In H. E. González & Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
+  line: territorial
+
+- type: chapter
+  year: 2019
+  title: "La enseñanza de la economía: política, ideología y mercado"
+  authors: ["Corredor, F.", "Castillo-Reina, M."]
+  venue: "In J. I. González & M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
+  url: "https://bdigital.uexternado.edu.co/handle/001/2873"
+  url_label: "Repository"
+  line: teaching
+
+- type: working
+  year: 2021
+  title: "Puentes y escaleras como caminos: el «desarrollo» y el capital social en el municipio de Gachantivá, Boyacá, 2020"
+  authors: ["Castillo-Reina, M."]
+  venue: "Master's thesis, Universidad Pedagógica y Tecnológica de Colombia (with distinction)"
+  url: "https://repositorio.uptc.edu.co//handle/001/9660"
+  url_label: "Repository"
+  line: social-capital
+
+- type: working
+  year: 2020
+  title: "Efectos y escenarios de recuperación económica frente a la pandemia COVID-19 en Boyacá"
+  authors: ["Ochoa, C.", "Suárez, L.", "Suárez, H.", "Ramírez, E.", "Valderrama, A.", "Castillo-Reina, M.", "Castro, H.", "Matallana, O."]
+  venue: "SSRN working paper"
+  doi: "10.2139/ssrn.3664379"
+  line: territorial
+
+- type: policy
+  year: 2021
+  title: "Política Pública de Ciencia, Tecnología e Innovación del municipio de Tunja 2021–2030"
+  authors: []
+  venue: "Adopted by Acuerdo Municipal No. 016 de 2021"
+
+- type: policy
+  year: 2018
+  title: "Entre las oportunidades y el progreso: la educación superior como camino a la competitividad departamental"
+  authors: ["Vargas, E.", "Oicatá, R.", "Castillo-Reina, M."]
+  venue: "Regional Labour Market Observatory of Boyacá (ORMET)"
+  url: "http://bit.ly/EstudioORMET2018"
+  url_label: "Report"
+
+- type: policy
+  year: 2018
+  title: "Política Pública de Trabajo Decente para el departamento de Boyacá, 2017–2032"
+  authors: []
+  venue: "Adopted by Ordenanza No. 026 de 2017"
+
+- type: policy
+  year: 2017
+  title: "Determinación del estado actual del mercado laboral en el departamento de Boyacá"
+  authors: ["Pérez, N.", "Rodríguez, R.", "Palacios, M.", "Castillo-Reina, M."]
+  venue: "Regional Labour Market Observatory of Boyacá (ORMET)"
+  url: "http://bit.ly/EstudioORMET2017"
+  url_label: "Report"
