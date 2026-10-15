@@ -91,6 +91,13 @@ const stats = order
             {about.music.caption && <figcaption>{tr(about.music.caption, lang)}</figcaption>}
           </figure>
         )}
+        {about.music.epigraph && (
+          <aside class="epigraph" lang="es">
+            <p class="ep-title">«{about.music.epigraph.title}»</p>
+            <p class="ep-author">{about.music.epigraph.author}</p>
+            <p class="ep-note" lang={lang}>{tr(about.music.epigraph.note, lang)}</p>
+          </aside>
+        )}
         <div class="beyond-cols">
           <div class="beyond-text">
             {(tr(about.music.text, lang) as unknown as string[]).map((para) => <p>{para}</p>)}
@@ -180,6 +187,14 @@ const stats = order
   .beyond-photo { margin: 0; }
   .beyond-photo img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 30%; border-radius: 6px; }
   .beyond-photo figcaption { margin-top: 8px; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+  .epigraph {
+    margin-top: 28px; padding: 6px 0 6px 22px;
+    border-left: 3px solid var(--second);
+    display: grid; gap: 4px; max-width: 60ch;
+  }
+  .ep-title { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); letter-spacing: -0.02em; line-height: 1.15; color: var(--ink); }
+  .ep-author { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--second); }
+  .ep-note { margin-top: 6px; color: var(--muted); font-size: 0.98rem; }
   .beyond-cols { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 48px; margin-top: 28px; align-items: start; }
   .beyond-text { display: grid; gap: 1em; font-size: 1.12rem; line-height: 1.6; max-width: 56ch; }
   .beyond-cards { display: grid; gap: 14px; }
