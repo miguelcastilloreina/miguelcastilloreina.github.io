@@ -98,6 +98,8 @@ links:
     url: "https://x.com/the3boy"
 
 # Novedades de la portada. La más reciente arriba.
+# show_news: true para mostrar la sección "Recientes" en la portada.
+show_news: false
 news:
   - date: "11/2025"
     text:

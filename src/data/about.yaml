@@ -114,11 +114,31 @@ skills:
   - label: { en: "Languages", es: "Idiomas" }
     value: { en: "Spanish (native), English (C1, IELTS Academic 7.0), Italian (beginner)", es: "Español (nativo), inglés (C1, IELTS Academic 7.0), italiano (básico)" }
 
-# Música: texto y grabación de SoundCloud. El reproductor solo se carga cuando el visitante pulsa el botón.
+# Más allá de la investigación: música, café, foto y grabaciones.
+# El reproductor de SoundCloud solo se carga cuando el visitante pulsa el botón.
 music:
   text:
-    en: "I play the Colombian tiple and the Venezuelan cuatro, and sing bambucos, pasillos and other rhythms of Andean music."
-    es: "Toco el tiple colombiano y el cuatro venezolano, y canto bambucos, pasillos y otros ritmos de la música andina."
+    en:
+      - "I play the Colombian tiple and the Venezuelan cuatro, and sing bambucos, pasillos and other rhythms of Andean music with my family's group, Manantial, from Gachantivá (Boyacá)."
+      - "I am also passionate about Colombian coffee."
+    es:
+      - "Toco el tiple colombiano y el cuatro venezolano, y canto bambucos, pasillos y otros ritmos de la música andina con la agrupación familiar Manantial, de Gachantivá (Boyacá)."
+      - "También soy un apasionado del café colombiano."
+  photo: "manantial-gachantiva.jpg"
+  photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
+  caption: { en: "Miguel, Félix and José Castillo. Manantial music group (Gachantivá, Boyacá).", es: "Miguel, Félix y José Castillo. Agrupación musical Manantial (Gachantivá, Boyacá)." }
+  press:
+    - title: "La familia Castillo, cultores de la música de cuerdas colombiana en Gachantivá"
+      outlet: { en: "Conexión Zaquencipa (cultural magazine), No. 24", es: "Revista cultural Conexión Zaquencipa, n.º 24" }
+      url: "https://drive.google.com/file/d/131Z2i4CvMZN8gKE0DIhIjdmTfaMINte5/view"
   tracks:
     - title: "Cambiaron los tiempos"
       url: "https://soundcloud.com/miguel-castillo-597028896/cambiaron-los-tiempos"
+
+# Mapa de L'Aquila en la página Sobre mí.
+place:
+  image: "laquila-map.jpg"
+  alt: { en: "Street map of L'Aquila, Italy", es: "Mapa de calles de L'Aquila, Italia" }
+  text:
+    en: "I live and work in L'Aquila, in the Abruzzo region of central Italy, where the Gran Sasso Science Institute is based."
+    es: "Vivo y trabajo en L'Aquila, en la región de los Abruzos, en el centro de Italia, donde tiene su sede el Gran Sasso Science Institute."

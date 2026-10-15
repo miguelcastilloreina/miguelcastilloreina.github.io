@@ -3,8 +3,8 @@
 // Usa la foto indicada en projects.yaml; si no hay, dibuja curvas de nivel únicas para cada línea.
 import { url } from '../lib/data';
 
-interface Props { seed: string; image?: string; alt?: string; class?: string }
-const { seed, image, alt = '', class: cls } = Astro.props;
+interface Props { seed: string; image?: string; alt?: string; focus?: string; class?: string }
+const { seed, image, alt = '', focus = '50% 50%', class: cls } = Astro.props;
 
 function hash(s: string) {
   let h = 2166136261;
@@ -32,7 +32,7 @@ for (let k = 0; k < n; k++) {
 }
 ---
 {image ? (
-  <img class:list={['lthumb', cls]} src={url(`/img/projects/${image}`)} alt={alt} loading="lazy" />
+  <img class:list={['lthumb', cls]} src={url(`/img/projects/${image}`)} alt={alt} loading="lazy" style={`object-position: ${focus}`} />
 ) : (
   <svg class:list={['lthumb', 'gen', cls]} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <rect width={W} height={H} class="bg" />

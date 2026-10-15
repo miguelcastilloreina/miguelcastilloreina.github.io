@@ -26,7 +26,7 @@ const urlLabel = tr(pub.url_label, lang) ?? 'Link';
     <div class="v" set:html={inline(tr(pub.venue, lang))} />
     {(pub.doi || pub.url) && (
       <div class="links">
-        {pub.doi && <a href={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} />DOI {pub.doi}</a>}
+        {pub.doi && <a href={`https://doi.org/${pub.doi}`} title={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} />DOI <span class="doi-id">{pub.doi}</span></a>}
         {pub.url && <a href={pub.url}><Icon name="external" size={14} />{urlLabel}</a>}
       </div>
     )}

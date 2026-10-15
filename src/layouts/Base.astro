@@ -55,7 +55,7 @@ const address: string[] = tr(profile.address, lang);
     <header class="bar">
       <div class="wrap">
         <a class="brand" href={href('home', lang)}>
-          <span class="disc" aria-hidden="true">{profile.initials}</span>
+          <img class="disc" src={url('/img/avatar.jpg')} alt="" width="36" height="36" />
           <span>{profile.name}</span>
         </a>
         <nav class="nav" aria-label={lang === 'es' ? 'Principal' : 'Main'}>

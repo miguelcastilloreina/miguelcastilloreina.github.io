@@ -103,6 +103,7 @@
   title: "Puentes y escaleras como caminos: el «desarrollo» y el capital social en el municipio de Gachantivá, Boyacá, 2020"
   authors: ["Castillo-Reina, M."]
   outlet: "UPTC"
+  image: "tesis-gachantiva.jpg"
   venue:
     en: "Master's thesis, Universidad Pedagógica y Tecnológica de Colombia (with distinction)"
     es: "Tesis de maestría, Universidad Pedagógica y Tecnológica de Colombia (meritoria)"
@@ -160,6 +161,8 @@
   authors: []
   outlet: "Boyacá"
   image: "trabajo-decente-boyaca.jpg"
+  url: "https://ormet.boyaca.gov.co/wp-content/uploads/2025/12/2018-Politica-Publica-de-Trabajo-Decente-para-Boyaca-2017-2032.pdf"
+  url_label: { en: "Policy (PDF)", es: "Política (PDF)" }
   venue:
     en: "Adopted by Ordenanza No. 026 de 2017"
     es: "Adoptada mediante la Ordenanza No. 026 de 2017"
