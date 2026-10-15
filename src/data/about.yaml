@@ -129,8 +129,11 @@ music:
   caption: { en: "Miguel, Félix and José Castillo. Manantial music group (Gachantivá, Boyacá).", es: "Miguel, Félix y José Castillo. Agrupación musical Manantial (Gachantivá, Boyacá)." }
   press:
     - title: "La familia Castillo, cultores de la música de cuerdas colombiana en Gachantivá"
-      outlet: { en: "Conexión Zaquencipa (cultural magazine), No. 24", es: "Revista cultural Conexión Zaquencipa, n.º 24" }
+      outlet: { en: "Conexión Zaquencipa (cultural magazine), No. 24, pp. 43–47, 2024", es: "Revista cultural Conexión Zaquencipa, n.º 24, pp. 43–47, 2024" }
       url: "https://drive.google.com/file/d/131Z2i4CvMZN8gKE0DIhIjdmTfaMINte5/view"
   tracks:
     - title: "Cambiaron los tiempos"
       url: "https://soundcloud.com/miguel-castillo-597028896/cambiaron-los-tiempos"
+      credits:
+        - { en: "Composer: Félix Alfredo Castillo Forero", es: "Compositor: Félix Alfredo Castillo Forero" }
+        - { en: "On: *Gachantivá: un lugar mágico por descubrir* (2018)", es: "En: *Gachantivá: un lugar mágico por descubrir* (2018)" }
