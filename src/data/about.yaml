@@ -124,13 +124,6 @@ music:
     es:
       - "Toco el tiple colombiano y el cuatro venezolano para cantar bambucos, pasillos, torbellinos, joropos y otros ritmos tradicionales con la agrupación familiar «Manantial», de Gachantivá (Boyacá)."
       - "También soy un apasionado del café colombiano."
-  # Epígrafe: título y autor de una canción, con una nota breve (sin letra).
-  epigraph:
-    title: "Un tiple y un corazón"
-    author: "José A. Morales"
-    note:
-      en: "A song about the tiple as the companion that keeps the singer's sorrows at bay."
-      es: "Una canción sobre el tiple como compañero que mantiene lejos las penas del cantor."
   photo: "manantial-gachantiva.jpg"
   photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
   caption: { en: "Miguel, Félix and José Castillo. Manantial music group (Gachantivá, Boyacá).", es: "Miguel, Félix y José Castillo. Agrupación musical Manantial (Gachantivá, Boyacá)." }
