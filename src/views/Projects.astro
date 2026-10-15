@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBanner from '../components/PageBanner.astro';
 import LineThumb from '../components/LineThumb.astro';
 import { projects, publications, inline, tr, pubId, type Lang } from '../lib/data';
 import { ui, href } from '../lib/i18n';
@@ -21,6 +22,7 @@ const lines = projects.lines.map((l: any) => ({
       <p>{t.projects.intro}</p>
     </div>
   </div>
+  <PageBanner page="projects" lang={lang} />
 
   <div class="wrap">
     <section class="block">

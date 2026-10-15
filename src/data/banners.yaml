@@ -1,0 +1,32 @@
+# Fotos de paisaje en la cabecera de las páginas internas.
+#
+# Guarda la foto (horizontal, unos 2000 px de ancho, JPG) en public/img/banners/
+# y escribe su nombre en `image`. Si `image` está vacío, la página no muestra foto.
+#
+# alt:     descripción breve de la foto, para lectores de pantalla.
+# caption: pie de foto visible (lugar y, si no es tuya, el crédito del fotógrafo).
+# focus:   qué parte de la foto conservar al recortarla: "center", "top", "bottom", "50% 30%"…
+
+research:
+  image: ""
+  alt: { en: "", es: "" }
+  caption: { en: "", es: "" }
+  focus: "center"
+
+projects:
+  image: ""
+  alt: { en: "", es: "" }
+  caption: { en: "", es: "" }
+  focus: "center"
+
+activity:
+  image: ""
+  alt: { en: "", es: "" }
+  caption: { en: "", es: "" }
+  focus: "center"
+
+about:
+  image: ""
+  alt: { en: "", es: "" }
+  caption: { en: "", es: "" }
+  focus: "center"
