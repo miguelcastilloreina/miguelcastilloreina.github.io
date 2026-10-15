@@ -55,7 +55,7 @@ npm run dev        # abre http://localhost:4321 y se actualiza al guardar
 
 ## Publicar en GitHub Pages
 
-1. En GitHub crea un repositorio público llamado **`the3boy.github.io`** (así la dirección será `https://the3boy.github.io`).
+1. En GitHub crea un repositorio público llamado **`miguelcastilloreina.github.io`** dentro de la organización `miguelcastilloreina` (así la dirección será `https://miguelcastilloreina.github.io`).
 2. Sube esta carpeta al repositorio (con GitHub Desktop o con `git push`). La carpeta `node_modules` no se sube.
 3. En el repositorio: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 4. Cada vez que hagas un cambio y lo subas a la rama `main`, el sitio se reconstruye y publica solo en uno o dos minutos. El progreso se ve en la pestaña **Actions**.
