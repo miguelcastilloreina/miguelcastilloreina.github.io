@@ -2,7 +2,8 @@
 #
 # type:     article | working | chapter | book | policy
 # outlet:   nombre corto que aparece en la miniatura (revista, editorial…)
-# image:    opcional. Portada o imagen propia guardada en public/img/pubs/ (por ejemplo "acta-agronomica.jpg").
+# image:    opcional. Portada: nombre de un archivo en public/img/pubs/ (por ejemplo "acta-agronomica.jpg")
+#           o una dirección https:// completa.
 #           Si está vacío se genera una miniatura con el nombre de la revista.
 # status:   etiqueta opcional ("Submitted", "R&R", "Forthcoming"…), con versión en/es
 # selected: true -> aparece en la portada
@@ -17,6 +18,7 @@
   title: "Yellow pitahaya (*Selenicereus megalanthus*) in Miraflores, Boyacá, Colombia: a social capital approach in a producer organisation"
   authors: ["Castillo-Reina, M.", "Pérez, N.", "Ruiz, I."]
   outlet: "Acta Agronómica"
+  image: "https://revistas.unal.edu.co/public/journals/10/cover_issue_6027_es_ES.jpg"
   venue: "*Acta Agronómica*, 71(4)"
   doi: "10.15446/acag.v71n4.100152"
   selected: true
@@ -32,6 +34,7 @@
   title: "Tourist sector innovation: an approach to the services and the co-creation of experiences"
   authors: ["Castillo-Reina, M.", "Cruz-Vásquez, J."]
   outlet: "Turismo y Sociedad"
+  image: "https://revistas.uexternado.edu.co/public/journals/8/cover_issue_754_es_ES.jpg"
   venue: "*Turismo y Sociedad*, 30, 25–49"
   doi: "10.18601/01207555.n30.02"
   selected: true
@@ -45,6 +48,7 @@
   title: "Alternativas y potencialidades de valor agregado en iniciativas turísticas de tipo comunitario: lecciones a partir del caso de la subprovincia del Alto Ricaurte (Boyacá)"
   authors: ["Dueñas, D.", "Vianchá, Z.", "Fraile, A.", "Castillo-Reina, M.", "et al."]
   outlet: "Editorial UPTC"
+  image: "https://librosaccesoabierto.uptc.edu.co/public/presses/1/submission_155_138_coverImage_es_ES_t.png"
   venue: "Editorial UPTC"
   doi: "10.19053/9789586605380"
   abstract:
@@ -57,6 +61,7 @@
   title: "¿Quiénes tienen el poder? La formación y la tecnocracia de economistas colombianos"
   authors: ["Castillo-Reina, M.", "Pico, C."]
   outlet: "Rethinking Economics"
+  image: "economia-en-crisis.jpg"
   venue:
     en: "In I. Silva Neira & A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
     es: "En I. Silva Neira y A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
@@ -79,6 +84,7 @@
   title: "La enseñanza de la economía: política, ideología y mercado"
   authors: ["Corredor, F.", "Castillo-Reina, M."]
   outlet: "U. Externado"
+  image: "https://simehbucket.s3.amazonaws.com/images/3012e4fbe03f911b804ed3e00d1cfaa5-large.jpg"
   venue:
     en: "In J. I. González & M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
     es: "En J. I. González y M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
@@ -111,6 +117,7 @@
   title: "Efectos y expectativas de recuperación económica frente a la pandemia COVID-19 en el departamento de Boyacá"
   authors: ["Ochoa, C.", "Suárez, L.", "Suárez, H.", "Ramírez, E.", "Valderrama, A.", "Castillo-Reina, M.", "Castro, H.", "Matallana, O."]
   outlet: "SSRN"
+  image: "https://cctunja.org.co/boyacacompite/wp-content/uploads/2020/07/estudio.png"
   venue:
     en: "SSRN working paper"
     es: "Documento de trabajo, SSRN"
@@ -156,6 +163,7 @@
   title: "Determinación del estado actual del mercado laboral en el departamento de Boyacá"
   authors: ["Pérez, N.", "Rodríguez, R.", "Palacios, M.", "Castillo-Reina, M."]
   outlet: "ORMET Boyacá"
+  image: "ormet-mercado-laboral-2017.jpg"
   venue:
     en: "Regional Labour Market Observatory of Boyacá (ORMET)"
     es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBanner from '../components/PageBanner.astro';
 import PubItem from '../components/PubItem.astro';
 import { publications, type Lang, type Publication } from '../lib/data';
 import { ui } from '../lib/i18n';
@@ -20,6 +21,7 @@ const groups = order
       <p>{t.research.intro}</p>
     </div>
   </div>
+  <PageBanner page="research" lang={lang} />
 
   <div class="wrap">
     <div class="filters" role="group" aria-label={t.research.filter} hidden>

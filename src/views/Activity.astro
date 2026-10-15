@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageBanner from '../components/PageBanner.astro';
 import Icon from '../components/Icon.astro';
 import { activity, url, tr, type Lang } from '../lib/data';
 import { ui } from '../lib/i18n';
@@ -19,6 +20,7 @@ const typeLabel = (k: string) => (a.types as Record<string, string>)[k] ?? '';
       <p>{a.intro}</p>
     </div>
   </div>
+  <PageBanner page="activity" lang={lang} />
 
   <div class="wrap">
     <section class="block">

@@ -113,3 +113,12 @@ skills:
     value: "MGA Web, GESPROY, SPGR, SECOP II"
   - label: { en: "Languages", es: "Idiomas" }
     value: { en: "Spanish (native), English (C1, IELTS Academic 7.0), Italian (beginner)", es: "Español (nativo), inglés (C1, IELTS Academic 7.0), italiano (básico)" }
+
+# Música: texto y grabación de SoundCloud. El reproductor solo se carga cuando el visitante pulsa el botón.
+music:
+  text:
+    en: "I play the Colombian tiple and the Venezuelan cuatro, and sing bambucos, pasillos and other rhythms of Andean music."
+    es: "Toco el tiple colombiano y el cuatro venezolano, y canto bambucos, pasillos y otros ritmos de la música andina."
+  tracks:
+    - title: "Cambiaron los tiempos"
+      url: "https://soundcloud.com/miguel-castillo-597028896/cambiaron-los-tiempos"

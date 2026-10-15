@@ -19,6 +19,8 @@ Sitio académico estático y bilingüe hecho con [Astro](https://astro.build). S
 | Miniaturas de publicaciones | imagen en `public/img/pubs/` + campo `image` en `publications.yaml` |
 | Fotos de proyectos y líneas | imagen en `public/img/projects/` + campo `image` en `projects.yaml` |
 | Textos fijos de la interfaz (menús, títulos de sección) | `src/lib/i18n.ts` |
+| Fotos de paisaje en la cabecera de las páginas | foto en `public/img/banners/` + `src/data/banners.yaml` |
+| Música (texto y grabaciones de SoundCloud) | `src/data/about.yaml` → `music` |
 | Colores y tipografía | `src/styles/global.css`, al principio del archivo |
 
 Casi todo el mantenimiento es editar los cuatro archivos `.yaml`. Reglas básicas de YAML:

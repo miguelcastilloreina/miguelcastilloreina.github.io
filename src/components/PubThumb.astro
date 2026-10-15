@@ -8,20 +8,22 @@ import { ui } from '../lib/i18n';
 interface Props { pub: Publication; lang: Lang }
 const { pub, lang } = Astro.props;
 const typeLabel = ui[lang].types[pub.type];
+const src = pub.image ? (/^https?:/.test(pub.image) ? pub.image : url(`/img/pubs/${pub.image}`)) : '';
 ---
-{pub.image ? (
-  <img class="pthumb img" src={url(`/img/pubs/${pub.image}`)} alt="" loading="lazy" width="112" height="148" />
-) : (
-  <div class={`pthumb gen t-${pub.type}`} aria-hidden="true">
-    <span class="k">{typeLabel}</span>
-    <span class="o">{pub.outlet ?? ''}</span>
-    <span class="rule"></span>
-  </div>
+{src && (
+  <img class="pthumb img" src={src} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+    onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
 )}
+<div class={`pthumb gen t-${pub.type}`} aria-hidden="true" hidden={!!src}>
+  <span class="k">{typeLabel}</span>
+  <span class="o">{pub.outlet ?? ''}</span>
+  <span class="rule"></span>
+</div>
 
 <style>
   .pthumb { width: 60px; aspect-ratio: 3 / 4; border-radius: 3px; flex: none; }
-  .pthumb.img { object-fit: cover; box-shadow: 0 0 0 1px var(--line); }
+  .pthumb.img { object-fit: cover; object-position: top; background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+  .pthumb[hidden] { display: none; }
   .gen {
     --tone: var(--accent);
     display: flex; flex-direction: column; gap: 4px;

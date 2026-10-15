@@ -1,0 +1,26 @@
+---
+// Foto de paisaje bajo el título de una página interna (configurada en src/data/banners.yaml).
+import { banners, url, tr, type Lang } from '../lib/data';
+
+interface Props { page: string; lang: Lang }
+const { page, lang } = Astro.props;
+const b = banners?.[page];
+const caption = b ? tr(b.caption, lang) : '';
+---
+{b?.image && (
+  <figure class="banner">
+    <img
+      src={url(`/img/banners/${b.image}`)}
+      alt={tr(b.alt, lang) ?? ''}
+      style={`object-position: ${b.focus ?? 'center'}`}
+      decoding="async"
+    />
+    {caption && <figcaption class="wrap">{caption}</figcaption>}
+  </figure>
+)}
+
+<style>
+  .banner { margin: 0; border-bottom: 1px solid var(--line); }
+  .banner img { display: block; width: 100%; height: clamp(180px, 28vw, 340px); object-fit: cover; }
+  .banner figcaption { padding-block: 8px; font-size: 0.8rem; font-style: italic; color: var(--muted); }
+</style>

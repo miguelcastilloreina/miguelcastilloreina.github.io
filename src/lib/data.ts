@@ -4,6 +4,7 @@ import pubsRaw from '../data/publications.yaml?raw';
 import projectsRaw from '../data/projects.yaml?raw';
 import activityRaw from '../data/activity.yaml?raw';
 import aboutRaw from '../data/about.yaml?raw';
+import bannersRaw from '../data/banners.yaml?raw';
 
 export type Lang = 'en' | 'es';
 /** A text that is either the same in both languages or has an en/es version. */
@@ -30,6 +31,7 @@ export const profile = parse(profileRaw);
 export const projects = parse(projectsRaw);
 export const activity = parse(activityRaw);
 export const about = parse(aboutRaw);
+export const banners = parse(bannersRaw);
 /** Activity page and menu item only exist once there is at least one event. */
 export const hasActivity = (activity?.events ?? []).length > 0;
 export const publications: Publication[] = (parse(pubsRaw) ?? []).sort(
