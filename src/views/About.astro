@@ -116,19 +116,6 @@ const stats = order
       </dl>
     </section>
 
-    {about.place && (
-      <section class="block sec">
-        <h2>{a.place}</h2>
-        <div class="place">
-          <img class="map" src={url(`/img/about/${about.place.image}`)} alt={tr(about.place.alt, lang)} loading="lazy" width="900" height="1200" />
-          <div class="place-text">
-            <p>{tr(about.place.text, lang)}</p>
-            <address class="addr"><Icon name="pin" /><span>{(tr(profile.address, lang) as unknown as string[]).map((l, i, arr) => (<>{l}{i < arr.length - 1 && <br />}</>))}</span></address>
-          </div>
-        </div>
-      </section>
-    )}
-
     {about.music && (
       <section class="block sec">
         <h2>{a.music}</h2>
@@ -223,13 +210,7 @@ const stats = order
   .music-photo figcaption, .press .outlet { font-size: 0.82rem; color: var(--muted); }
   .music-photo figcaption { margin-top: 8px; font-style: italic; }
   .press { display: grid; gap: 6px; margin-top: 4px; }
-  .place { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: center; }
-  .map { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 0 0 1px var(--line); }
-  .place-text { display: grid; gap: 16px; max-width: 52ch; }
-  .addr { font-style: normal; display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 10px; color: var(--muted); }
-  .addr :global(.icon) { margin-top: 4px; }
   @media (max-width: 900px) { .beyond { grid-template-columns: 1fr; } }
-  @media (max-width: 560px) { .place { grid-template-columns: 1fr; } .map { max-width: 260px; } }
   .track { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
   .play {
     display: inline-flex; align-items: center; gap: 12px; cursor: pointer; font: inherit; text-align: left;
