@@ -9,6 +9,7 @@
 # line:     línea de investigación a la que pertenece (ver projects.yaml)
 #
 # Los títulos van en su idioma original. `venue` puede ser un texto único o tener versión en/es.
+# abstract: resumen desplegable (en/es). Si solo hay un idioma, se muestra ese en ambas versiones.
 # Formato: *cursiva*. Tu nombre se resalta solo.
 
 - type: working
@@ -23,6 +24,11 @@
     en: "Submitted"
     es: "En evaluación"
   selected: true
+  abstract:
+    en: >-
+      Sergio Boisier (1939–2022) remains an eminent figure in Latin American economic thought, particularly within circles dedicated to territorial development (encompassing the endogenous, regional, and local levels). His prolific body of work adopts a 'Babylonian' approach (Dow, 2012) and has profoundly influenced how development is conceptualized and practiced across Latin America. However, his contributions remain largely unrecognized within Anglo-American academia. Indeed, European perspectives, such as those of Albuquerque or Vázquez-Barquero, which focused on 'local economic development', ultimately came to dominate the discourse, whereas the paradigms long advocated by Boisier and his contemporaries failed to resonate beyond Latin American borders.
+    
+      Drawing on a review of his most significant contributions spanning over four decades (1976–2017) and his extensive research agenda on “development”, this article aims to elucidate the specific role of endogenous local resources (those originating within and belonging to the territory) in economic growth, with the ultimate goal of strengthening local markets. Boisier emphasized the necessity of generating knowledge regarding the resources available to a territory and their corresponding management. Above all, he argued that development is a fundamentally geographical phenomenon that does not occur in a vacuum; rather, it requires dense, intelligent, and deliberate integration. Growth and development thus form a spiral of constant, cumulative, and progressive causation. Given the highly dispersed nature of Boisier's writings, this article endeavors to synthesize his most salient reflections, thereby providing a cohesive and accessible entry point into his theoretical framework.
   line: territorial
 
 - type: article
@@ -33,6 +39,11 @@
   venue: "*Acta Agronómica*, 71(4)"
   doi: "10.15446/acag.v71n4.100152"
   selected: true
+  abstract:
+    en: >-
+      Yellow pitahaya (Selenicereus megalanthus) has become an alternative for agricultural production in several municipalities of the province of Lengupá, in the department of Boyacá, Colombia, with an expanding and consolidating international market due to its status as an exotic fruit. This paper presents the results of a mixed methods research conducted with producers affiliated with the PITAFCOL organization in the municipality of Miraflores. The characteristics of the fruit and its market were described, and the socioeconomic conditions of the members of the association, as well as their attitudes of trust, reciprocity, and solidarity under the perspective of social capital (bonding type) were characterized. The conclusions point to the need to strengthen the trust within the organization for its consolidation, improve the organizational practices and seek new allies for processing the fruit to generate added value to the product, as well as alternative economic activities.
+    es: >-
+      Con un mercado internacional en expansión y consolidación, dada su condición de fruta exótica, la pitahaya amarilla (Selenicereus megalanthus) se ha constituido como una alternativa de producción agrícola en varios municipios de la provincia de Lengupá, en el departamento de Boyacá en Colombia. Este artículo presenta los resultados de una investigación adelantada mediante métodos mixtos con productores asociados a la organización PITAFCOL en el municipio de Miraflores. Su objetivo es describir las características de la fruta, su mercado, las condiciones socioeconómicas de los integrantes de la asociación, así como conocer sus actitudes de confianza, reciprocidad y solidaridad bajo la perspectiva del capital social (de tipo bonding). Las conclusiones apuntan a la necesidad de fortalecer la confianza al interior de la organización para su consolidación, la mejora de prácticas organizacionales y la necesidad de buscar nuevos aliados para la transformación que generen valor agregado al producto, así como actividades económicas alternativas.
   line: social-capital
 
 - type: article
@@ -43,6 +54,9 @@
   venue: "*Turismo y Sociedad*, 30, 25–49"
   doi: "10.18601/01207555.n30.02"
   selected: true
+  abstract:
+    es: >-
+      En los últimos años el término innovación se ha usado ampliamente para describir la generación de nuevos procesos o productos en la economía, principalmente en aquellos sectores intensivos en capital y mano de obra (manufactureros). Ante la importancia del turismo en la economía mundial, se considera conveniente revisar cómo la innovación afecta su competitividad. En la introducción se presentan algunos temas de interés en la actualidad para el sector. La segunda sección presenta algunos aspectos característicos y distintivos de la economía de los servicios. En la tercera se presentan aproximaciones a la innovación en los servicios y el turismo para finalizar con la presentación de la economía experiencial y la cocreación como potencial herramienta para la innovación. Finalmente, se presentan unas conclusiones parciales. Se argumenta que la innovación en el turismo tiene que entenderse como derivada de la cocreación, que el sector no es simplemente un imitador y que requiere un marco de análisis propio.
   line: tourism
 
 - type: book
@@ -52,6 +66,9 @@
   outlet: "Editorial UPTC"
   venue: "Editorial UPTC"
   doi: "10.19053/9789586605380"
+  abstract:
+    es: >-
+      A pesar de los efectos negativos generados por la pandemia de COVID-19, el turismo de base comunitaria se constituye como una forma alternativa de crecimiento económico y desarrollo gracias a la integración de experiencias locales, así como del aprovechamiento y conservación de los recursos naturales, culturales y patrimoniales. Esta investigación se concentró en identificar los factores que agregan valor y cómo se involucran los actores que participan en esta clase de turismo. Se presenta un contexto teórico y estado del arte en las categorías de territorialidad, turismo comunitario, cadena y flujo de valor y procesos de co-creación de valor. Los resultados parten de la caracterización socioeconómica de la Subprovincia del Alto Ricaurte en Boyacá, el análisis de la oferta y la percepción de turista en los procesos de co-creación sobre la agregación de valor, lo que confirma la importancia del turismo comunitario como proceso de construcción colectiva que involucra diversos enfoques y conceptos frente a cómo se interpreta y cómo se maneja.
   line: tourism
 
 - type: chapter
@@ -86,6 +103,11 @@
     es: "En J. I. González y M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
   url: "https://bdigital.uexternado.edu.co/handle/001/2873"
   url_label: { en: "Repository", es: "Repositorio" }
+  abstract:
+    en: >-
+      This chapter proposes that the mainstream teaching in economics is determined mainly by political, ideological and market criteria. This fact implies that the teaching economics could contradict its fundamental purpose, which is essentially altruistic: the search for the common good. Using seminal discussions proposed by the Colombian emeritus professor Homero Cuevas as a starting point, this essay explores the concept pluralist teaching, that can contribute to align what is taught today and what should be taught in order to accomplish economics’ goals. It is argued that pluralist teaching can take place different educational alternatives manage their resources strategically, in terms market positioning and political power networking.
+    es: >-
+      Este capítulo plantea que la enseñanza predominante en economía está determinada fundamentalmente por criterios políticos, ideológicos y de mercado, razón por la cual puede entrar en contradicción con el propósito último de la disciplina, que es uno esencialmente altruista: el bien común. A partir de discusiones seminales propuestas por el profesor Homero Cuevas, se explora la noción de una enseñanza plural, que puede contribuir a alinear lo que se enseña con lo que se necesita para que la economía cumpla con el objetivo que se propone. Se argumenta que una enseñanza plural puede establecerse en la medida en que distintas alternativas educativas administren sus recursos de forma estratégica, es decir, aumenten su poder y se posicionen en el mercado.
   line: teaching
 
 - type: working
@@ -98,17 +120,25 @@
     es: "Tesis de maestría, Universidad Pedagógica y Tecnológica de Colombia (meritoria)"
   url: "https://repositorio.uptc.edu.co//handle/001/9660"
   url_label: { en: "Repository", es: "Repositorio" }
+  abstract:
+    es: >-
+      Caminar por la senda del desarrollo requiere simultáneamente de una base material y una subjetiva que permita a los territorios, como contenedores y contenido, hacer frente al doble proceso de apertura (descentralización y globalización). Por su naturaleza excluyente, el mercado tiende a concentrar los recursos exógenos de inversión que pudieran ser útiles para el crecimiento económico en grandes ciudades, condenando al ostracismo y la exclusión a los territorios más frágiles y pequeños. El capital social, entendido como un activo de recursos reales y potenciales asociados al individuo, puede influir en el desarrollo territorial al facilitar la cooperación, reducir los costos de transacción, simplificar el acceso a la información e incluso generar formas alternativas de intercambio. Esta investigación explora la relación entre el capital social y el desarrollo a partir de métodos mixtos en el municipio de Gachantivá en el departamento de Boyacá. Los resultados obtenidos mediante encuestas y entrevistas muestran que a pesar de una baja participación en espacios asociativos o juntas de acción comunal (75% de la muestra), las personas estarían muy dispuestas a trabajar en proyectos que beneficien a la comunidad y aunque no consideren los habitantes de su vereda tan honestos, confían en ellos y su disposición solidaria a ayudar. El capital social latente en el municipio requiere de liderazgos y fortalecimiento, de buscar las mejores formas de atraer capital e inversión para transformar ventajas comparativas estáticas en competitivas dinámicas.
   line: social-capital
 
 - type: working
   year: 2020
-  title: "Efectos y escenarios de recuperación económica frente a la pandemia COVID-19 en Boyacá"
+  title: "Efectos y expectativas de recuperación económica frente a la pandemia COVID-19 en el departamento de Boyacá"
   authors: ["Ochoa, C.", "Suárez, L.", "Suárez, H.", "Ramírez, E.", "Valderrama, A.", "Castillo-Reina, M.", "Castro, H.", "Matallana, O."]
   outlet: "SSRN"
   venue:
     en: "SSRN working paper"
     es: "Documento de trabajo, SSRN"
   doi: "10.2139/ssrn.3664379"
+  abstract:
+    en: >-
+      The effects of COVID-19 have reached unsuspected limits on public health and the economy. Job destruction and business closures have led to a loss of acquired skills in companies (as organizations) and their employees. This document presents the results of a survey applied during May and June 2020 to more than 1,000 companies throughout the department of Boyacá (Colombia) in aspects related to their income, their cost structure and their recovery expectations, a description of the economic policies assumed in Latin America related to the crisis as well as an additional section of local policies. The results obtained show the fragility and differential effect of companies in the face of the double shock, of supply and demand, generated by COVID-19. In our sample, a third of the 45 percent of the companies that registered a decrease in their sales have had falls of more than 70 percent. The availability of cash has restricted the payment of rent, utilities and bank loans. Respondents suggested that local governments should design packages of subsidies, tax reductions and timely information for the implementation of biosecurity protocols. Despite business formality, labor informality limits employers' access to payroll subsidy programs. Information and conditions for access to this and other programs end up being deficient.
+    es: >-
+      Los efectos del COVID-19 han alcanzado límites insospechados en la salud pública y la economía. La destrucción de empleos y cierres comerciales ha generado una pérdida de capacidades adquiridas en las empresas (como organizaciones) y sus empleados. Este documento presenta el resultado de una encuesta aplicada durante mayo y junio de 2020 a más de 1.000 empresas en todo el departamento de Boyacá (Colombia) en aspectos relacionados con sus ingresos, su estructura de costos y sus expectativas de recuperación, una descripción de las políticas económicas asumidas en América Latina frente a la crisis así como un aparte adicional de políticas locales. Los resultados obtenidos muestran la fragilidad y efecto diferencial de las empresas ante el doble choque, de oferta y demanda, generado por la pandemia. En nuestra muestra, un tercio del 45 por ciento de las empresas que registró una disminución en sus ventas, ha tenido caídas de más del 70 por ciento. La disponibilidad de efectivo ha restringido el pago oportuno de arrendamientos, servicios públicos y créditos bancarios. Los encuestados sugirieron que los gobiernos locales deberían diseñar paquetes de subsidios, reducción de impuestos e información oportuna para la implementación de protocolos de bioseguridad. A pesar de la formalidad empresarial, la informalidad laboral limita el acceso por parte de los empresarios a programas de subsidio a la nómina. La información y condiciones para el acceso a este y otros programas termina siendo deficiente.
   line: territorial
 
 - type: policy

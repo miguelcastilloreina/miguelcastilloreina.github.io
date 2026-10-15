@@ -70,4 +70,5 @@
   let t: number | undefined;
   window.addEventListener('resize', () => { clearTimeout(t); t = window.setTimeout(redraw, 150); });
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redraw);
+  window.addEventListener('themechange', redraw);
 </script>

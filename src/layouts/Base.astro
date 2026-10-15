@@ -45,6 +45,10 @@ const address: string[] = tr(profile.address, lang);
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(url('/img/portrait.jpg'), Astro.site)} />
     <meta name="twitter:card" content="summary" />
+    <script is:inline>
+      // Aplica el modo elegido antes de pintar la página (evita un destello del modo equivocado).
+      try { var th = localStorage.getItem('theme'); if (th === 'light' || th === 'dark') document.documentElement.dataset.theme = th; } catch (e) {}
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
@@ -59,6 +63,9 @@ const address: string[] = tr(profile.address, lang);
             <a href={href(r, lang)} aria-current={route === r ? 'page' : undefined}>{t.nav[r]}</a>
           ))}
         </nav>
+        <button type="button" class="theme-toggle" data-label-light={t.themeLight} data-label-dark={t.themeDark} aria-label={t.themeLight}>
+          <Icon name="sun" size={15} class="i-sun" /><Icon name="moon" size={15} class="i-moon" />
+        </button>
         <a class="lang-switch" href={switchHref} hreflang={other} lang={other} aria-label={t.otherLang}>
           <Icon name="globe" size={14} />{t.otherLangShort}
         </a>
@@ -87,5 +94,24 @@ const address: string[] = tr(profile.address, lang);
         <p class="copy">© {new Date().getFullYear()} {profile.name}</p>
       </div>
     </footer>
+    <script is:inline>
+      (function () {
+        var btn = document.querySelector('.theme-toggle');
+        if (!btn) return;
+        var root = document.documentElement;
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        var isDark = function () { return root.dataset.theme ? root.dataset.theme === 'dark' : mq.matches; };
+        var label = function () { btn.setAttribute('aria-label', isDark() ? btn.dataset.labelLight : btn.dataset.labelDark); btn.title = btn.getAttribute('aria-label'); };
+        label();
+        btn.addEventListener('click', function () {
+          var next = isDark() ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          label();
+          window.dispatchEvent(new Event('themechange'));
+        });
+        mq.addEventListener('change', label);
+      })();
+    </script>
   </body>
 </html>
