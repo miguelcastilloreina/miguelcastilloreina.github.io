@@ -68,31 +68,6 @@ const stats = order
     </section>
 
     <section class="block sec">
-      <h2>{a.experience}</h2>
-      <ul class="plain tl">
-        {about.experience.map((e: any) => (
-          <li>
-            <span class="when">{e.years}</span>
-            <div>
-              <strong>{tr(e.role, lang)}</strong>
-              <span class="where">{tr(e.org, lang)}</span>
-              {e.note && <p class="note" set:html={inline(tr(e.note, lang))} />}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <section class="block sec">
-      <h2>{a.awards}</h2>
-      <ul class="plain tl">
-        {about.awards.map((x: any) => (
-          <li><span class="when">{x.year}</span><div><strong>{tr(x.title, lang)}</strong><span class="where">{tr(x.detail, lang)}</span></div></li>
-        ))}
-      </ul>
-    </section>
-
-    <section class="block sec">
       <h2>{a.affiliations}</h2>
       <ul class="plain tl">
         {about.affiliations.map((x: any) => (
