@@ -9,10 +9,11 @@ Sitio académico estático y bilingüe hecho con [Astro](https://astro.build). S
 
 | Quiero cambiar… | Archivo |
 |---|---|
-| Nombre, frase de portada, bio, intereses, formación, novedades, enlaces, email | `src/data/profile.yaml` |
+| Nombre, frase de portada, bio, intereses, fecha y archivos del CV, novedades, enlaces, email | `src/data/profile.yaml` |
+| Página About / Sobre mí (formación, experiencia, premios, afiliaciones, herramientas) | `src/data/about.yaml` |
 | Publicaciones (y cuáles salen en portada) | `src/data/publications.yaml` |
 | Trabajo en curso y líneas de investigación | `src/data/projects.yaml` |
-| Ponencias, premios, afiliaciones | `src/data/activity.yaml` |
+| Galería de Actividad (talleres, congresos, fotos y presentaciones en PDF) | `src/data/activity.yaml`, fotos en `public/img/activity/`, PDF en `public/activity/slides/` |
 | CV en PDF | `public/cv/castillo-reina-cv-en.pdf` y `public/cv/castillo-reina-cv-es.pdf` (reemplaza el archivo con el mismo nombre) |
 | Foto | `public/img/portrait.jpg` (cuadrada, 560 × 560 px o más) |
 | Miniaturas de publicaciones | imagen en `public/img/pubs/` + campo `image` en `publications.yaml` |
@@ -53,9 +54,13 @@ Copia una entrada existente en `publications.yaml` y cambia los campos:
   line: visual           # opcional: la vincula a una línea de projects.yaml
 ```
 
-### Añadir una ponencia
+### Añadir una actividad a la galería
 
-En `activity.yaml`, cambia `talks: []` por una lista. La sección aparece sola en la página Activity.
+En `activity.yaml`, cambia `events: []` por una lista (el archivo trae un ejemplo comentado). Guarda las fotos en `public/img/activity/` y el PDF de la presentación en `public/activity/slides/`. La página **Activity / Actividad** aparece en el menú en cuanto existe la primera entrada.
+
+### Actualizar el CV
+
+Reemplaza los PDF en `public/cv/` (mismo nombre) y cambia la fecha en `profile.yaml` → `cv.updated`. El botón de la portada y de la página About muestra esa fecha.
 
 ### Añadir fotos y miniaturas
 

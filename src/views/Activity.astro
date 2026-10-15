@@ -1,71 +1,135 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
-import { activity, tr, type Lang } from '../lib/data';
+import { activity, url, tr, type Lang } from '../lib/data';
 import { ui } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang];
-const talks = activity.talks ?? [];
+const a = t.activity;
+const events: any[] = activity.events ?? [];
+const typeLabel = (k: string) => (a.types as Record<string, string>)[k] ?? '';
 ---
-<Base lang={lang} route="activity" title={t.nav.activity} description={t.activity.metaDesc}>
+<Base lang={lang} route="activity" title={a.label} description={a.metaDesc}>
   <div class="page-head">
     <div class="wrap">
-      <div class="label">{t.activity.label}</div>
-      <h1>{talks.length ? t.activity.titleWithTalks : t.activity.title}</h1>
+      <div class="label">{a.label}</div>
+      <h1>{a.title}</h1>
+      <p>{a.intro}</p>
     </div>
   </div>
 
   <div class="wrap">
-    {talks.length > 0 && (
-      <section class="block">
-        <div class="block-head"><div class="label">{t.activity.talks}</div><h2>{t.activity.presentations}</h2></div>
-        <ul class="plain rows">
-          {talks.map((x: any) => (
-            <li>
-              <span class="when">{x.date}</span>
-              <span>
-                {x.url ? <a class="ilink" href={x.url}>{tr(x.title, lang)}<Icon name="external" size={13} /></a> : tr(x.title, lang)}
-                <small>{tr(x.event, lang)}{x.place && ` · ${tr(x.place, lang)}`}</small>
-              </span>
+    <section class="block">
+      <ul class="plain gallery">
+        {events.map((e, i) => {
+          const photos: string[] = e.photos ?? [];
+          const title = tr(e.title, lang);
+          return (
+            <li class="ev" data-ev={i}>
+              {photos.length > 0 && (
+                <button type="button" class="cover" data-ev={i} data-i="0" aria-label={`${a.photos}: ${title}`}>
+                  <img src={url(`/img/activity/${photos[0]}`)} alt="" loading="lazy" />
+                  {photos.length > 1 && <span class="count">+{photos.length - 1}</span>}
+                </button>
+              )}
+              <div class="ev-body">
+                <div class="meta">
+                  <span class="when">{e.date}</span>
+                  {e.type && <span class="kind">{typeLabel(e.type)}</span>}
+                </div>
+                <h2>{title}</h2>
+                <p class="where">{e.event}{e.place && ` · ${tr(e.place, lang)}`}{e.role && ` · ${tr(e.role, lang)}`}</p>
+                <div class="actions">
+                  {e.slides && <a class="btn cta small" href={url(`/activity/slides/${e.slides}`)}><Icon name="download" size={14} />{a.slides}</a>}
+                  {photos.length > 0 && <button type="button" class="btn small" data-ev={i} data-i="0"><Icon name="image" size={14} />{a.photos} ({photos.length})</button>}
+                  {e.url && <a class="btn small" href={e.url}><Icon name="external" size={14} />{a.page}</a>}
+                </div>
+              </div>
+              <script type="application/json" class="ev-photos" set:html={JSON.stringify(photos.map((p) => url(`/img/activity/${p}`)))} />
             </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    <section class="block two">
-      <div>
-        <h2>{t.activity.awards}</h2>
-        <ul class="plain rows">
-          {activity.awards.map((a: any) => (
-            <li><span class="when">{a.year}</span><span>{tr(a.title, lang)}<small>{tr(a.detail, lang)}</small></span></li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h2>{t.activity.affiliations}</h2>
-        <ul class="plain rows">
-          {activity.affiliations.map((a: any) => (
-            <li>
-              <span class="when">{a.since}–</span>
-              <span>
-                {a.url ? <a class="ilink" href={a.url}>{tr(a.name, lang)}<Icon name="external" size={13} /></a> : tr(a.name, lang)}
-                <small>{tr(a.role, lang)}</small>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+          );
+        })}
+      </ul>
     </section>
   </div>
+
+  <dialog class="lightbox" aria-label={a.photos}>
+    <img alt="" />
+    <p class="cap"></p>
+    <button type="button" class="lb-btn lb-close" aria-label={a.close}>×</button>
+    <button type="button" class="lb-btn lb-prev" aria-label={a.prev}>‹</button>
+    <button type="button" class="lb-btn lb-next" aria-label={a.next}>›</button>
+  </dialog>
 </Base>
 
 <style>
-  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
-  .two h2 { font-size: 1.5rem; margin-bottom: 14px; }
-  .ilink { display: inline; }
-  .ilink :global(.icon) { margin-left: 5px; vertical-align: -1px; opacity: 0.7; }
-  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px 28px; }
+  .ev { display: grid; gap: 14px; align-content: start; min-width: 0; }
+  .cover { position: relative; padding: 0; border: 0; cursor: zoom-in; border-radius: 6px; overflow: hidden; background: var(--surface); }
+  .cover img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.3s; }
+  .cover:hover img { transform: scale(1.03); }
+  .count {
+    position: absolute; right: 10px; bottom: 10px; padding: 2px 9px; border-radius: 99px;
+    background: var(--bg); color: var(--ink); font-size: 0.8rem; font-weight: 700;
+  }
+  .meta { display: flex; gap: 10px; align-items: center; }
+  .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+  .kind { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--second); }
+  .ev h2 { font-size: 1.2rem; margin-top: 4px; line-height: 1.3; }
+  .where { color: var(--muted); font-size: 0.94rem; margin-top: 4px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .btn.small { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 6px 12px; display: inline-flex; align-items: center; gap: 6px; background: transparent; cursor: pointer; }
+  .btn.small.cta { background: var(--cta); color: var(--on-cta); }
+  @media (prefers-reduced-motion: reduce) { .cover img { transition: none; } }
+
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+  .lightbox::backdrop { background: rgb(0 0 0 / 0.86); }
+  .lightbox[open] { display: grid; place-items: center; }
+  .lightbox img { max-width: min(92vw, 1400px); max-height: 82vh; object-fit: contain; border-radius: 4px; }
+  .cap { position: fixed; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; text-align: center; color: #fff; font-size: 0.9rem; }
+  .lb-btn {
+    position: fixed; border: 0; cursor: pointer; color: #fff; background: rgb(255 255 255 / 0.12);
+    width: 44px; height: 44px; border-radius: 50%; font-size: 1.6rem; line-height: 1;
+  }
+  .lb-btn:hover { background: rgb(255 255 255 / 0.25); }
+  .lb-close { top: calc(16px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px)); }
+  .lb-prev { left: calc(16px + env(safe-area-inset-left, 0px)); top: 50%; transform: translateY(-50%); }
+  .lb-next { right: calc(16px + env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); }
 </style>
+
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('dialog.lightbox');
+  if (dlg) {
+    const img = dlg.querySelector('img')!;
+    const cap = dlg.querySelector<HTMLElement>('.cap')!;
+    let list: string[] = [];
+    let idx = 0;
+    const show = () => {
+      img.src = list[idx];
+      cap.textContent = list.length > 1 ? `${idx + 1} / ${list.length}` : '';
+      dlg.querySelector<HTMLElement>('.lb-prev')!.hidden = list.length < 2;
+      dlg.querySelector<HTMLElement>('.lb-next')!.hidden = list.length < 2;
+    };
+    document.querySelectorAll<HTMLElement>('[data-ev][data-i]').forEach((b) => {
+      b.addEventListener('click', () => {
+        const ev = b.closest('.ev');
+        list = JSON.parse(ev?.querySelector('.ev-photos')?.textContent || '[]');
+        if (!list.length) return;
+        idx = Number(b.dataset.i) || 0;
+        show();
+        dlg.showModal();
+      });
+    });
+    const step = (d: number) => { idx = (idx + d + list.length) % list.length; show(); };
+    dlg.querySelector('.lb-prev')!.addEventListener('click', () => step(-1));
+    dlg.querySelector('.lb-next')!.addEventListener('click', () => step(1));
+    dlg.querySelector('.lb-close')!.addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+  }
+</script>

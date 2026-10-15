@@ -26,11 +26,10 @@ const interests: string[] = tr(profile.interests, lang);
         <div class="meta">
           <span class="ilink"><Icon name="pin" />{profile.institution} · {tr(profile.location, lang)}</span>
         </div>
-        <ul class="plain hero-links">
-          {profile.links.map((l: any) => (
-            <li><a class="ilink" href={l.url} rel="me noopener"><Icon name={l.icon ?? 'web'} />{tr(l.label, lang)}</a></li>
-          ))}
-        </ul>
+        <div class="cta-row hero-cta">
+          <a class="btn cta" href={url(`/cv/${tr(profile.cv.files, lang)}`)} hreflang={lang}><Icon name="download" />{t.cvButton}</a>
+          <span class="upd">{t.cvUpdated} {tr(profile.cv.updated, lang)}</span>
+        </div>
       </div>
       <img class="portrait" src={url('/img/portrait.jpg')} alt={`${t.portrait} ${profile.name}`} width="560" height="560" />
     </div>
@@ -60,7 +59,7 @@ const interests: string[] = tr(profile.interests, lang);
             {interests.map((x) => <li>{x}</li>)}
           </ul>
         </div>
-        <a class="more" href={href('cv', lang)}>{t.fullCv}</a>
+        <a class="more" href={href('about', lang)}>{t.fullCv}</a>
       </div>
     </section>
 
@@ -86,7 +85,7 @@ const interests: string[] = tr(profile.interests, lang);
         <h2>{t.selected}</h2>
       </div>
       <div>
-        {selected.map((p) => <PubItem pub={p} lang={lang} />)}
+        {selected.map((p) => <PubItem pub={p} lang={lang} thumb={false} />)}
       </div>
       <a class="more" href={href('research', lang)}>{t.allPubs}</a>
     </section>
@@ -119,15 +118,7 @@ const interests: string[] = tr(profile.interests, lang);
   .tagline { font-size: var(--step-1); line-height: 1.45; margin-top: 18px; max-width: 36ch; }
   .tagline :global(b) { color: var(--accent); }
   .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 22px; color: var(--muted); font-size: 0.95rem; }
-  .hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-  .hero-links a {
-    font-size: 0.88rem; text-decoration: none; color: var(--ink);
-    padding: 5px 12px 5px 10px; border-radius: 99px;
-    background: color-mix(in srgb, var(--bg) 80%, transparent);
-    border: 1px solid var(--line);
-  }
-  .hero-links a :global(.icon) { color: var(--accent); }
-  .hero-links a:hover { border-color: var(--accent); }
+  .hero-cta { margin-top: 24px; }
   .portrait {
     width: 240px; aspect-ratio: 1; object-fit: cover; border-radius: 50%;
     border: 6px solid var(--bg); box-shadow: 0 0 0 1px var(--line);

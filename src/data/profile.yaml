@@ -19,21 +19,33 @@ location:
 
 # Frase principal de la portada.
 tagline:
-  en: "I study how **purpose-built visual attractions** (selfie parks, giant benches, oversized sculptures) reshape tourism and development in small towns."
-  es: "Estudio cómo los **atractivos visuales construidos a propósito** (parques selfie, bancas gigantes, esculturas monumentales) transforman el turismo y el desarrollo de los municipios pequeños."
+  en: "I study how **purpose-built visual attractions** (selfie parks, monumental sculptures and others) transform tourism and development."
+  es: "Estudio cómo los **atractivos visuales construidos a propósito** (parques selfie, esculturas monumentales, entre otros) transforman el turismo y el desarrollo."
 
 # Presentación de la portada: un párrafo por guion.
 bio:
   en:
     - "I am a Colombian economist and a PhD candidate in Regional Science and Economic Geography at the Gran Sasso Science Institute (GSSI) in L'Aquila, Italy, supervised by [Maria Giovanna Brandano](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/5387-brandano-maria-giovanna) and [Alessandra Faggian](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/2234-faggian-alessandra)."
     - "My doctoral research sits between cultural economics and tourism economics. More broadly, I am interested in debates on territorial development, public policy and the history of economic thought."
+    - "In my free time I play the Colombian tiple or the Venezuelan cuatro and sing bambucos, pasillos and other rhythms of Andean music."
   es:
     - "Soy economista colombiano y doctorando en Ciencia Regional y Geografía Económica en el Gran Sasso Science Institute (GSSI), en L'Aquila (Italia), bajo la dirección de [Maria Giovanna Brandano](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/5387-brandano-maria-giovanna) y [Alessandra Faggian](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/2234-faggian-alessandra)."
     - "Mi investigación doctoral se sitúa entre la economía de la cultura y la economía del turismo. De forma más amplia, me interesan las discusiones sobre desarrollo territorial, políticas públicas e historia del pensamiento económico."
+    - "En mi tiempo libre toco el tiple colombiano o el cuatro venezolano para cantar bambucos, pasillos y otros ritmos de la música andina."
 
+# Áreas de interés: las mismas que en tu perfil de Google Scholar.
 interests:
-  en: ["Cultural economics", "Tourism economics", "Territorial development", "Public policy", "History of economic thought"]
-  es: ["Economía de la cultura", "Economía del turismo", "Desarrollo territorial", "Políticas públicas", "Historia del pensamiento económico"]
+  en: ["History of Economic Thought", "Regional Development", "Economics Teaching", "Labor Economics", "Tourism"]
+  es: ["Historia del pensamiento económico", "Desarrollo regional", "Enseñanza de la economía", "Economía laboral", "Turismo"]
+
+# CV en PDF (archivos en public/cv/) y fecha de actualización que se muestra junto al botón.
+cv:
+  updated:
+    en: "October 2026"
+    es: "octubre de 2026"
+  files:
+    en: "castillo-reina-cv-en.pdf"
+    es: "castillo-reina-cv-es.pdf"
 
 education:
   - degree:

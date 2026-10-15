@@ -1,0 +1,115 @@
+# Página "About / Sobre mí": la información de la hoja de vida.
+# Los textos con dos idiomas usan en/es. El orden es de lo más reciente a lo más antiguo.
+
+intro:
+  en: "Economist and PhD candidate in Regional Science and Economic Geography at GSSI, with several years of experience in research, teaching, consulting and the design of science, technology and innovation (STI) policy in Colombian regions. Recognized as Junior Researcher by Colombia's Ministry of Science, Technology and Innovation."
+  es: "Economista y doctorando en Ciencia Regional y Geografía Económica en el GSSI, con varios años de experiencia en investigación, docencia, consultoría y diseño de políticas de ciencia, tecnología e innovación (CTeI) en las regiones de Colombia. Reconocido como Investigador Junior por el Ministerio de Ciencia, Tecnología e Innovación."
+
+education:
+  - years: "2025–"
+    degree: { en: "PhD in Regional Science and Economic Geography", es: "Doctorado en Ciencia Regional y Geografía Económica" }
+    place: { en: "Gran Sasso Science Institute (GSSI), L'Aquila, Italy", es: "Gran Sasso Science Institute (GSSI), L'Aquila, Italia" }
+    note: { en: "Cohort XLI. Supervisors: Maria Giovanna Brandano and Alessandra Faggian.", es: "Cohorte XLI. Directoras: Maria Giovanna Brandano y Alessandra Faggian." }
+  - years: "2021"
+    degree: { en: "Master's in Economics", es: "Maestría en Economía" }
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    note: { en: "Thesis with distinction: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*.", es: "Tesis meritoria: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*." }
+  - years: "2016"
+    degree: { en: "BA in Economics", es: "Economista" }
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    note: { en: "Teaching assistant in Macroeconomics, 2014–2016.", es: "Monitor del área de Macroeconomía, 2014–2016." }
+
+experience:
+  - years: "2023–2025"
+    role: { en: "Specialist in regional implementation of STI policy (contractor)", es: "Profesional en la implementación de políticas regionales de CTeI (contratista)" }
+    org: { en: "Ministry of Science, Technology and Innovation (MinCiencias), Bogotá", es: "Ministerio de Ciencia, Tecnología e Innovación (MinCiencias), Bogotá" }
+    note: { en: "Design and implementation of regional STI policy; support to departmental STI councils (CODECTI) and design of public funding calls.", es: "Diseño e implementación de la territorialización de la política de CTeI; acompañamiento a los Consejos Departamentales (CODECTI) y diseño de convocatorias." }
+  - years: "2023–2024"
+    role: { en: "Co-principal investigator", es: "Coinvestigador" }
+    org: { en: "Universidad de La Sabana, Chía", es: "Universidad de La Sabana, Chía" }
+    note: { en: "Project BPIN 2021000100459 on strengthening the STI ecosystem of Casanare, funded by the General System of Royalties.", es: "Proyecto BPIN 2021000100459 para el fortalecimiento del ecosistema de CTeI de Casanare, financiado por el Sistema General de Regalías." }
+  - years: "2023"
+    role: { en: "Specialist in regional implementation of STI policy (contractor)", es: "Especialista en la implementación de políticas regionales de CTeI (contratista)" }
+    org: { en: "Organization of Ibero-American States (OEI), Bogotá", es: "Organización de Estados Iberoamericanos (OEI), Bogotá" }
+  - years: "2021–2023"
+    role: { en: "Research director, Yopal campus", es: "Director de Investigación, sede Yopal" }
+    org: { en: "Fundación Universitaria de San Gil (UNISANGIL), Yopal", es: "Fundación Universitaria de San Gil (UNISANGIL), Yopal" }
+    note: { en: "Led the university's research policy. General coordinator of project BPIN 2020000100435 on water quality information systems in Casanare.", es: "Coordinación de la política de investigación. Coordinador general del proyecto BPIN 2020000100435 sobre sistemas de información de calidad del agua en Casanare." }
+  - years: "2022"
+    role: { en: "Regional STI policy advisor", es: "Especialista en política regional de CTeI" }
+    org: { en: "Organization of Ibero-American States (OEI), Yopal", es: "Organización de Estados Iberoamericanos (OEI), Yopal" }
+    note: { en: "STI policy guidelines for Arauca and Casanare, aligned with CONPES 4069.", es: "Lineamientos de política de CTeI para Arauca y Casanare, en línea con el CONPES 4069." }
+  - years: "2021–2022"
+    role: { en: "Project researcher", es: "Investigador" }
+    org: "CREPIB, Tunja"
+    note: { en: "Yellow pitahaya value chain in Miraflores, Boyacá. Funded by MinCiencias.", es: "Cadena productiva de la pitahaya amarilla en Miraflores, Boyacá. Financiado por MinCiencias." }
+  - years: "2020–2021"
+    role: { en: "Adjunct lecturer and project researcher", es: "Profesor catedrático e investigador" }
+    org: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    note: { en: "Taught Microeconomics and Economics to undergraduates. Research on knowledge transfer in tourist territories.", es: "Cursos de Microeconomía y Economía en pregrado. Investigación sobre transferencia de conocimiento en territorios turísticos." }
+  - years: "2019"
+    role: { en: "Project researcher", es: "Investigador" }
+    org: "CREPIB, Tunja"
+    note: { en: "Design of the STI public policy of the municipality of Tunja.", es: "Diseño de la Política Pública de CTeI del municipio de Tunja." }
+  - years: "2018–2019"
+    role: { en: "Early-career researcher", es: "Joven investigador" }
+    org: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    note: { en: "Projects on alternative markets and design thinking for tourism in Alto Ricaurte, Boyacá.", es: "Proyectos sobre mercado alternativo y design thinking para el turismo en el Alto Ricaurte, Boyacá." }
+  - years: "2016–2018"
+    role: { en: "Research assistant", es: "Asistente de investigación" }
+    org: "CREPIB, Tunja"
+    note: { en: "Regional Labour Market Observatory of Boyacá (ORMET), with the Ministry of Labour and UNDP.", es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET), con el Ministerio del Trabajo y el PNUD." }
+
+awards:
+  - year: "2025"
+    title: { en: "Full doctoral scholarship", es: "Beca doctoral completa" }
+    detail: { en: "Gran Sasso Science Institute, Italy", es: "Gran Sasso Science Institute, Italia" }
+  - year: "2024"
+    title: { en: "Junior Researcher recognition", es: "Reconocimiento como Investigador Junior" }
+    detail: { en: "MinCiencias, Call 957", es: "MinCiencias, Convocatoria 957" }
+  - year: "2018"
+    title: { en: "International Summer Gathering travel grant", es: "Beca de viaje, International Summer Gathering" }
+    detail: { en: "Rethinking Economics, France", es: "Rethinking Economics, Francia" }
+  - year: "2018"
+    title: { en: "Young Scholars Initiative travel grant", es: "Beca de viaje, Young Scholars Initiative" }
+    detail: "Institute for New Economic Thinking, Argentina"
+  - year: "2017"
+    title: "Youth Champion"
+    detail: { en: "International Labour Organization, Singapore", es: "Organización Internacional del Trabajo, Singapur" }
+  - year: "2017"
+    title: { en: "Master's scholarship (70%)", es: "Beca de maestría (70 %)" }
+    detail: "Universidad Pedagógica y Tecnológica de Colombia"
+  - year: "2015"
+    title: { en: "Young Scholars Initiative travel grant", es: "Beca de viaje, Young Scholars Initiative" }
+    detail: "Institute for New Economic Thinking, Chile"
+  - year: "2014"
+    title: { en: "Full scholarship for academic assistantship", es: "Beca completa por monitoría académica" }
+    detail: "Universidad Pedagógica y Tecnológica de Colombia"
+
+affiliations:
+  - since: "2015"
+    name: { en: "Latin American Society for the History of Economic Thought (ALAHPE)", es: "Asociación Latinoamericana de Historia del Pensamiento Económico (ALAHPE)" }
+    role: { en: "Member", es: "Integrante" }
+    url: "https://alahpe.org/en/"
+  - since: "2018"
+    name: "Rethinking Economics"
+    role: { en: "Member through ReDe and the Economics Student Council, UPTC", es: "Integrante a través de ReDe y del Consejo Estudiantil de Economía, UPTC" }
+    url: "https://www.rethinkeconomics.org"
+  - since: "2018"
+    name: "De América Soy"
+    role: { en: "Co-founder and member", es: "Cofundador e integrante" }
+    url: "https://deamericasoy.org"
+  - since: "2016"
+    name: "CREPIB, Boyacá"
+    role: { en: "Researcher", es: "Investigador" }
+    url: "https://www.crepib.org.co"
+
+skills:
+  - label: { en: "Data analysis", es: "Análisis de datos" }
+    value: "Stata, R (RStudio), Tableau"
+  - label: { en: "Qualitative analysis", es: "Análisis cualitativo" }
+    value: "MAXQDA"
+  - label: { en: "Public investment systems (Colombia)", es: "Sistemas de inversión pública (Colombia)" }
+    value: "MGA Web, GESPROY, SPGR, SECOP II"
+  - label: { en: "Languages", es: "Idiomas" }
+    value: { en: "Spanish (native), English (C1, IELTS Academic 7.0), Italian (beginner)", es: "Español (nativo), inglés (C1, IELTS Academic 7.0), italiano (básico)" }
