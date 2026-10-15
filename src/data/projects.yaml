@@ -4,7 +4,7 @@
 #        Si está vacío se muestra una miniatura generada con curvas de nivel.
 # image_alt: descripción breve de la imagen (en/es), para lectores de pantalla.
 # focus:  qué parte de la foto conservar al recortarla ("50% 50%" es el centro).
-# credit: pie de foto opcional, p. ej. el autor y la licencia si la foto no es tuya.
+# credit: pie de foto (lugar, año; y el autor y la licencia si la foto no es tuya).
 
 current:
   label:
@@ -44,6 +44,7 @@ lines:
     image: "territorial-development.jpg"
     image_alt: { en: "Workshop presentation with a regional puzzle", es: "Presentación en un taller con un rompecabezas regional" }
     focus: "50% 40%"
+    credit: { en: "Results presentation of «[ConCiencia Casanare](https://www.facebook.com/profile.php?id=61550824003820)» at UNISANGIL, Yopal.", es: "Socialización de resultados de «[ConCiencia Casanare](https://www.facebook.com/profile.php?id=61550824003820)» en UNISANGIL, Yopal." }
     title:
       en: "Territorial development"
       es: "Desarrollo territorial"
@@ -56,6 +57,7 @@ lines:
     image: "social-capital.jpg"
     image_alt: { en: "Meeting with members of a producer association", es: "Reunión con integrantes de una asociación de productores" }
     focus: "50% 50%"
+    credit: { en: "Workshop on the governance of the PITAFCOL association in Miraflores, Boyacá (2021).", es: "Taller sobre la gobernanza de la asociación PITAFCOL en Miraflores, Boyacá (2021)." }
     title:
       en: "Social capital in rural communities"
       es: "Capital social en comunidades rurales"
@@ -68,6 +70,7 @@ lines:
     image: "tourism-innovation.jpg"
     image_alt: { en: "Colonial-style house and stone fountain in Boyacá", es: "Casa de estilo colonial y fuente de piedra en Boyacá" }
     focus: "50% 62%"
+    credit: { en: "Villa de Leyva, Boyacá.", es: "Villa de Leyva, Boyacá." }
     title:
       en: "Tourism and innovation"
       es: "Turismo e innovación"
@@ -79,6 +82,7 @@ lines:
     period: "2018–"
     image: "economics-education.jpg"
     focus: "50% 50%"
+    credit: { en: "Rethinking Economics Gathering (Chaussy, France, 2018), where [De América Soy](https://deamericasoy.org) was born.", es: "Rethinking Economics Gathering (Chaussy, Francia, 2018). Allí nació [De América Soy](https://deamericasoy.org)." }
     image_alt: { en: "Group photo at an economics education gathering", es: "Foto grupal en un encuentro sobre enseñanza de la economía" }
     title:
       en: "Economics education"
