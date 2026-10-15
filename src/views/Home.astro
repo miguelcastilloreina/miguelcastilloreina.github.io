@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import Contours from '../components/Contours.astro';
+import PubItem from '../components/PubItem.astro';
+import LineThumb from '../components/LineThumb.astro';
+import Icon from '../components/Icon.astro';
+import { profile, projects, publications, inline, url, tr, type Lang } from '../lib/data';
+import { ui, href } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const selected = publications.filter((p) => p.selected);
+const cur = projects.current;
+const bio: string[] = tr(profile.bio, lang);
+const interests: string[] = tr(profile.interests, lang);
+---
+<Base lang={lang} route="home">
+  <div class="hero">
+    <Contours />
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="label">{tr(profile.position, lang)}</div>
+        <h1>{profile.name}</h1>
+        <p class="tagline" set:html={inline(tr(profile.tagline, lang))} />
+        <div class="meta">
+          <span class="ilink"><Icon name="pin" />{profile.institution} · {tr(profile.location, lang)}</span>
+        </div>
+        <ul class="plain hero-links">
+          {profile.links.map((l: any) => (
+            <li><a class="ilink" href={l.url} rel="me noopener"><Icon name={l.icon ?? 'web'} />{tr(l.label, lang)}</a></li>
+          ))}
+        </ul>
+      </div>
+      <img class="portrait" src={url('/img/portrait.jpg')} alt={`${t.portrait} ${profile.name}`} width="560" height="560" />
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="block about">
+      <aside class="facts">
+        <div>
+          <div class="label">{t.education}</div>
+          <ul class="plain edu">
+            {profile.education.map((e: any) => (
+              <li><span>{tr(e.degree, lang)}</span><small>{tr(e.place, lang)} · {e.years}</small></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div class="label">{t.languages}</div>
+          <p class="lang">{tr(profile.languages, lang)}</p>
+        </div>
+      </aside>
+      <div class="prose">
+        {bio.map((p) => <p set:html={inline(p)} />)}
+        <div>
+          <div class="label">{t.interests}</div>
+          <ul class="plain tags">
+            {interests.map((x) => <li>{x}</li>)}
+          </ul>
+        </div>
+        <a class="more" href={href('cv', lang)}>{t.fullCv}</a>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="block-head">
+        <div class="label">{t.currentLabel}</div>
+        <h2>{t.currentTitle}</h2>
+      </div>
+      <article class="feature">
+        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} class="feature-img" />
+        <div class="feature-text">
+          <span class="status">{tr(cur.label, lang)}</span>
+          <h3>{tr(cur.title, lang)}</h3>
+          <p set:html={inline(tr(cur.summary, lang))} />
+          <a class="more" href={href('projects', lang)}>{t.researchLines}</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="block">
+      <div class="block-head">
+        <div class="label">{t.researchLabel}</div>
+        <h2>{t.selected}</h2>
+      </div>
+      <div>
+        {selected.map((p) => <PubItem pub={p} lang={lang} />)}
+      </div>
+      <a class="more" href={href('research', lang)}>{t.allPubs}</a>
+    </section>
+
+    <section class="block">
+      <div class="block-head">
+        <div class="label">{t.newsLabel}</div>
+        <h2>{t.newsTitle}</h2>
+      </div>
+      <ul class="plain rows">
+        {profile.news.map((n: any) => (
+          <li><span class="when">{n.date}</span><span set:html={inline(tr(n.text, lang))} /></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 48px;
+    align-items: center;
+    padding-block: 80px 72px;
+  }
+  .hero h1 { font-size: var(--step-3); margin-top: 14px; }
+  .tagline { font-size: var(--step-1); line-height: 1.45; margin-top: 18px; max-width: 36ch; }
+  .tagline :global(b) { color: var(--accent); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 22px; color: var(--muted); font-size: 0.95rem; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .hero-links a {
+    font-size: 0.88rem; text-decoration: none; color: var(--ink);
+    padding: 5px 12px 5px 10px; border-radius: 99px;
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    border: 1px solid var(--line);
+  }
+  .hero-links a :global(.icon) { color: var(--accent); }
+  .hero-links a:hover { border-color: var(--accent); }
+  .portrait {
+    width: 240px; aspect-ratio: 1; object-fit: cover; border-radius: 50%;
+    border: 6px solid var(--bg); box-shadow: 0 0 0 1px var(--line);
+    justify-self: end;
+  }
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 48px; }
+    .portrait { width: 136px; justify-self: start; order: -1; }
+  }
+
+  .about { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+  .prose { max-width: 64ch; display: grid; gap: 1em; align-content: start; }
+  .prose .more { margin-top: 4px; justify-self: start; }
+  .facts { display: grid; gap: 24px; align-content: start; font-size: 0.94rem; }
+  .edu { display: grid; gap: 10px; margin-top: 8px; }
+  .edu li { display: grid; line-height: 1.4; }
+  .edu small { color: var(--muted); font-size: 0.85rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tags li { font-size: 0.85rem; padding: 3px 11px; border-radius: 99px; background: var(--surface); }
+  .lang { margin-top: 8px; }
+  @media (max-width: 760px) {
+    .about { grid-template-columns: 1fr; gap: 32px; }
+    .facts { order: 2; }
+  }
+
+  .feature {
+    display: grid; grid-template-columns: 260px minmax(0, 1fr); align-items: stretch;
+    background: var(--surface); border-radius: 6px; overflow: hidden;
+  }
+  .feature :global(.feature-img) { height: 100%; aspect-ratio: auto; border-radius: 0; min-height: 200px; }
+  .feature-text { padding: 28px 32px; max-width: 72ch; }
+  .feature .status { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--second); }
+  .feature h3 { font-size: 1.6rem; margin: 10px 0 12px; }
+  @media (max-width: 760px) {
+    .feature { grid-template-columns: 1fr; }
+    .feature :global(.feature-img) { min-height: 0; aspect-ratio: 16 / 7; height: auto; }
+    .feature-text { padding: 24px; }
+  }
+</style>

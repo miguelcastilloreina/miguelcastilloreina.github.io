@@ -1,51 +1,51 @@
-# Ponencias, premios y afiliaciones.
+# Ponencias, premios y afiliaciones. Los textos con dos idiomas usan en/es.
 
 # Ponencias y presentaciones. La sección aparece en cuanto añadas la primera.
 # Ejemplo:
-# - date: "2027-06"
+# - date: "06/2027"
 #   title: "Selfie parks and the image of small towns"
 #   event: "ERSA Congress"
-#   place: "City, Country"
+#   place: { en: "Athens, Greece", es: "Atenas, Grecia" }
 #   url: ""
 talks: []
 
 awards:
   - year: "2025"
-    title: "Full doctoral scholarship"
-    detail: "Gran Sasso Science Institute, Italy"
+    title: { en: "Full doctoral scholarship", es: "Beca doctoral completa" }
+    detail: { en: "Gran Sasso Science Institute, Italy", es: "Gran Sasso Science Institute, Italia" }
   - year: "2024"
-    title: "Junior Researcher recognition"
-    detail: "Ministry of Science, Technology and Innovation of Colombia (MinCiencias), Call 957"
+    title: { en: "Junior Researcher recognition", es: "Reconocimiento como Investigador Junior" }
+    detail: { en: "Ministry of Science, Technology and Innovation of Colombia (MinCiencias), Call 957", es: "Ministerio de Ciencia, Tecnología e Innovación (MinCiencias), Convocatoria 957" }
   - year: "2018"
-    title: "International Summer Gathering travel grant"
-    detail: "Rethinking Economics, France"
+    title: { en: "International Summer Gathering travel grant", es: "Beca de viaje, International Summer Gathering" }
+    detail: { en: "Rethinking Economics, France", es: "Rethinking Economics, Francia" }
   - year: "2018"
-    title: "Young Scholars Initiative travel grant"
-    detail: "Institute for New Economic Thinking, Argentina"
+    title: { en: "Young Scholars Initiative travel grant", es: "Beca de viaje, Young Scholars Initiative" }
+    detail: { en: "Institute for New Economic Thinking, Argentina", es: "Institute for New Economic Thinking, Argentina" }
   - year: "2017"
-    title: "Youth Champion"
-    detail: "International Labour Organization, Singapore"
+    title: { en: "Youth Champion", es: "Youth Champion" }
+    detail: { en: "International Labour Organization, Singapore", es: "Organización Internacional del Trabajo, Singapur" }
   - year: "2017"
-    title: "Master's scholarship (70%)"
+    title: { en: "Master's scholarship (70%)", es: "Beca de maestría (70 %)" }
     detail: "Universidad Pedagógica y Tecnológica de Colombia"
   - year: "2015"
-    title: "Young Scholars Initiative travel grant"
-    detail: "Institute for New Economic Thinking, Chile"
+    title: { en: "Young Scholars Initiative travel grant", es: "Beca de viaje, Young Scholars Initiative" }
+    detail: { en: "Institute for New Economic Thinking, Chile", es: "Institute for New Economic Thinking, Chile" }
 
 affiliations:
   - since: "2015"
-    name: "Latin American Society for the History of Economic Thought (ALAHPE)"
-    role: "Member"
+    name: { en: "Latin American Society for the History of Economic Thought (ALAHPE)", es: "Asociación Latinoamericana de Historia del Pensamiento Económico (ALAHPE)" }
+    role: { en: "Member", es: "Integrante" }
     url: "https://alahpe.org/en/"
   - since: "2018"
     name: "Rethinking Economics"
-    role: "Member through ReDe and the Economics Student Council, UPTC"
+    role: { en: "Member through ReDe and the Economics Student Council, UPTC", es: "Integrante a través de ReDe y del Consejo Estudiantil de Economía, UPTC" }
     url: "https://www.rethinkeconomics.org"
   - since: "2018"
     name: "De América Soy"
-    role: "Co-founder and member"
+    role: { en: "Co-founder and member", es: "Cofundador e integrante" }
     url: "https://deamericasoy.org"
   - since: "2016"
-    name: "CREPIB, Boyacá"
-    role: "Researcher"
+    name: { en: "CREPIB, Boyacá", es: "CREPIB, Boyacá" }
+    role: { en: "Researcher", es: "Investigador" }
     url: "https://www.crepib.org.co"

@@ -1,36 +1,45 @@
 ---
 import '../styles/global.css';
-import { profile, url } from '../lib/data';
+import Icon from '../components/Icon.astro';
+import { profile, url, tr, type Lang } from '../lib/data';
+import { ui, href, type Route } from '../lib/i18n';
 
 interface Props {
+  lang: Lang;
+  route?: Route;
   title?: string;
   description?: string;
 }
-const { title, description } = Astro.props;
-const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${profile.institution}`;
-const desc = description ?? `${profile.position}, ${profile.institution}. Research on visual tourist attractions and territorial development.`;
+const { lang, route, title, description } = Astro.props;
+const t = ui[lang];
+const other: Lang = lang === 'en' ? 'es' : 'en';
+const institution = profile.institution;
+const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${institution}`;
+const desc = description ?? t.metaDesc;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const path = Astro.url.pathname.replace(/\/$/, '') || '/';
-
-const nav = [
-  { href: '/research', label: 'Research' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/activity', label: 'Activity' },
-  { href: '/cv', label: 'CV' },
-];
-const isCurrent = (href: string) => path === url(href).replace(/\/$/, '');
+const navRoutes: Route[] = ['research', 'projects', 'activity', 'cv'];
+const switchHref = href(route ?? 'home', other);
+const address: string[] = tr(profile.address, lang);
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={desc} />
     <link rel="canonical" href={canonical} />
+    {route && (
+      <>
+        <link rel="alternate" hreflang="en" href={new URL(href(route, 'en'), Astro.site)} />
+        <link rel="alternate" hreflang="es" href={new URL(href(route, 'es'), Astro.site)} />
+        <link rel="alternate" hreflang="x-default" href={new URL(href(route, 'en'), Astro.site)} />
+      </>
+    )}
     <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
     <meta name="theme-color" content="#2c5e50" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_CO' : 'en_US'} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:url" content={canonical} />
@@ -38,18 +47,21 @@ const isCurrent = (href: string) => path === url(href).replace(/\/$/, '');
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">{t.skip}</a>
     <header class="bar">
       <div class="wrap">
-        <a class="brand" href={url('/')}>
+        <a class="brand" href={href('home', lang)}>
           <span class="disc" aria-hidden="true">{profile.initials}</span>
           <span>{profile.name}</span>
         </a>
-        <nav class="nav" aria-label="Main">
-          {nav.map((n) => (
-            <a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a>
+        <nav class="nav" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
+          {navRoutes.map((r) => (
+            <a href={href(r, lang)} aria-current={route === r ? 'page' : undefined}>{t.nav[r]}</a>
           ))}
         </nav>
+        <a class="lang-switch" href={switchHref} hreflang={other} lang={other} aria-label={t.otherLang}>
+          <Icon name="globe" size={14} />{t.otherLangShort}
+        </a>
       </div>
     </header>
 
@@ -60,15 +72,15 @@ const isCurrent = (href: string) => path === url(href).replace(/\/$/, '');
     <footer class="site-foot">
       <div class="wrap">
         <div>
-          <div class="label">Contact</div>
-          <a class="mail" href={`mailto:${profile.email}`}>{profile.email}</a>
-          <address>{profile.address.map((l: string, i: number) => (<>{l}{i < profile.address.length - 1 && <br />}</>))}</address>
+          <div class="label">{t.contact}</div>
+          <a class="mail" href={`mailto:${profile.email}`}><Icon name="mail" />{profile.email}</a>
+          <address>{address.map((l, i) => (<>{l}{i < address.length - 1 && <br />}</>))}</address>
         </div>
         <div>
-          <div class="label">Elsewhere</div>
+          <div class="label">{t.elsewhere}</div>
           <ul class="plain">
-            {profile.links.map((l: { label: string; url: string }) => (
-              <li><a href={l.url} rel="me noopener">{l.label}</a></li>
+            {profile.links.map((l: { label: string; url: string; icon?: string }) => (
+              <li><a href={l.url} rel="me noopener"><Icon name={l.icon ?? 'web'} />{tr(l.label, lang)}</a></li>
             ))}
           </ul>
         </div>

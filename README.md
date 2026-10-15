@@ -1,6 +1,9 @@
 # Sitio web · Miguel Ángel Castillo-Reina
 
-Sitio académico estático hecho con [Astro](https://astro.build). Se publica gratis en GitHub Pages.
+Sitio académico estático y bilingüe hecho con [Astro](https://astro.build). Se publica gratis en GitHub Pages.
+
+- Inglés: `https://miguelcastilloreina.github.io/`
+- Español: `https://miguelcastilloreina.github.io/es/`
 
 ## Dónde está cada cosa
 
@@ -12,13 +15,25 @@ Sitio académico estático hecho con [Astro](https://astro.build). Se publica gr
 | Ponencias, premios, afiliaciones | `src/data/activity.yaml` |
 | CV en PDF | `public/cv/castillo-reina-cv-en.pdf` y `public/cv/castillo-reina-cv-es.pdf` (reemplaza el archivo con el mismo nombre) |
 | Foto | `public/img/portrait.jpg` (cuadrada, 560 × 560 px o más) |
+| Miniaturas de publicaciones | imagen en `public/img/pubs/` + campo `image` en `publications.yaml` |
+| Fotos de proyectos y líneas | imagen en `public/img/projects/` + campo `image` en `projects.yaml` |
+| Textos fijos de la interfaz (menús, títulos de sección) | `src/lib/i18n.ts` |
 | Colores y tipografía | `src/styles/global.css`, al principio del archivo |
 
 Casi todo el mantenimiento es editar los cuatro archivos `.yaml`. Reglas básicas de YAML:
 
 - Respeta la sangría (dos espacios) y los guiones al inicio de cada entrada.
 - Pon los textos entre comillas dobles. Si el texto lleva comillas dobles dentro, usa comillas tipográficas (“ ”).
-- En los textos, `*así*` sale en cursiva y `**así**` sale resaltado.
+- En los textos, `*así*` sale en cursiva, `**así**` sale resaltado y `[texto](https://...)` crea un enlace.
+- Los textos que cambian según el idioma llevan dos versiones:
+
+```yaml
+title:
+  en: "Text in English"
+  es: "Texto en español"
+```
+
+Si un texto es igual en ambos idiomas (un nombre, un año), basta con escribirlo una vez. Si falta la versión en español, se muestra la inglesa.
 
 ### Añadir una publicación
 
@@ -29,9 +44,11 @@ Copia una entrada existente en `publications.yaml` y cambia los campos:
   year: 2027
   title: "Título del artículo"
   authors: ["Castillo-Reina, M.", "Brandano, M. G.", "Faggian, A."]
+  outlet: "Tourism Economics"  # nombre corto para la miniatura
   venue: "*Tourism Economics*, 33(2), 100–120"
   doi: "10.xxxx/xxxxx"   # opcional
-  status: "Forthcoming"  # opcional
+  status: { en: "Forthcoming", es: "En prensa" }  # opcional
+  image: "tourism-economics.jpg"  # opcional, en public/img/pubs/
   selected: true         # opcional: aparece en la portada
   line: visual           # opcional: la vincula a una línea de projects.yaml
 ```
@@ -40,9 +57,11 @@ Copia una entrada existente en `publications.yaml` y cambia los campos:
 
 En `activity.yaml`, cambia `talks: []` por una lista. La sección aparece sola en la página Activity.
 
-### Añadir el mapa de las Big Benches
+### Añadir fotos y miniaturas
 
-Exporta el mapa desde QGIS como PNG o JPG (unos 1600 px de ancho), guárdalo en `public/img/` y escribe el nombre del archivo en `projects.yaml` → `current.image`, con una descripción breve en `image_alt`.
+- **Proyectos:** guarda la foto o el mapa (JPG o PNG, unos 1200 px de ancho, horizontal 4:3) en `public/img/projects/` y escribe el nombre del archivo en el campo `image` de la línea correspondiente de `projects.yaml`. Para el mapa de las Big Benches, usa `current.image` y añade una descripción en `image_alt`.
+- **Publicaciones:** guarda la portada (vertical 3:4, unos 240 × 320 px) en `public/img/pubs/` y escribe el nombre en el campo `image` de la publicación. Si el campo está vacío, el sitio genera una miniatura con el nombre corto de `outlet`.
+- Usa imágenes propias o con permiso; para portadas de revistas, revisa las condiciones de cada editorial.
 
 ## Ver el sitio en tu Mac
 

@@ -1,38 +1,70 @@
-# Proyecto de tesis destacado y líneas de investigación.
+# Trabajo en curso y líneas de investigación.
+#
+# image: opcional. Foto propia o mapa guardado en public/img/projects/ (por ejemplo "big-benches-mapa.jpg").
+#        Si está vacío se muestra una miniatura generada con curvas de nivel.
+# image_alt: descripción breve de la imagen (en/es), para lectores de pantalla.
 
-# Trabajo en curso que aparece destacado en la portada y en Projects.
-# Si tienes un mapa (por ejemplo exportado de QGIS), guárdalo en public/img/
-# y escribe su nombre en `image`. Mientras esté vacío no se muestra imagen.
 current:
-  label: "Work in progress · Thesis paper 1"
-  title: "Big Benches: giant benches as territorial attractions in Italy and Europe"
-  summary: "A georeferenced dataset of the giant benches built across Italy and Europe, with year of construction, cost, accessibility and nearby services, as the basis for studying where these installations spread and how much demand they attract."
+  label:
+    en: "Work in progress · Thesis paper 1"
+    es: "En curso · Primer artículo de la tesis"
+  title:
+    en: "Big Benches: giant benches as territorial attractions in Italy and Europe"
+    es: "Big Benches: bancas gigantes como atractivos territoriales en Italia y Europa"
+  summary:
+    en: "A georeferenced dataset of the giant benches built across Italy and Europe, with year of construction, cost, accessibility and nearby services, as the basis for studying where these installations spread and how much demand they attract."
+    es: "Una base de datos georreferenciada de las bancas gigantes construidas en Italia y Europa, con año de construcción, costo, accesibilidad y servicios cercanos, como base para estudiar dónde se difunden estas instalaciones y cuánta demanda atraen."
   image: ""
-  image_alt: ""
+  image_alt: { en: "", es: "" }
 
-# Líneas de investigación. El `id` enlaza con el campo `line` de publications.yaml.
+# El `id` enlaza con el campo `line` de publications.yaml.
 lines:
   - id: visual
-    title: "Visual tourist attractions"
     period: "2025–"
-    text: "My doctoral research. Selfie parks, giant benches and oversized sculptures in Colombian and European municipalities: how they are built, who visits them and what they change locally. Comparative case studies, ethnography, netnography and spatial data."
+    image: ""
+    title:
+      en: "Visual tourist attractions"
+      es: "Atractivos turísticos visuales"
+    text:
+      en: "My doctoral research. Selfie parks, giant benches and oversized sculptures in Colombian and European municipalities: how they are built, who visits them and what they change locally. Comparative case studies, ethnography, netnography and spatial data."
+      es: "Mi investigación doctoral. Parques selfie, bancas gigantes y esculturas monumentales en municipios de Colombia y Europa: cómo se construyen, quién los visita y qué cambian en lo local. Estudios de caso comparados, etnografía, netnografía y datos espaciales."
 
   - id: territorial
-    title: "Territorial development"
     period: "2019–"
-    text: "Latin American thinking on territory and development, with a focus on Sergio Boisier, and the economic situation of Boyacá."
+    image: ""
+    title:
+      en: "Territorial development"
+      es: "Desarrollo territorial"
+    text:
+      en: "Latin American thinking on territory and development, with a focus on Sergio Boisier, and the economic situation of Boyacá."
+      es: "El pensamiento latinoamericano sobre territorio y desarrollo, con énfasis en Sergio Boisier, y la situación económica de Boyacá."
 
   - id: social-capital
-    title: "Social capital in rural communities"
     period: "2019–"
-    text: "How trust and cooperation shape development in small Andean municipalities and producer organisations."
+    image: ""
+    title:
+      en: "Social capital in rural communities"
+      es: "Capital social en comunidades rurales"
+    text:
+      en: "How trust and cooperation shape development in small Andean municipalities and producer organisations."
+      es: "Cómo la confianza y la cooperación moldean el desarrollo en municipios andinos pequeños y en organizaciones de productores."
 
   - id: tourism
-    title: "Tourism and innovation"
     period: "2018–"
-    text: "Community-based tourism, value added and co-creation of experiences in rural Boyacá."
+    image: ""
+    title:
+      en: "Tourism and innovation"
+      es: "Turismo e innovación"
+    text:
+      en: "Community-based tourism, value added and co-creation of experiences in rural Boyacá."
+      es: "Turismo comunitario, valor agregado y cocreación de experiencias en la Boyacá rural."
 
   - id: teaching
-    title: "Economics education"
     period: "2018–"
-    text: "How economics is taught in Latin America and what that teaching does to the profession and to policy."
+    image: ""
+    title:
+      en: "Economics education"
+      es: "Enseñanza de la economía"
+    text:
+      en: "How economics is taught in Latin America and what that teaching does to the profession and to policy."
+      es: "Cómo se enseña la economía en América Latina y qué efectos tiene esa enseñanza en la profesión y en las políticas públicas."

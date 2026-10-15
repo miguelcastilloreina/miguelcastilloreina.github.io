@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { activity, tr, type Lang } from '../lib/data';
+import { ui } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const talks = activity.talks ?? [];
+---
+<Base lang={lang} route="activity" title={t.nav.activity} description={t.activity.metaDesc}>
+  <div class="page-head">
+    <div class="wrap">
+      <div class="label">{t.activity.label}</div>
+      <h1>{talks.length ? t.activity.titleWithTalks : t.activity.title}</h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    {talks.length > 0 && (
+      <section class="block">
+        <div class="block-head"><div class="label">{t.activity.talks}</div><h2>{t.activity.presentations}</h2></div>
+        <ul class="plain rows">
+          {talks.map((x: any) => (
+            <li>
+              <span class="when">{x.date}</span>
+              <span>
+                {x.url ? <a class="ilink" href={x.url}>{tr(x.title, lang)}<Icon name="external" size={13} /></a> : tr(x.title, lang)}
+                <small>{tr(x.event, lang)}{x.place && ` · ${tr(x.place, lang)}`}</small>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="block two">
+      <div>
+        <h2>{t.activity.awards}</h2>
+        <ul class="plain rows">
+          {activity.awards.map((a: any) => (
+            <li><span class="when">{a.year}</span><span>{tr(a.title, lang)}<small>{tr(a.detail, lang)}</small></span></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>{t.activity.affiliations}</h2>
+        <ul class="plain rows">
+          {activity.affiliations.map((a: any) => (
+            <li>
+              <span class="when">{a.since}–</span>
+              <span>
+                {a.url ? <a class="ilink" href={a.url}>{tr(a.name, lang)}<Icon name="external" size={13} /></a> : tr(a.name, lang)}
+                <small>{tr(a.role, lang)}</small>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+  .two h2 { font-size: 1.5rem; margin-bottom: 14px; }
+  .ilink { display: inline; }
+  .ilink :global(.icon) { margin-left: 5px; vertical-align: -1px; opacity: 0.7; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,42 @@
+---
+// Miniatura de una publicación: la imagen indicada en publications.yaml
+// o, si no hay, una "portada" tipográfica con el nombre de la revista o editorial.
+import type { Publication, Lang } from '../lib/data';
+import { url } from '../lib/data';
+import { ui } from '../lib/i18n';
+
+interface Props { pub: Publication; lang: Lang }
+const { pub, lang } = Astro.props;
+const typeLabel = ui[lang].types[pub.type];
+---
+{pub.image ? (
+  <img class="pthumb img" src={url(`/img/pubs/${pub.image}`)} alt="" loading="lazy" width="112" height="148" />
+) : (
+  <div class={`pthumb gen t-${pub.type}`} aria-hidden="true">
+    <span class="k">{typeLabel}</span>
+    <span class="o">{pub.outlet ?? ''}</span>
+    <span class="rule"></span>
+  </div>
+)}
+
+<style>
+  .pthumb { width: 60px; aspect-ratio: 3 / 4; border-radius: 3px; flex: none; }
+  .pthumb.img { object-fit: cover; box-shadow: 0 0 0 1px var(--line); }
+  .gen {
+    --tone: var(--accent);
+    display: flex; flex-direction: column; gap: 4px;
+    padding: 6px 5px 7px;
+    background: color-mix(in srgb, var(--tone) 12%, var(--bg));
+    border-top: 3px solid var(--tone);
+    overflow: hidden;
+  }
+  .t-working { --tone: var(--second); }
+  .t-chapter, .t-book { --tone: color-mix(in srgb, var(--accent) 55%, var(--second)); }
+  .t-policy { --tone: var(--muted); }
+  .k { white-space: nowrap; overflow: hidden; font-size: 0.5rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tone); line-height: 1.1; }
+  .o {
+    font-family: var(--font-head); font-weight: 700; font-size: 0.58rem; line-height: 1.15;
+    color: var(--ink); letter-spacing: -0.015em; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: normal;
+  }
+  .rule { margin-top: auto; height: 1px; background: color-mix(in srgb, var(--tone) 45%, transparent); box-shadow: 0 -4px 0 color-mix(in srgb, var(--tone) 25%, transparent); }
+</style>

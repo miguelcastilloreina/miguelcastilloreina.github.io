@@ -1,13 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
-import { url } from '../lib/data';
+import { href } from '../lib/i18n';
 ---
-<Base title="Page not found">
+<Base lang="en" title="Page not found">
   <div class="page-head">
     <div class="wrap">
       <div class="label">404</div>
-      <h1>Page not found</h1>
-      <p>The page may have moved. <a href={url('/')}>Go to the home page</a> or <a href={url('/research')}>see all publications</a>.</p>
+      <h1>Page not found · Página no encontrada</h1>
+      <p>The page may have moved. <a href={href('home', 'en')}>Go to the home page</a> or <a href={href('research', 'en')}>see all publications</a>.</p>
+      <p lang="es">Es posible que la página haya cambiado de dirección. <a href={href('home', 'es')}>Ir a la portada en español</a>.</p>
     </div>
   </div>
 </Base>
