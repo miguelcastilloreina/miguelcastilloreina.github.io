@@ -119,10 +119,10 @@ skills:
 music:
   text:
     en:
-      - "I play the Colombian tiple and the Venezuelan cuatro, and sing bambucos, pasillos and other rhythms of Andean music with my family's group, Manantial, from Gachantivá (Boyacá)."
+      - "I play the Colombian tiple and the Venezuelan cuatro to sing bambucos, pasillos, torbellinos, joropos and other traditional rhythms with my family group «Manantial», from Gachantivá (Boyacá)."
       - "I am also passionate about Colombian coffee."
     es:
-      - "Toco el tiple colombiano y el cuatro venezolano, y canto bambucos, pasillos y otros ritmos de la música andina con la agrupación familiar Manantial, de Gachantivá (Boyacá)."
+      - "Toco el tiple colombiano y el cuatro venezolano para cantar bambucos, pasillos, torbellinos, joropos y otros ritmos tradicionales con la agrupación familiar «Manantial», de Gachantivá (Boyacá)."
       - "También soy un apasionado del café colombiano."
   photo: "manantial-gachantiva.jpg"
   photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
