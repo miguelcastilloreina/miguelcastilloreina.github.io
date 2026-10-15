@@ -59,7 +59,7 @@ const interests: string[] = tr(profile.interests, lang);
             {interests.map((x) => <li>{x}</li>)}
           </ul>
         </div>
-        <a class="more" href={href('about', lang)}>{t.fullCv}</a>
+        <a class="btn outline about-btn" href={href('about', lang)}>{t.fullCv}<Icon name="arrow" size={15} /></a>
       </div>
     </section>
 
@@ -85,7 +85,7 @@ const interests: string[] = tr(profile.interests, lang);
         <h2>{t.selected}</h2>
       </div>
       <div>
-        {selected.map((p) => <PubItem pub={p} lang={lang} thumb={false} />)}
+        {selected.map((p) => <PubItem pub={p} lang={lang} thumb={false} abstract={false} />)}
       </div>
       <a class="more" href={href('research', lang)}>{t.allPubs}</a>
     </section>
@@ -131,7 +131,7 @@ const interests: string[] = tr(profile.interests, lang);
 
   .about { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
   .prose { max-width: 64ch; display: grid; gap: 1em; align-content: start; }
-  .prose .more { margin-top: 4px; justify-self: start; }
+  .prose .about-btn { margin-top: 6px; justify-self: start; }
   .facts { display: grid; gap: 24px; align-content: start; font-size: 0.94rem; }
   .edu { display: grid; gap: 10px; margin-top: 8px; }
   .edu li { display: grid; line-height: 1.4; }

@@ -1,11 +1,16 @@
 ---
 import type { Publication, Lang } from '../lib/data';
 import { inline, authorsHtml, tr, pubId } from '../lib/data';
+import { ui } from '../lib/i18n';
 import PubThumb from './PubThumb.astro';
 import Icon from './Icon.astro';
 
-interface Props { pub: Publication; lang: Lang; thumb?: boolean }
-const { pub, lang, thumb = true } = Astro.props;
+interface Props { pub: Publication; lang: Lang; thumb?: boolean; abstract?: boolean }
+const { pub, lang, thumb = true, abstract = true } = Astro.props;
+// Resumen en el idioma de la página; si no existe, el que haya.
+const absLang: Lang | undefined = pub.abstract?.[lang] ? lang : pub.abstract?.en ? 'en' : pub.abstract?.es ? 'es' : undefined;
+const absText = absLang ? pub.abstract![absLang]! : '';
+const absLabel = absLang === lang ? ui[lang].abstract : ui[lang].abstractIn;
 const status = tr(pub.status, lang);
 const urlLabel = tr(pub.url_label, lang) ?? 'Link';
 ---
@@ -24,6 +29,14 @@ const urlLabel = tr(pub.url_label, lang) ?? 'Link';
         {pub.doi && <a href={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} />DOI {pub.doi}</a>}
         {pub.url && <a href={pub.url}><Icon name="external" size={14} />{urlLabel}</a>}
       </div>
+    )}
+    {abstract && absLang && (
+      <details class="abs">
+        <summary>{absLabel}</summary>
+        <div class="abs-text" lang={absLang}>
+          {absText.split('\n').map((para) => <p set:html={inline(para)} />)}
+        </div>
+      </details>
     )}
   </div>
 </article>

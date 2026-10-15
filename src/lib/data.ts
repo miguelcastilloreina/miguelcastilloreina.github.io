@@ -21,6 +21,7 @@ export interface Publication {
   url_label?: Text;
   status?: Text;
   image?: string;
+  abstract?: { en?: string; es?: string };
   selected?: boolean;
   line?: string;
 }
@@ -71,5 +72,5 @@ export function pubId(p: Publication) {
   const words = p.title
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean).slice(0, 4);
-  return `${p.year}-${words.join('-')}`;
+  return `pub-${p.year}-${words.join("-")}`;
 }
