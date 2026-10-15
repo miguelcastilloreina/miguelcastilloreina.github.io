@@ -62,6 +62,9 @@ export const ui = {
       title: 'Research lines',
       intro: 'My doctoral project on visual tourist attractions, and the questions on territory and development I keep coming back to.',
       related: 'Related publications',
+      since: 'Since',
+      pubOne: 'publication',
+      pubMany: 'publications',
       metaDesc: 'Doctoral research and research lines of Miguel Ángel Castillo-Reina.',
     },
     activity: {
@@ -147,6 +150,9 @@ export const ui = {
       title: 'Líneas de investigación',
       intro: 'Mi proyecto doctoral sobre atractivos turísticos visuales y las preguntas sobre territorio y desarrollo a las que siempre vuelvo.',
       related: 'Publicaciones relacionadas',
+      since: 'Desde',
+      pubOne: 'publicación',
+      pubMany: 'publicaciones',
       metaDesc: 'Investigación doctoral y líneas de investigación de Miguel Ángel Castillo-Reina.',
     },
     activity: {

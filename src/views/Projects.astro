@@ -56,7 +56,10 @@ const lines = projects.lines.map((l: any) => ({
               {l.credit && <figcaption set:html={inline(tr(l.credit, lang))} />}
             </figure>
             <div class="body">
-              <div class="when">{l.period}</div>
+              <div class="meta-line">
+                <span class="since"><Icon name="calendar" size={13} />{t.projects.since} {String(l.period).replace(/[–-]\s*$/, '')}</span>
+                {l.pubs.length > 0 && <span class="count">{l.pubs.length} {l.pubs.length === 1 ? t.projects.pubOne : t.projects.pubMany}</span>}
+              </div>
               <h3>{tr(l.title, lang)}{l.status && <span class="badge">{tr(l.status, lang)}</span>}</h3>
               <p set:html={inline(tr(l.text, lang))} />
               {l.pubs.length > 0 && (
@@ -65,7 +68,7 @@ const lines = projects.lines.map((l: any) => ({
                   <ul class="plain">
                     {l.pubs.map((p: any) => (
                       <li>
-                        <a href={`${href('research', lang)}#${pubId(p)}`} class="rel-title" set:html={`<span class="mono">${p.year}</span> ${inline(p.title)}`} />
+                        <a href={`${href('research', lang)}#${pubId(p)}`} class="rel-title"><span class="yr-box">{p.year}</span><span set:html={inline(p.title)} /></a>
                       </li>
                     ))}
                   </ul>
@@ -96,15 +99,22 @@ const lines = projects.lines.map((l: any) => ({
   .lines > li:first-child { border-top: 0; padding-top: 0; }
   .lfig { margin: 0; min-width: 0; }
   .lfig figcaption { font-size: 0.72rem; line-height: 1.35; color: var(--muted); margin-top: 6px; font-style: italic; }
-  .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+  .meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 0.8rem; color: var(--muted); }
+  .since { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; letter-spacing: 0.04em; color: var(--second); }
+  .count { position: relative; padding-left: 14px; }
+  .count::before { content: ''; position: absolute; left: 0; top: 50%; width: 4px; height: 4px; border-radius: 50%; background: var(--line); transform: translateY(-50%); }
   .body h3 { font-size: 1.35rem; margin: 4px 0 8px; }
   .body p { max-width: 64ch; }
   .related { margin-top: 16px; }
   .related ul { display: grid; gap: 10px; margin-top: 8px; }
-  .related li { padding-left: 14px; border-left: 2px solid var(--line); }
-  .rel-title { font-size: 0.92rem; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .related li { padding: 0; border: 0; }
+  .rel-title { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: baseline; font-size: 0.92rem; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .yr-box {
+    font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; font-variant-numeric: tabular-nums;
+    padding: 1px 7px; border-radius: 3px; color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
   .rel-title:hover { color: var(--accent); }
-  .rel-title :global(.mono) { color: var(--muted); font-size: 0.8rem; margin-right: 4px; }
   @media (max-width: 640px) {
     .lines > li { grid-template-columns: 1fr; gap: 14px; }
     .lfig :global(.lthumb) { aspect-ratio: 16 / 9; }
