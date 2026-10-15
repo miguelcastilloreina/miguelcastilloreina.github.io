@@ -1,0 +1,91 @@
+---
+import Base from '../layouts/Base.astro';
+import LineThumb from '../components/LineThumb.astro';
+import { projects, publications, inline, tr, pubId, type Lang } from '../lib/data';
+import { ui, href } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const cur = projects.current;
+const lines = projects.lines.map((l: any) => ({
+  ...l,
+  pubs: publications.filter((p) => p.line === l.id),
+}));
+---
+<Base lang={lang} route="projects" title={t.nav.projects} description={t.projects.metaDesc}>
+  <div class="page-head">
+    <div class="wrap">
+      <div class="label">{t.projects.label}</div>
+      <h1>{t.projects.title}</h1>
+      <p>{t.projects.intro}</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="block">
+      <article class="current">
+        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} />
+        <div>
+          <span class="status">{tr(cur.label, lang)}</span>
+          <h2>{tr(cur.title, lang)}</h2>
+          <p set:html={inline(tr(cur.summary, lang))} />
+        </div>
+      </article>
+    </section>
+
+    <section class="block">
+      <ul class="plain lines">
+        {lines.map((l: any) => (
+          <li id={l.id}>
+            <LineThumb seed={l.id} image={l.image} alt={tr(l.title, lang)} />
+            <div class="body">
+              <div class="when">{l.period}</div>
+              <h3>{tr(l.title, lang)}</h3>
+              <p set:html={inline(tr(l.text, lang))} />
+              {l.pubs.length > 0 && (
+                <div class="related">
+                  <div class="label">{t.projects.related}</div>
+                  <ul class="plain">
+                    {l.pubs.map((p: any) => (
+                      <li>
+                        <a href={`${href('research', lang)}#${pubId(p)}`} class="rel-title" set:html={`<span class="mono">${p.year}</span> ${inline(p.title)}`} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .current { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 36px; align-items: center; }
+  .current .status { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--second); }
+  .current h2 { font-size: var(--step-2); margin: 10px 0 14px; max-width: 24ch; }
+  .current p { max-width: 64ch; }
+  @media (max-width: 760px) { .current { grid-template-columns: 1fr; gap: 20px; } }
+
+  .lines > li {
+    display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 28px;
+    padding: 28px 0; border-top: 1px solid var(--line);
+  }
+  .lines > li:first-child { border-top: 0; padding-top: 0; }
+  .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+  .body h3 { font-size: 1.35rem; margin: 4px 0 8px; }
+  .body p { max-width: 64ch; }
+  .related { margin-top: 16px; }
+  .related ul { display: grid; gap: 10px; margin-top: 8px; }
+  .related li { padding-left: 14px; border-left: 2px solid var(--line); }
+  .rel-title { font-size: 0.92rem; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .rel-title:hover { color: var(--accent); }
+  .rel-title :global(.mono) { color: var(--muted); font-size: 0.8rem; margin-right: 4px; }
+  @media (max-width: 640px) {
+    .lines > li { grid-template-columns: 1fr; gap: 14px; }
+    .lines > li > :global(.lthumb) { aspect-ratio: 16 / 7; }
+  }
+</style>

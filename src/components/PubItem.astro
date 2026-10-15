@@ -1,23 +1,28 @@
 ---
-import type { Publication } from '../lib/data';
-import { inline, authorsHtml } from '../lib/data';
+import type { Publication, Lang } from '../lib/data';
+import { inline, authorsHtml, tr, pubId } from '../lib/data';
+import PubThumb from './PubThumb.astro';
+import Icon from './Icon.astro';
 
-interface Props { pub: Publication }
-const { pub } = Astro.props;
+interface Props { pub: Publication; lang: Lang }
+const { pub, lang } = Astro.props;
+const status = tr(pub.status, lang);
+const urlLabel = tr(pub.url_label, lang) ?? 'Link';
 ---
-<article class="pub" data-type={pub.type}>
+<article class="pub" id={pubId(pub)} data-type={pub.type}>
   <div class="yr">{pub.year}</div>
-  <div>
+  <PubThumb pub={pub} lang={lang} />
+  <div class="pub-body">
     <div class="t">
       <Fragment set:html={inline(pub.title)} />
-      {pub.status && <span class="badge">{pub.status}</span>}
+      {status && <span class="badge">{status}</span>}
     </div>
     {pub.authors.length > 0 && <div class="au" set:html={authorsHtml(pub.authors)} />}
-    <div class="v" set:html={inline(pub.venue)} />
+    <div class="v" set:html={inline(tr(pub.venue, lang))} />
     {(pub.doi || pub.url) && (
       <div class="links">
-        {pub.doi && <a href={`https://doi.org/${pub.doi}`}>doi:{pub.doi}</a>}
-        {pub.url && <a href={pub.url}>{pub.url_label ?? 'Link'} ↗</a>}
+        {pub.doi && <a href={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} />DOI {pub.doi}</a>}
+        {pub.url && <a href={pub.url}><Icon name="external" size={14} />{urlLabel}</a>}
       </div>
     )}
   </div>

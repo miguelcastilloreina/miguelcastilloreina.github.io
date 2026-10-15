@@ -1,17 +1,27 @@
 # Publicaciones. Cada entrada empieza con un guion.
 #
-# type: article | working | chapter | book | policy
-# status: texto opcional que aparece como etiqueta (por ejemplo "Submitted", "R&R", "Forthcoming")
-# selected: true  -> aparece en la portada
-# line: línea de investigación a la que pertenece (ver projects.yaml)
-# Para cursiva usa *asteriscos*. Tu nombre se resalta solo.
+# type:     article | working | chapter | book | policy
+# outlet:   nombre corto que aparece en la miniatura (revista, editorial…)
+# image:    opcional. Portada o imagen propia guardada en public/img/pubs/ (por ejemplo "acta-agronomica.jpg").
+#           Si está vacío se genera una miniatura con el nombre de la revista.
+# status:   etiqueta opcional ("Submitted", "R&R", "Forthcoming"…), con versión en/es
+# selected: true -> aparece en la portada
+# line:     línea de investigación a la que pertenece (ver projects.yaml)
+#
+# Los títulos van en su idioma original. `venue` puede ser un texto único o tener versión en/es.
+# Formato: *cursiva*. Tu nombre se resalta solo.
 
 - type: working
   year: 2026
   title: "The territory and the development: 40 years of Sergio Boisier's thinking"
   authors: ["Castillo-Reina, M.", "Niño-Amézquita, J."]
-  venue: "Submitted to the *Journal of the History of Economic Thought*"
-  status: "Submitted"
+  outlet: "JHET"
+  venue:
+    en: "Submitted to the *Journal of the History of Economic Thought*"
+    es: "Enviado al *Journal of the History of Economic Thought*"
+  status:
+    en: "Submitted"
+    es: "En evaluación"
   selected: true
   line: territorial
 
@@ -19,6 +29,7 @@
   year: 2023
   title: "Yellow pitahaya (*Selenicereus megalanthus*) in Miraflores, Boyacá, Colombia: a social capital approach in a producer organisation"
   authors: ["Castillo-Reina, M.", "Pérez, N.", "Ruiz, I."]
+  outlet: "Acta Agronómica"
   venue: "*Acta Agronómica*, 71(4)"
   doi: "10.15446/acag.v71n4.100152"
   selected: true
@@ -28,6 +39,7 @@
   year: 2021
   title: "Tourist sector innovation: an approach to the services and the co-creation of experiences"
   authors: ["Castillo-Reina, M.", "Cruz-Vásquez, J."]
+  outlet: "Turismo y Sociedad"
   venue: "*Turismo y Sociedad*, 30, 25–49"
   doi: "10.18601/01207555.n30.02"
   selected: true
@@ -37,6 +49,7 @@
   year: 2021
   title: "Alternativas y potencialidades de valor agregado en iniciativas turísticas de tipo comunitario: lecciones a partir del caso de la subprovincia del Alto Ricaurte (Boyacá)"
   authors: ["Dueñas, D.", "Vianchá, Z.", "Fraile, A.", "Castillo-Reina, M.", "et al."]
+  outlet: "Editorial UPTC"
   venue: "Editorial UPTC"
   doi: "10.19053/9789586605380"
   line: tourism
@@ -45,41 +58,56 @@
   year: 2023
   title: "¿Quiénes tienen el poder? La formación y la tecnocracia de economistas colombianos"
   authors: ["Castillo-Reina, M.", "Pico, C."]
-  venue: "In I. Silva Neira & A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
+  outlet: "Rethinking Economics"
+  venue:
+    en: "In I. Silva Neira & A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
+    es: "En I. Silva Neira y A. Lambertini (Eds.), *Economía en crisis: la enseñanza de la economía en Latinoamérica y los límites de la teoría ortodoxa* (pp. 54–91). Rethinking Economics"
   url: "https://bit.ly/DAS_EconCrisis"
-  url_label: "Book"
+  url_label: { en: "Book", es: "Libro" }
   line: teaching
 
 - type: chapter
   year: 2020
   title: "Boyacá: a la penumbra de las oportunidades"
   authors: ["Castillo-Reina, M.", "Tobasura, E."]
-  venue: "In H. E. González & Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
+  outlet: "U. Antonio Nariño"
+  venue:
+    en: "In H. E. González & Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
+    es: "En H. E. González y Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
   line: territorial
 
 - type: chapter
   year: 2019
   title: "La enseñanza de la economía: política, ideología y mercado"
   authors: ["Corredor, F.", "Castillo-Reina, M."]
-  venue: "In J. I. González & M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
+  outlet: "U. Externado"
+  venue:
+    en: "In J. I. González & M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
+    es: "En J. I. González y M. Pérez (Eds.), *Mercados y bienestar: ensayos en memoria de Homero Cuevas* (pp. 81–118). Universidad Externado de Colombia"
   url: "https://bdigital.uexternado.edu.co/handle/001/2873"
-  url_label: "Repository"
+  url_label: { en: "Repository", es: "Repositorio" }
   line: teaching
 
 - type: working
   year: 2021
   title: "Puentes y escaleras como caminos: el «desarrollo» y el capital social en el municipio de Gachantivá, Boyacá, 2020"
   authors: ["Castillo-Reina, M."]
-  venue: "Master's thesis, Universidad Pedagógica y Tecnológica de Colombia (with distinction)"
+  outlet: "UPTC"
+  venue:
+    en: "Master's thesis, Universidad Pedagógica y Tecnológica de Colombia (with distinction)"
+    es: "Tesis de maestría, Universidad Pedagógica y Tecnológica de Colombia (meritoria)"
   url: "https://repositorio.uptc.edu.co//handle/001/9660"
-  url_label: "Repository"
+  url_label: { en: "Repository", es: "Repositorio" }
   line: social-capital
 
 - type: working
   year: 2020
   title: "Efectos y escenarios de recuperación económica frente a la pandemia COVID-19 en Boyacá"
   authors: ["Ochoa, C.", "Suárez, L.", "Suárez, H.", "Ramírez, E.", "Valderrama, A.", "Castillo-Reina, M.", "Castro, H.", "Matallana, O."]
-  venue: "SSRN working paper"
+  outlet: "SSRN"
+  venue:
+    en: "SSRN working paper"
+    es: "Documento de trabajo, SSRN"
   doi: "10.2139/ssrn.3664379"
   line: territorial
 
@@ -87,26 +115,38 @@
   year: 2021
   title: "Política Pública de Ciencia, Tecnología e Innovación del municipio de Tunja 2021–2030"
   authors: []
-  venue: "Adopted by Acuerdo Municipal No. 016 de 2021"
+  outlet: "Tunja"
+  venue:
+    en: "Adopted by Acuerdo Municipal No. 016 de 2021"
+    es: "Adoptada mediante el Acuerdo Municipal No. 016 de 2021"
 
 - type: policy
   year: 2018
   title: "Entre las oportunidades y el progreso: la educación superior como camino a la competitividad departamental"
   authors: ["Vargas, E.", "Oicatá, R.", "Castillo-Reina, M."]
-  venue: "Regional Labour Market Observatory of Boyacá (ORMET)"
+  outlet: "ORMET Boyacá"
+  venue:
+    en: "Regional Labour Market Observatory of Boyacá (ORMET)"
+    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
   url: "http://bit.ly/EstudioORMET2018"
-  url_label: "Report"
+  url_label: { en: "Report", es: "Informe" }
 
 - type: policy
   year: 2018
   title: "Política Pública de Trabajo Decente para el departamento de Boyacá, 2017–2032"
   authors: []
-  venue: "Adopted by Ordenanza No. 026 de 2017"
+  outlet: "Boyacá"
+  venue:
+    en: "Adopted by Ordenanza No. 026 de 2017"
+    es: "Adoptada mediante la Ordenanza No. 026 de 2017"
 
 - type: policy
   year: 2017
   title: "Determinación del estado actual del mercado laboral en el departamento de Boyacá"
   authors: ["Pérez, N.", "Rodríguez, R.", "Palacios, M.", "Castillo-Reina, M."]
-  venue: "Regional Labour Market Observatory of Boyacá (ORMET)"
+  outlet: "ORMET Boyacá"
+  venue:
+    en: "Regional Labour Market Observatory of Boyacá (ORMET)"
+    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
   url: "http://bit.ly/EstudioORMET2017"
-  url_label: "Report"
+  url_label: { en: "Report", es: "Informe" }

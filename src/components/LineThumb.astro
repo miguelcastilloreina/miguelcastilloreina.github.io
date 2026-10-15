@@ -1,0 +1,51 @@
+---
+// Miniatura de una línea de investigación o del trabajo en curso.
+// Usa la foto indicada en projects.yaml; si no hay, dibuja curvas de nivel únicas para cada línea.
+import { url } from '../lib/data';
+
+interface Props { seed: string; image?: string; alt?: string; class?: string }
+const { seed, image, alt = '', class: cls } = Astro.props;
+
+function hash(s: string) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+let st = hash(seed) || 1;
+const rnd = () => { st = (st * 16807) % 2147483647; return st / 2147483647; };
+
+const W = 160, H = 120;
+const f1 = 0.025 + rnd() * 0.03, f2 = 0.05 + rnd() * 0.05;
+const p1 = rnd() * 6.28, p2 = rnd() * 6.28;
+const amp = 6 + rnd() * 10;
+const lines: { d: string; strong: boolean; second: boolean }[] = [];
+const n = 9;
+const hi = Math.floor(rnd() * n);
+for (let k = 0; k < n; k++) {
+  const base = 10 + (k * (H - 14)) / (n - 1);
+  const pts: string[] = [];
+  for (let x = -4; x <= W + 4; x += 8) {
+    const y = base + amp * Math.sin(x * f1 + p1 + k * 0.35) + (amp / 2.5) * Math.sin(x * f2 + p2 - k * 0.5);
+    pts.push(`${x},${y.toFixed(1)}`);
+  }
+  lines.push({ d: 'M' + pts.join(' L'), strong: k % 3 === 0, second: k === hi });
+}
+---
+{image ? (
+  <img class:list={['lthumb', cls]} src={url(`/img/projects/${image}`)} alt={alt} loading="lazy" />
+) : (
+  <svg class:list={['lthumb', 'gen', cls]} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width={W} height={H} class="bg" />
+    {lines.map((l) => (
+      <path d={l.d} class:list={['ln', { strong: l.strong, second: l.second }]} />
+    ))}
+  </svg>
+)}
+
+<style>
+  .lthumb { display: block; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; border-radius: 4px; object-fit: cover; }
+  .gen .bg { fill: color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+  .gen .ln { fill: none; stroke: var(--accent); stroke-width: 0.8; opacity: 0.35; }
+  .gen .ln.strong { stroke-width: 1.2; opacity: 0.6; }
+  .gen .ln.second { stroke: var(--second); stroke-width: 1.6; opacity: 0.9; }
+</style>

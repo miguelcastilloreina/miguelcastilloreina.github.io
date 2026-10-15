@@ -1,60 +1,96 @@
-# Datos generales del sitio. Edita los textos entre comillas.
+# Datos generales del sitio.
+#
+# Los textos que cambian según el idioma tienen dos versiones:
+#   campo:
+#     en: "English text"
+#     es: "Texto en español"
+# Formato dentro de los textos: *cursiva*, **resaltado**, [texto del enlace](https://...)
 
 name: "Miguel Ángel Castillo-Reina"
 initials: "MCR"
-position: "PhD candidate in Regional Science and Economic Geography"
+
+position:
+  en: "PhD candidate in Regional Science and Economic Geography"
+  es: "Doctorando en Ciencia Regional y Geografía Económica"
 institution: "Gran Sasso Science Institute (GSSI)"
-location: "L'Aquila, Italy"
+location:
+  en: "L'Aquila, Italy"
+  es: "L'Aquila, Italia"
 
-# Frase principal de la portada. Lo que va entre ** se resalta en color.
-tagline: "I study how **purpose-built visual attractions** (selfie parks, giant benches, oversized sculptures) reshape tourism and development in small towns."
+# Frase principal de la portada.
+tagline:
+  en: "I study how **purpose-built visual attractions** (selfie parks, giant benches, oversized sculptures) reshape tourism and development in small towns."
+  es: "Estudio cómo los **atractivos visuales construidos a propósito** (parques selfie, bancas gigantes, esculturas monumentales) transforman el turismo y el desarrollo de los municipios pequeños."
 
+# Presentación de la portada: un párrafo por guion.
 bio:
-  - "I am a Colombian economist and a PhD candidate in Regional Science and Economic Geography at the Gran Sasso Science Institute in L'Aquila, supervised by Maria Giovanna Brandano and Alessandra Faggian."
-  - "My thesis looks at attractions built to be photographed and asks what they do to visitor flows, local economies and the image of the places that build them. I combine comparative case studies, fieldwork and online data with spatial analysis."
-  - "I also write on territorial development theory, especially the work of Sergio Boisier, on social capital, and on how economics is taught in Latin America."
+  en:
+    - "I am a Colombian economist and a PhD candidate in Regional Science and Economic Geography at the Gran Sasso Science Institute (GSSI) in L'Aquila, Italy, supervised by [Maria Giovanna Brandano](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/5387-brandano-maria-giovanna) and [Alessandra Faggian](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/2234-faggian-alessandra)."
+    - "My doctoral research sits between cultural economics and tourism economics. More broadly, I am interested in debates on territorial development, public policy and the history of economic thought."
+  es:
+    - "Soy economista colombiano y doctorando en Ciencia Regional y Geografía Económica en el Gran Sasso Science Institute (GSSI), en L'Aquila (Italia), bajo la dirección de [Maria Giovanna Brandano](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/5387-brandano-maria-giovanna) y [Alessandra Faggian](https://www.gssi.it/people/professors/lectures-social-science-gssi-cities/item/2234-faggian-alessandra)."
+    - "Mi investigación doctoral se sitúa entre la economía de la cultura y la economía del turismo. De forma más amplia, me interesan las discusiones sobre desarrollo territorial, políticas públicas e historia del pensamiento económico."
 
 interests:
-  - "Tourism economics"
-  - "Territorial development"
-  - "Economic geography"
-  - "Social capital"
-  - "History of economic thought"
+  en: ["Cultural economics", "Tourism economics", "Territorial development", "Public policy", "History of economic thought"]
+  es: ["Economía de la cultura", "Economía del turismo", "Desarrollo territorial", "Políticas públicas", "Historia del pensamiento económico"]
 
 education:
-  - degree: "PhD, Regional Science and Economic Geography"
-    place: "GSSI, Italy"
+  - degree:
+      en: "PhD, Regional Science and Economic Geography"
+      es: "Doctorado en Ciencia Regional y Geografía Económica"
+    place:
+      en: "GSSI, Italy"
+      es: "GSSI, Italia"
     years: "2025–"
-  - degree: "MSc Economics, thesis with distinction"
+  - degree:
+      en: "MSc Economics, thesis with distinction"
+      es: "Maestría en Economía, tesis meritoria"
     place: "UPTC, Colombia"
     years: "2021"
-  - degree: "BA Economics"
+  - degree:
+      en: "BA Economics"
+      es: "Economista"
     place: "UPTC, Colombia"
     years: "2016"
 
-languages: "Spanish (native) · English (C1) · Italian (beginner)"
+languages:
+  en: "Spanish (native) · English (C1) · Italian (beginner)"
+  es: "Español (nativo) · Inglés (C1) · Italiano (básico)"
 
 email: "miguelangel.castilloreina@gssi.it"
 address:
-  - "Gran Sasso Science Institute"
-  - "Viale Francesco Crispi 7"
-  - "67100 L'Aquila, Italy"
+  en: ["Gran Sasso Science Institute", "Viale Francesco Crispi 7", "67100 L'Aquila, Italy"]
+  es: ["Gran Sasso Science Institute", "Viale Francesco Crispi 7", "67100 L'Aquila, Italia"]
 
+# Enlaces externos. `icon` puede ser: orcid, scholar, linkedin, cvlac, github, x, web
 links:
   - label: "ORCID"
+    icon: orcid
     url: "https://orcid.org/0000-0002-9365-2467"
   - label: "Google Scholar"
+    icon: scholar
     url: "https://scholar.google.com/citations?user=VzCLHQoAAAAJ"
   - label: "LinkedIn"
+    icon: linkedin
     url: "https://www.linkedin.com/in/miguel-castillo-reina/"
-  - label: "CvLAC (MinCiencias)"
+  - label: "CvLAC"
+    icon: cvlac
     url: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001537283"
   - label: "GitHub"
+    icon: github
     url: "https://github.com/the3boy"
+  - label: "X"
+    icon: x
+    url: "https://x.com/the3boy"
 
 # Novedades de la portada. La más reciente arriba.
 news:
   - date: "2026"
-    text: "Paper with J. L. Niño-Amézquita on four decades of Sergio Boisier's thought submitted to the *Journal of the History of Economic Thought*."
-  - date: "Nov 2025"
-    text: "Started the PhD in Regional Science and Economic Geography at GSSI (cohort XLI), with a full scholarship."
+    text:
+      en: "Paper with J. L. Niño-Amézquita on four decades of Sergio Boisier's thought submitted to the *Journal of the History of Economic Thought*."
+      es: "Artículo con J. L. Niño-Amézquita sobre cuatro décadas del pensamiento de Sergio Boisier enviado al *Journal of the History of Economic Thought*."
+  - date: "11/2025"
+    text:
+      en: "Started the PhD in Regional Science and Economic Geography at GSSI (cohort XLI), with a full scholarship."
+      es: "Inicio del doctorado en Ciencia Regional y Geografía Económica en el GSSI (cohorte XLI), con beca completa."
