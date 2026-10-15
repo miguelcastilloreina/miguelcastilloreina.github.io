@@ -30,6 +30,11 @@ const typeLabel = (k: string) => (a.types as Record<string, string>)[k] ?? '';
           const title = tr(e.title, lang);
           return (
             <li class="ev" data-ev={i}>
+              {photos.length === 0 && e.cover && (
+                <a class="cover" href={e.slides ? url(`/activity/slides/${e.slides}`) : (e.url ?? '#')} aria-label={`${a.slides}: ${title}`}>
+                  <img src={url(`/img/activity/${e.cover}`)} alt="" loading="lazy" />
+                </a>
+              )}
               {photos.length > 0 && (
                 <button type="button" class="cover" data-ev={i} data-i="0" aria-label={`${a.photos}: ${title}`}>
                   <img src={url(`/img/activity/${photos[0]}`)} alt="" loading="lazy" />
@@ -70,7 +75,8 @@ const typeLabel = (k: string) => (a.types as Record<string, string>)[k] ?? '';
   .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px 28px; }
   .ev { display: grid; gap: 14px; align-content: start; min-width: 0; }
   .cover { position: relative; padding: 0; border: 0; cursor: zoom-in; border-radius: 6px; overflow: hidden; background: var(--surface); }
-  .cover img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.3s; }
+  .cover { display: block; box-shadow: 0 0 0 1px var(--line); }
+  .cover img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform 0.3s; }
   .cover:hover img { transform: scale(1.03); }
   .count {
     position: absolute; right: 10px; bottom: 10px; padding: 2px 9px; border-radius: 99px;

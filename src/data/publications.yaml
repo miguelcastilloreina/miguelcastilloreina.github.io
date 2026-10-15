@@ -53,7 +53,7 @@
   title: "Tourist sector innovation: an approach to the services and the co-creation of experiences"
   authors: ["Castillo-Reina, M.", "Cruz-Vásquez, J."]
   outlet: "Turismo y Sociedad"
-  image: "https://revistas.uexternado.edu.co/public/journals/8/cover_issue_754_es_ES.jpg"
+  image: "turismo-y-sociedad.jpg"
   venue: "*Turismo y Sociedad*, 30, 25–49"
   doi: "10.18601/01207555.n30.02"
   selected: true
@@ -67,7 +67,7 @@
   title: "Alternativas y potencialidades de valor agregado en iniciativas turísticas de tipo comunitario: lecciones a partir del caso de la subprovincia del Alto Ricaurte (Boyacá)"
   authors: ["Dueñas, D.", "Vianchá, Z.", "Fraile, A.", "Castillo-Reina, M.", "et al."]
   outlet: "Editorial UPTC"
-  image: "https://librosaccesoabierto.uptc.edu.co/public/presses/1/submission_155_138_coverImage_es_ES_t.png"
+  image: "alternativas-alto-ricaurte.jpg"
   venue: "Editorial UPTC"
   doi: "10.19053/9789586605380"
   abstract:
@@ -93,6 +93,7 @@
   title: "Boyacá: a la penumbra de las oportunidades"
   authors: ["Castillo-Reina, M.", "Tobasura, E."]
   outlet: "U. Antonio Nariño"
+  image: "boyaca-siglo-xxi.jpg"
   venue:
     en: "In H. E. González & Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
     es: "En H. E. González y Ó. A. Alarcón (Eds.), *Boyacá Siglo XXI: dinámicas de desarrollo y competitividad regional* (pp. 247–273). Universidad Antonio Nariño"
@@ -153,6 +154,9 @@
   title: "Política Pública de Ciencia, Tecnología e Innovación del municipio de Tunja 2021–2030"
   authors: []
   outlet: "Tunja"
+  image: "acuerdo-016-tunja.jpg"
+  url: "https://alcaldiatunja.micolombiadigital.gov.co/sites/alcaldiatunja/content/files/001340/66955_pp_ciencia_tecnologia.pdf"
+  url_label: { en: "Acuerdo 016 de 2021 (PDF)", es: "Acuerdo 016 de 2021 (PDF)" }
   venue:
     en: "Adopted by Acuerdo Municipal No. 016 de 2021"
     es: "Adoptada mediante el Acuerdo Municipal No. 016 de 2021"
@@ -162,6 +166,7 @@
   title: "Entre las oportunidades y el progreso: la educación superior como camino a la competitividad departamental"
   authors: ["Vargas, E.", "Oicatá, R.", "Castillo-Reina, M."]
   outlet: "ORMET Boyacá"
+  image: "ormet-educacion-superior-2018.jpg"
   venue:
     en: "Regional Labour Market Observatory of Boyacá (ORMET)"
     es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
@@ -173,6 +178,7 @@
   title: "Política Pública de Trabajo Decente para el departamento de Boyacá, 2017–2032"
   authors: []
   outlet: "Boyacá"
+  image: "trabajo-decente-boyaca.jpg"
   venue:
     en: "Adopted by Ordenanza No. 026 de 2017"
     es: "Adoptada mediante la Ordenanza No. 026 de 2017"

@@ -8,8 +8,17 @@
 #   event: "Nombre del evento"
 #   place: { en: "Rome, Italy", es: "Roma, Italia" }
 #   role: { en: "Presenter", es: "Ponente" }   # opcional
+#   cover: "…jpg"                      # opcional: imagen de portada (p. ej. la primera diapositiva); al pulsarla abre la presentación
 #   photos: ["2026-05-taller-1.jpg", "2026-05-taller-2.jpg"]   # en public/img/activity/
 #   slides: "2026-05-taller.pdf"          # opcional, en public/activity/slides/
 #   url: "https://…"                      # opcional, página del evento
 
-events: []
+events:
+  - date: "07/2026"
+    type: school
+    title: "Built to Be Photographed: Conspicuous Consumption and the Co-Creation of Instagrammable Tourist Attractions in the Global South"
+    event: "ACEI Summer School on Cultural Economics"
+    place: { en: "Mantua, Italy", es: "Mantua, Italia" }
+    role: { en: "Presenter", es: "Ponente" }
+    cover: "acei-2026-mantua-slide-1.jpg"
+    slides: "castillo-reina-acei-2026-built-to-be-photographed.pdf"

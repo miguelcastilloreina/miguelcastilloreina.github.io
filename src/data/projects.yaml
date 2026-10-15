@@ -16,6 +16,11 @@ current:
     es: "El turismo es más que un servicio cocreado en el momento de su prestación: es una experiencia que se planea, se vive y se recuerda. Este artículo estudia una nueva categoría de atractivo cuyo valor no reside en su importancia histórica ni en su densidad cultural, sino en su capacidad de servir como telón de fondo fotogénico para la autopresentación. Los atractivos construidos a propósito y orientados a lo visual se han multiplicado en el Sur Global, diseñados para ser fotografiados y compartidos más que para ser vividos en el sentido convencional. El artículo los analiza desde el consumo conspicuo y la forma en que visitantes y destinos cocrean su valor."
   image: ""
   image_alt: { en: "", es: "" }
+  # Archivos descargables del trabajo (en public/activity/slides/, los mismos de la galería de Actividad).
+  files:
+    - file: "castillo-reina-acei-2026-built-to-be-photographed.pdf"
+      label: { en: "Slides (PDF)", es: "Presentación (PDF)" }
+      note: { en: "ACEI Summer School on Cultural Economics · Mantua, Italy · 6–10 July 2026", es: "ACEI Summer School on Cultural Economics · Mantua, Italia · 6–10 de julio de 2026" }
 
 # El `id` enlaza con el campo `line` de publications.yaml.
 lines:
@@ -61,7 +66,8 @@ lines:
 
   - id: teaching
     period: "2018–"
-    image: ""
+    image: "economics-education.jpg"
+    image_alt: { en: "Group photo at an economics education gathering", es: "Foto grupal en un encuentro sobre enseñanza de la economía" }
     title:
       en: "Economics education"
       es: "Enseñanza de la economía"
