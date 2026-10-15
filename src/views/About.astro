@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { profile, about, publications, url, tr, inline, type Lang, type Publication } from '../lib/data';
+import { ui } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const a = t.about;
+const other: Lang = lang === 'en' ? 'es' : 'en';
+const interests: string[] = tr(profile.interests, lang);
+
+// Cifras calculadas a partir de publications.yaml.
+const order: Publication['type'][] = ['article', 'chapter', 'book', 'working', 'policy'];
+const stats = order
+  .map((type) => ({ type, n: publications.filter((p) => p.type === type).length }))
+  .filter((s) => s.n > 0);
+---
+<Base lang={lang} route="about" title={a.title} description={a.metaDesc}>
+  <div class="page-head">
+    <div class="wrap head-grid">
+      <div>
+        <div class="label">{a.label}</div>
+        <h1>{profile.name}</h1>
+        <p class="lead">{tr(profile.position, lang)} · {profile.institution}</p>
+        <p class="intro" set:html={inline(tr(about.intro, lang))} />
+        <div class="cta-row">
+          <a class="btn cta" href={url(`/cv/${tr(profile.cv.files, lang)}`)} hreflang={lang}><Icon name="download" />{t.cvButton}</a>
+          <a class="btn" href={url(`/cv/${tr(profile.cv.files, other)}`)} hreflang={other}>{a.otherCv}</a>
+          <span class="upd">{t.cvUpdated} {tr(profile.cv.updated, lang)}</span>
+        </div>
+      </div>
+      <img class="portrait" src={url('/img/portrait.jpg')} alt={`${t.portrait} ${profile.name}`} width="560" height="560" />
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="block">
+      <ul class="plain stats">
+        {stats.map((s) => (
+          <li><span class="n">{s.n}</span><span class="l">{a.stats[s.type]}</span></li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.fields}</h2>
+      <ul class="plain tags">{interests.map((x) => <li>{x}</li>)}</ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.education}</h2>
+      <ul class="plain tl">
+        {about.education.map((e: any) => (
+          <li>
+            <span class="when">{e.years}</span>
+            <div>
+              <strong>{tr(e.degree, lang)}</strong>
+              <span class="where">{tr(e.place, lang)}</span>
+              {e.note && <p class="note" set:html={inline(tr(e.note, lang))} />}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.experience}</h2>
+      <ul class="plain tl">
+        {about.experience.map((e: any) => (
+          <li>
+            <span class="when">{e.years}</span>
+            <div>
+              <strong>{tr(e.role, lang)}</strong>
+              <span class="where">{tr(e.org, lang)}</span>
+              {e.note && <p class="note" set:html={inline(tr(e.note, lang))} />}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.awards}</h2>
+      <ul class="plain tl">
+        {about.awards.map((x: any) => (
+          <li><span class="when">{x.year}</span><div><strong>{tr(x.title, lang)}</strong><span class="where">{tr(x.detail, lang)}</span></div></li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.affiliations}</h2>
+      <ul class="plain tl">
+        {about.affiliations.map((x: any) => (
+          <li>
+            <span class="when">{x.since}–</span>
+            <div>
+              {x.url ? <a class="org" href={x.url}><strong>{tr(x.name, lang)}</strong><Icon name="external" size={13} /></a> : <strong>{tr(x.name, lang)}</strong>}
+              <span class="where">{tr(x.role, lang)}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block sec">
+      <h2>{a.skills}</h2>
+      <dl class="skills">
+        {about.skills.map((x: any) => (
+          <div><dt>{tr(x.label, lang)}</dt><dd>{tr(x.value, lang)}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+  </div>
+</Base>
+
+<style>
+  .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
+  .lead { color: var(--ink) !important; font-size: 1.1rem; margin-top: 12px !important; }
+  .intro { max-width: 64ch; }
+  .head-grid .cta-row { margin-top: 24px; }
+  .portrait { width: 180px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); justify-self: end; }
+  @media (max-width: 760px) {
+    .head-grid { grid-template-columns: 1fr; gap: 24px; }
+    .portrait { width: 112px; justify-self: start; order: -1; }
+  }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 20px; }
+  .stats li { display: grid; gap: 4px; padding-top: 12px; border-top: 2px solid var(--accent); }
+  .stats .n { font-family: var(--font-head); font-weight: 700; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stats .l { color: var(--muted); font-size: 0.9rem; line-height: 1.3; }
+
+  .sec { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 12px 48px; }
+  .sec > h2 { font-size: 1.35rem; }
+  @media (max-width: 760px) { .sec { grid-template-columns: 1fr; } }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; align-content: start; }
+  .tags li { font-size: 0.92rem; padding: 4px 12px; border-radius: 99px; background: var(--surface); }
+
+  .tl > li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+  .tl > li:first-child { border-top: 0; padding-top: 0; }
+  .tl .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
+  .tl strong { display: block; font-weight: 700; line-height: 1.4; }
+  .tl .where { display: block; color: var(--muted); font-size: 0.94rem; }
+  .tl .note { font-size: 0.92rem; margin-top: 4px; max-width: 70ch; }
+  .tl .org { color: var(--ink); text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px; }
+  .tl .org:hover strong { color: var(--accent); }
+  .tl .org :global(.icon) { color: var(--muted); }
+  @media (max-width: 480px) { .tl > li { grid-template-columns: 1fr; gap: 2px; } }
+
+  .skills { margin: 0; display: grid; gap: 10px; }
+  .skills div { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 16px; }
+  .skills dt { color: var(--muted); font-size: 0.94rem; }
+  .skills dd { margin: 0; }
+  @media (max-width: 560px) { .skills div { grid-template-columns: 1fr; gap: 0; } }
+
+</style>

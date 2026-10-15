@@ -6,14 +6,14 @@
 
 current:
   label:
-    en: "Work in progress · Thesis paper 1"
-    es: "En curso · Primer artículo de la tesis"
+    en: "In progress. First thesis paper"
+    es: "En curso. Primer artículo de la tesis"
   title:
-    en: "Big Benches: giant benches as territorial attractions in Italy and Europe"
-    es: "Big Benches: bancas gigantes como atractivos territoriales en Italia y Europa"
+    en: "Built to Be Photographed: Conspicuous Consumption and the Co-Creation of Instagrammable Tourist Attractions"
+    es: "Built to Be Photographed: Conspicuous Consumption and the Co-Creation of Instagrammable Tourist Attractions"
   summary:
-    en: "A georeferenced dataset of the giant benches built across Italy and Europe, with year of construction, cost, accessibility and nearby services, as the basis for studying where these installations spread and how much demand they attract."
-    es: "Una base de datos georreferenciada de las bancas gigantes construidas en Italia y Europa, con año de construcción, costo, accesibilidad y servicios cercanos, como base para estudiar dónde se difunden estas instalaciones y cuánta demanda atraen."
+    en: "Tourism is more than a service co-created at the moment of delivery: it is an experience that is planned, lived and remembered. This paper studies a new category of attraction whose value lies not in historical significance or cultural depth, but in its use as a photogenic backdrop for self-presentation. Purpose-built, visually oriented attractions have multiplied across the Global South, designed to be photographed and shared rather than experienced in the conventional sense. The paper reads them through conspicuous consumption and the way visitors and destinations co-create their value."
+    es: "El turismo es más que un servicio cocreado en el momento de su prestación: es una experiencia que se planea, se vive y se recuerda. Este artículo estudia una nueva categoría de atractivo cuyo valor no reside en su importancia histórica ni en su densidad cultural, sino en su capacidad de servir como telón de fondo fotogénico para la autopresentación. Los atractivos construidos a propósito y orientados a lo visual se han multiplicado en el Sur Global, diseñados para ser fotografiados y compartidos más que para ser vividos en el sentido convencional. El artículo los analiza desde el consumo conspicuo y la forma en que visitantes y destinos cocrean su valor."
   image: ""
   image_alt: { en: "", es: "" }
 

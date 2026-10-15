@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
-import { profile, url, tr, type Lang } from '../lib/data';
+import { profile, url, tr, hasActivity, type Lang } from '../lib/data';
 import { ui, href, type Route } from '../lib/i18n';
 
 interface Props {
@@ -17,7 +17,7 @@ const institution = profile.institution;
 const fullTitle = title ? `${title} · ${profile.name}` : `${profile.name} · ${institution}`;
 const desc = description ?? t.metaDesc;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const navRoutes: Route[] = ['research', 'projects', 'activity', 'cv'];
+const navRoutes: Route[] = hasActivity ? ['research', 'projects', 'activity', 'about'] : ['research', 'projects', 'about'];
 const switchHref = href(route ?? 'home', other);
 const address: string[] = tr(profile.address, lang);
 ---

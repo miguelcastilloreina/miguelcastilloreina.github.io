@@ -4,14 +4,14 @@ import { inline, authorsHtml, tr, pubId } from '../lib/data';
 import PubThumb from './PubThumb.astro';
 import Icon from './Icon.astro';
 
-interface Props { pub: Publication; lang: Lang }
-const { pub, lang } = Astro.props;
+interface Props { pub: Publication; lang: Lang; thumb?: boolean }
+const { pub, lang, thumb = true } = Astro.props;
 const status = tr(pub.status, lang);
 const urlLabel = tr(pub.url_label, lang) ?? 'Link';
 ---
-<article class="pub" id={pubId(pub)} data-type={pub.type}>
+<article class:list={['pub', { 'no-thumb': !thumb }]} id={pubId(pub)} data-type={pub.type}>
   <div class="yr">{pub.year}</div>
-  <PubThumb pub={pub} lang={lang} />
+  {thumb && <PubThumb pub={pub} lang={lang} />}
   <div class="pub-body">
     <div class="t">
       <Fragment set:html={inline(pub.title)} />
