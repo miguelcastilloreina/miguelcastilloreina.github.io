@@ -16,6 +16,8 @@ Sitio académico estático y bilingüe hecho con [Astro](https://astro.build). S
 | Galería de Actividad (talleres, congresos, fotos y presentaciones en PDF) | `src/data/activity.yaml`, fotos en `public/img/activity/`, PDF en `public/activity/slides/` |
 | CV en PDF | `public/cv/castillo-reina-cv-en.pdf` y `public/cv/castillo-reina-cv-es.pdf` (reemplaza el archivo con el mismo nombre) |
 | Foto | `public/img/portrait.jpg` (cuadrada, 560 × 560 px o más) |
+| Ícono junto al nombre en la barra superior | `public/img/avatar.jpg` (cuadrado, 160 × 160 px) |
+| Mapa de L'Aquila, foto del grupo musical y nota de prensa | `public/img/about/` + `about.yaml` → `place` y `music` |
 | Miniaturas de publicaciones | imagen en `public/img/pubs/` + campo `image` en `publications.yaml` |
 | Fotos de proyectos y líneas | imagen en `public/img/projects/` + campo `image` en `projects.yaml` |
 | Textos fijos de la interfaz (menús, títulos de sección) | `src/lib/i18n.ts` |

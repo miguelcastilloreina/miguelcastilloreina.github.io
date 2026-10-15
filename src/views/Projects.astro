@@ -51,7 +51,10 @@ const lines = projects.lines.map((l: any) => ({
       <ul class="plain lines">
         {lines.map((l: any) => (
           <li id={l.id}>
-            <LineThumb seed={l.id} image={l.image} alt={tr(l.title, lang)} />
+            <figure class="lfig">
+              <LineThumb seed={l.id} image={l.image} alt={tr(l.image_alt, lang) ?? tr(l.title, lang)} focus={l.focus} />
+              {l.credit && <figcaption set:html={inline(tr(l.credit, lang))} />}
+            </figure>
             <div class="body">
               <div class="when">{l.period}</div>
               <h3>{tr(l.title, lang)}</h3>
@@ -91,6 +94,8 @@ const lines = projects.lines.map((l: any) => ({
     padding: 28px 0; border-top: 1px solid var(--line);
   }
   .lines > li:first-child { border-top: 0; padding-top: 0; }
+  .lfig { margin: 0; min-width: 0; }
+  .lfig figcaption { font-size: 0.72rem; line-height: 1.35; color: var(--muted); margin-top: 6px; font-style: italic; }
   .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
   .body h3 { font-size: 1.35rem; margin: 4px 0 8px; }
   .body p { max-width: 64ch; }
@@ -102,6 +107,6 @@ const lines = projects.lines.map((l: any) => ({
   .rel-title :global(.mono) { color: var(--muted); font-size: 0.8rem; margin-right: 4px; }
   @media (max-width: 640px) {
     .lines > li { grid-template-columns: 1fr; gap: 14px; }
-    .lines > li > :global(.lthumb) { aspect-ratio: 16 / 7; }
+    .lfig :global(.lthumb) { aspect-ratio: 16 / 9; }
   }
 </style>

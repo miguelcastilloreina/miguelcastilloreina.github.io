@@ -115,10 +115,8 @@ p { margin: 0; }
 .bar .wrap { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px; min-height: 64px; padding-block: 10px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; }
 .brand .disc {
-  width: 34px; height: 34px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--accent); color: var(--bg);
-  font-family: var(--font-head); font-size: 0.8rem; font-weight: 800;
+  width: 36px; height: 36px; border-radius: 50%; flex: none;
+  object-fit: cover; box-shadow: 0 0 0 1px var(--line);
 }
 .nav { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-left: auto; font-size: 0.95rem; }
 .nav a { color: var(--muted); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
@@ -188,8 +186,14 @@ section.block:last-of-type { border-bottom: 0; }
 .pub .au { font-size: 0.94rem; color: var(--muted); margin-top: 4px; }
 .pub .au b { color: var(--ink); font-weight: 700; }
 .pub .v { font-size: 0.94rem; margin-top: 2px; }
-.pub .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; }
-.pub .links a { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 0.8rem; }
+.pub .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.pub .links a {
+  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+  font-size: 0.8rem; font-weight: 700; color: var(--accent);
+  padding: 3px 11px 3px 9px; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.pub .links a:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.pub .links a .doi-id { font-family: var(--font-mono); font-weight: 400; font-size: 0.74rem; color: var(--muted); }
 .badge {
   display: inline-block; margin-left: 8px; vertical-align: 2px;
   font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
@@ -202,7 +206,7 @@ section.block:last-of-type { border-bottom: 0; }
 }
 
 /* resumen desplegable */
-.abs { margin-top: 10px; }
+.abs { margin-top: 8px; }
 .abs summary {
   display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
   font-size: 0.82rem; font-weight: 700; color: var(--accent);

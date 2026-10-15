@@ -90,6 +90,7 @@ const interests: string[] = tr(profile.interests, lang);
       <a class="btn outline more-btn" href={href('research', lang)}>{t.allPubs}<Icon name="arrow" size={15} /></a>
     </section>
 
+    {profile.show_news && (
     <section class="block">
       <div class="block-head">
         <div class="label">{t.newsLabel}</div>
@@ -101,6 +102,7 @@ const interests: string[] = tr(profile.interests, lang);
         ))}
       </ul>
     </section>
+    )}
   </div>
 </Base>
 
