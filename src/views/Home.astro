@@ -69,7 +69,7 @@ const interests: string[] = tr(profile.interests, lang);
         <h2>{t.currentTitle}</h2>
       </div>
       <article class="feature">
-        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} focus={cur.focus} class="feature-img" />
+        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} focus={cur.focus} crop={cur.crop} class="feature-img" />
         <div class="feature-text">
           <span class="status">{tr(cur.label, lang)}</span>
           <h3>{tr(cur.title, lang)}</h3>
