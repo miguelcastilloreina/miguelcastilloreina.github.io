@@ -180,6 +180,11 @@
   venue:
     en: "Regional Labour Market Observatory of Boyacá (ORMET)"
     es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
+  abstract:
+    en: >-
+      This report starts from a labour-market failure: the difficulty of anticipating the skills that firms demand. It aims to produce information that helps correct these asymmetries and that, despite its limitations, supports the strategic decisions of individuals and institutions about the role of skills in their training for economic development. Beyond an academic exercise, it seeks to foster dialogue between government, firms, students and citizens in the design, monitoring and evaluation of public policies on training for work. It also argues that closing these gaps is not only the State's responsibility: local actors must also take on and lead the process.
+    es: >-
+      Este trabajo parte de una falla del mercado de trabajo: la dificultad para anticipar las habilidades que demandan las empresas. Busca generar información que contribuya a corregir esas asimetrías y que, pese a sus limitaciones, apoye las decisiones estratégicas de personas e instituciones sobre el papel de las competencias en su formación para el desarrollo económico. Más allá del ejercicio académico, pretende facilitar el diálogo entre gobierno, empresas, estudiantes y ciudadanía en el diseño, el seguimiento y la evaluación de las políticas públicas de formación para el trabajo. Plantea además que el cierre de brechas no es solo responsabilidad del Estado: los actores locales también deben asumir y liderar ese proceso.
   url: "http://bit.ly/EstudioORMET2018"
   url_label: { en: "Report", es: "Informe" }
 
