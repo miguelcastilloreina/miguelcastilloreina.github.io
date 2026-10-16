@@ -137,3 +137,13 @@ music:
       credits:
         - { en: "Composer: Félix Alfredo Castillo Forero", es: "Compositor: Félix Alfredo Castillo Forero" }
         - { en: "On: *Gachantivá: un lugar mágico por descubrir* (2018)", es: "En: *Gachantivá: un lugar mágico por descubrir* (2018)" }
+
+# Cita al cierre de la página Sobre mí.
+# Texto original de Pigou (1920, dominio público); la versión en español es una traducción propia.
+quote:
+  text:
+    en: "If it were not for the hope that a scientific study of men’s social actions may lead, not necessarily directly or immediately, but at some time and in some way, to practical results in social improvement, not a few students of these actions would regard the time devoted to their study as time misspent."
+    es: "Si no fuera por la esperanza de que el estudio científico de las acciones sociales de los hombres pueda conducir, no necesariamente de forma directa o inmediata, sino en algún momento y de algún modo, a resultados prácticos en favor del mejoramiento social, no pocos de quienes estudian estas acciones considerarían perdido el tiempo dedicado a su estudio."
+  author: "Arthur C. Pigou"
+  source: { en: "*The Economics of Welfare* (1920), ch. I, § 1", es: "*The Economics of Welfare* (1920), cap. I, § 1. Traducción propia." }
+
