@@ -13,6 +13,7 @@ position:
   en: "PhD candidate in Regional Science and Economic Geography"
   es: "Doctorando en Ciencia Regional y Geografía Económica"
 institution: "Gran Sasso Science Institute (GSSI)"
+institution_profile: "https://www.gssi.it/people/students/students-social-science-gssi-cities/item/26010-castillo-reina-miguel-angel"
 location:
   en: "L'Aquila, Italy"
   es: "L'Aquila, Italia"
@@ -74,8 +75,11 @@ address:
   en: ["Gran Sasso Science Institute (GSSI)", "Office PT-35", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italy"]
   es: ["Gran Sasso Science Institute (GSSI)", "Oficina PT-35", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italia"]
 
-# Enlaces externos. `icon` puede ser: orcid, scholar, linkedin, cvlac, github, x, web
+# Enlaces externos. `icon` puede ser: gssi, orcid, scholar, linkedin, cvlac, github, x, web
 links:
+  - label: "GSSI"
+    icon: gssi
+    url: "https://www.gssi.it/people/students/students-social-science-gssi-cities/item/26010-castillo-reina-miguel-angel"
   - label: "ORCID"
     icon: orcid
     url: "https://orcid.org/0000-0002-9365-2467"

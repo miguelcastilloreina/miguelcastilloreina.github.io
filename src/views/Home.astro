@@ -24,7 +24,7 @@ const interests: string[] = tr(profile.interests, lang);
         <h1>{profile.name}</h1>
         <p class="tagline" set:html={inline(tr(profile.tagline, lang))} />
         <div class="meta">
-          <span class="ilink"><Icon name="pin" />{profile.institution} · {tr(profile.location, lang)}</span>
+          <span class="ilink"><Icon name="pin" /><span><a class="inst-link" href={profile.institution_profile}>{profile.institution}</a> · {tr(profile.location, lang)}</span></span>
         </div>
         <div class="cta-row hero-cta">
           <a class="btn cta" href={url(`/cv/${tr(profile.cv.files, lang)}`)} hreflang={lang}><Icon name="download" />{t.cvButton}</a>
@@ -121,6 +121,8 @@ const interests: string[] = tr(profile.interests, lang);
   .tagline :global(b) { color: var(--accent); }
   .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 22px; color: var(--muted); font-size: 0.95rem; }
   .hero-cta { margin-top: 24px; }
+  .inst-link { color: inherit; text-decoration-color: var(--line); }
+  .inst-link:hover { color: var(--accent); text-decoration-color: currentColor; }
   .portrait {
     width: 240px; aspect-ratio: 1; object-fit: cover; border-radius: 50%;
     border: 6px solid var(--bg); box-shadow: 0 0 0 1px var(--line);
