@@ -204,5 +204,10 @@
   venue:
     en: "Regional Labour Market Observatory of Boyacá (ORMET)"
     es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
+  abstract:
+    en: >-
+      This report identifies the factors that promote or hinder decent work in the department of Boyacá at the provincial level, as a basis for strategies to reduce gaps in the quantity and quality of employment between provinces and with the rest of Colombia. It combines a characterisation of the labour market and of the department's demographic, economic and social conditions, built from secondary sources (DANE, the Ministry of Labour, the ILO and ECLAC), with participatory workshops with local actors in the thirteen provinces and the two special management zones (Cubará and Puerto Boyacá). The resulting diagnosis served as the baseline for Boyacá's Decent Work Public Policy.
+    es: >-
+      Este documento identifica los factores que promueven o dificultan la generación de trabajo decente en el departamento de Boyacá, a escala provincial, como base para diseñar estrategias que reduzcan las brechas en cantidad y calidad del empleo entre provincias y frente al resto del país. Combina una caracterización del mercado laboral y de las condiciones demográficas, económicas y sociales del departamento, elaborada con fuentes secundarias (DANE, Ministerio del Trabajo, OIT y CEPAL), con ejercicios de construcción conjunta con actores locales en las trece provincias y las dos zonas de manejo especial (Cubará y Puerto Boyacá). El diagnóstico resultante sirvió como línea de base para la Política Pública de Trabajo Decente de Boyacá.
   url: "http://bit.ly/EstudioORMET2017"
   url_label: { en: "Report", es: "Informe" }
