@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miguelcastilloreina.github.io/sitemap.xml
