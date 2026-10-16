@@ -72,8 +72,8 @@ languages:
 email: "miguelangel.castilloreina@gssi.it"
 # Dirección postal, en orden: institución, oficina, calle, código postal + ciudad, país.
 address:
-  en: ["Gran Sasso Science Institute (GSSI)", "Office PT-35", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italy"]
-  es: ["Gran Sasso Science Institute (GSSI)", "Oficina PT-35", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italia"]
+  en: ["Gran Sasso Science Institute (GSSI)", "Office PT-21", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italy"]
+  es: ["Gran Sasso Science Institute (GSSI)", "Oficina PT-21", "Viale Luigi Rendina, 26–28", "67100 L'Aquila, Italia"]
 
 # Enlaces externos. `icon` puede ser: gssi, orcid, scholar, linkedin, cvlac, github, x, web
 links:
