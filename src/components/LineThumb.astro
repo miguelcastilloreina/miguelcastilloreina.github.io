@@ -32,7 +32,7 @@ for (let k = 0; k < n; k++) {
 }
 ---
 {image ? (
-  <img class:list={['lthumb', cls]} src={url(`/img/projects/${image}`)} alt={alt} loading="lazy" style={`object-position: ${focus}`} />
+  <img class:list={['lthumb', cls]} src={/^https?:/.test(image) ? image : url(`/img/projects/${image}`)} alt={alt} loading="lazy" style={`object-position: ${focus}`} />
 ) : (
   <svg class:list={['lthumb', 'gen', cls]} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <rect width={W} height={H} class="bg" />
