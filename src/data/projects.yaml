@@ -16,10 +16,13 @@ current:
   summary:
     en: "Tourism is more than a service co-created at the moment of delivery: it is an experience that is planned, lived and remembered. The first literature review of my doctoral project explores attractions whose value lies not in their historical significance or cultural depth, but in their capacity to serve as a photogenic backdrop for self-presentation. Purpose-built, visually oriented attractions have multiplied around the world. They are designed to be photographed and shared rather than experienced in the conventional sense."
     es: "El turismo es más que un servicio cocreado en el momento de su prestación: es una experiencia que se planea, se vive y se recuerda. La primera revisión de literatura de mi proyecto doctoral explora aquellos atractivos cuyo valor no reside en su importancia histórica ni en su densidad cultural, sino en su capacidad de servir como telón de fondo fotogénico para la autopresentación. Los atractivos construidos a propósito y orientados a lo visual se han multiplicado en el mundo. Son diseñados para ser fotografiados y compartidos más que para ser vividos en el sentido convencional."
-  image: "https://live.staticflickr.com/65535/53931218293_7a0a721807_b.jpg"
-  image_alt: { en: "Giant red bench on a mountain meadow", es: "Banca gigante roja en un prado de montaña" }
-  focus: "50% 55%"
-  credit: { en: "Giant bench in the mountains. Photo: [Lorenzo Davico](https://www.flickr.com/photos/lorenzodavico/53931218293/), CC BY-SA 2.0", es: "Banca gigante en la montaña. Foto: [Lorenzo Davico](https://www.flickr.com/photos/lorenzodavico/53931218293/), CC BY-SA 2.0" }
+  image: "https://live.staticflickr.com/4291/36112833792_c2cc5e6fbb_b.jpg"
+  image_alt: { en: "Room at the Museum of Illusions in Ljubljana where a woman appears to stand on the ceiling", es: "Sala del Museo de las Ilusiones de Liubliana donde una mujer parece estar de pie en el techo" }
+  # crop: muestra solo una parte de la foto (aquí, la mitad izquierda del par estereoscópico).
+  #   box: "x y ancho alto" en píxeles de la foto original; size: "ancho alto" de la foto completa.
+  #   align: "top" conserva la parte superior al ajustar el recorte al marco; "center" el centro.
+  crop: { box: "0 0 512 749", size: "1024 749", align: "top" }
+  credit: { en: "Museum of Illusions, Ljubljana (Slovenia), detail. Photo: [Bruno Zaffoni](https://www.flickr.com/photos/stereozaff/36112833792/), CC BY-NC-SA 2.0", es: "Museo de las Ilusiones, Liubliana (Eslovenia), detalle. Foto: [Bruno Zaffoni](https://www.flickr.com/photos/stereozaff/36112833792/), CC BY-NC-SA 2.0" }
   # Archivos descargables del trabajo (en public/activity/slides/, los mismos de la galería de Actividad).
   files:
     - file: "castillo-reina-acei-2026-built-to-be-photographed.pdf"

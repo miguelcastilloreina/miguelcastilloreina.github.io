@@ -3,8 +3,11 @@
 // Usa la foto indicada en projects.yaml; si no hay, dibuja curvas de nivel únicas para cada línea.
 import { url } from '../lib/data';
 
-interface Props { seed: string; image?: string; alt?: string; focus?: string; class?: string }
-const { seed, image, alt = '', focus = '50% 50%', class: cls } = Astro.props;
+interface Props { seed: string; image?: string; alt?: string; focus?: string; crop?: { box: string; size: string; align?: string }; class?: string }
+const { seed, image, alt = '', focus = '50% 50%', crop, class: cls } = Astro.props;
+const src = image ? (/^https?:/.test(image) ? image : url(`/img/projects/${image}`)) : '';
+const [cw, ch] = crop ? crop.size.split(/\s+/) : [];
+const par = crop?.align === 'top' ? 'xMidYMin slice' : crop?.align === 'bottom' ? 'xMidYMax slice' : 'xMidYMid slice';
 
 function hash(s: string) {
   let h = 2166136261;
@@ -31,8 +34,12 @@ for (let k = 0; k < n; k++) {
   lines.push({ d: 'M' + pts.join(' L'), strong: k % 3 === 0, second: k === hi });
 }
 ---
-{image ? (
-  <img class:list={['lthumb', cls]} src={/^https?:/.test(image) ? image : url(`/img/projects/${image}`)} alt={alt} loading="lazy" style={`object-position: ${focus}`} />
+{image && crop ? (
+  <svg class:list={['lthumb', 'crop', cls]} viewBox={crop.box} preserveAspectRatio={par} role="img" aria-label={alt}>
+    <image href={src} width={cw} height={ch} />
+  </svg>
+) : image ? (
+  <img class:list={['lthumb', cls]} src={src} alt={alt} loading="lazy" style={`object-position: ${focus}`} />
 ) : (
   <svg class:list={['lthumb', 'gen', cls]} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <rect width={W} height={H} class="bg" />

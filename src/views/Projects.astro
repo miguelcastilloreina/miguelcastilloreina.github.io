@@ -29,7 +29,7 @@ const lines = projects.lines.map((l: any) => ({
     <section class="block">
       <article class="current">
         <figure class="cfig">
-          <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} focus={cur.focus} />
+          <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} focus={cur.focus} crop={cur.crop} />
           {cur.credit && <figcaption set:html={inline(tr(cur.credit, lang))} />}
         </figure>
         <div>
