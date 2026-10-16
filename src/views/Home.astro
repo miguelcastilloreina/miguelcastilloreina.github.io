@@ -69,11 +69,12 @@ const interests: string[] = tr(profile.interests, lang);
         <h2>{t.currentTitle}</h2>
       </div>
       <article class="feature">
-        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} class="feature-img" />
+        <LineThumb seed="current-work" image={cur.image} alt={tr(cur.image_alt, lang)} focus={cur.focus} class="feature-img" />
         <div class="feature-text">
           <span class="status">{tr(cur.label, lang)}</span>
           <h3>{tr(cur.title, lang)}</h3>
           <p set:html={inline(tr(cur.summary, lang))} />
+          {cur.credit && <p class="feat-credit" set:html={inline(tr(cur.credit, lang))} />}
           <a class="btn outline more-btn" href={href('projects', lang)}>{t.researchLines}<Icon name="arrow" size={15} /></a>
         </div>
       </article>
@@ -156,6 +157,7 @@ const interests: string[] = tr(profile.interests, lang);
   .feature :global(.feature-img) { height: 100%; aspect-ratio: auto; border-radius: 0; min-height: 200px; }
   .feature-text { padding: 28px 32px; max-width: 72ch; }
   .feature .status { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--second); }
+  .feat-credit { margin-top: 14px; font-size: 0.75rem; font-style: italic; color: var(--muted); }
   .feature h3 { font-size: 1.6rem; margin: 10px 0 12px; }
   @media (max-width: 760px) {
     .feature { grid-template-columns: 1fr; }

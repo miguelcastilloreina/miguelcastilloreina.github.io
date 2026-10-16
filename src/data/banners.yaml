@@ -6,6 +6,7 @@
 # alt:     descripción breve de la foto, para lectores de pantalla.
 # caption: pie de foto visible (lugar y, si no es tuya, el crédito del fotógrafo).
 # focus:   qué parte de la foto conservar al recortarla: "center", "top", "bottom", "50% 30%"…
+# image también puede ser una dirección https:// completa.
 
 research:
   image: ""
@@ -14,10 +15,11 @@ research:
   focus: "center"
 
 projects:
-  image: ""
-  alt: { en: "", es: "" }
-  caption: { en: "", es: "" }
-  focus: "center"
+  image: "https://live.staticflickr.com/65535/50401809342_f1272378b0_b.jpg"
+  alt: { en: "Giant bench of the Big Bench Community Project on the Colli di San Fermo, Lombardy", es: "Banca gigante del Big Bench Community Project en los Colli di San Fermo, Lombardía" }
+  caption: { en: "Big Bench Community Project, Colli di San Fermo (Bergamo, Italy). Photo: [alfp_photo](https://www.flickr.com/photos/freemanphoto/50401809342/), CC BY-NC-ND 2.0", es: "Big Bench Community Project, Colli di San Fermo (Bérgamo, Italia). Foto: [alfp_photo](https://www.flickr.com/photos/freemanphoto/50401809342/), CC BY-NC-ND 2.0" }
+  # full: muestra la foto completa, sin recortar (necesario con licencias "ND", que no permiten modificarla).
+  full: true
 
 activity:
   image: ""

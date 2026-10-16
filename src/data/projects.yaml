@@ -14,10 +14,12 @@ current:
     en: "Built to Be Photographed: Conspicuous Consumption and the Co-Creation of Instagrammable Tourist Attractions"
     es: "Built to Be Photographed: Conspicuous Consumption and the Co-Creation of Instagrammable Tourist Attractions"
   summary:
-    en: "Tourism is more than a service co-created at the moment of delivery: it is an experience that is planned, lived and remembered. This paper studies a new category of attraction whose value lies not in historical significance or cultural depth, but in its use as a photogenic backdrop for self-presentation. Purpose-built, visually oriented attractions have multiplied across the Global South, designed to be photographed and shared rather than experienced in the conventional sense. The paper reads them through conspicuous consumption and the way visitors and destinations co-create their value."
-    es: "El turismo es más que un servicio cocreado en el momento de su prestación: es una experiencia que se planea, se vive y se recuerda. Este artículo estudia una nueva categoría de atractivo cuyo valor no reside en su importancia histórica ni en su densidad cultural, sino en su capacidad de servir como telón de fondo fotogénico para la autopresentación. Los atractivos construidos a propósito y orientados a lo visual se han multiplicado en el Sur Global, diseñados para ser fotografiados y compartidos más que para ser vividos en el sentido convencional. El artículo los analiza desde el consumo conspicuo y la forma en que visitantes y destinos cocrean su valor."
-  image: ""
-  image_alt: { en: "", es: "" }
+    en: "Tourism is more than a service co-created at the moment of delivery: it is an experience that is planned, lived and remembered. The first literature review of my doctoral project explores attractions whose value lies not in their historical significance or cultural depth, but in their capacity to serve as a photogenic backdrop for self-presentation. Purpose-built, visually oriented attractions have multiplied around the world. They are designed to be photographed and shared rather than experienced in the conventional sense."
+    es: "El turismo es más que un servicio cocreado en el momento de su prestación: es una experiencia que se planea, se vive y se recuerda. La primera revisión de literatura de mi proyecto doctoral explora aquellos atractivos cuyo valor no reside en su importancia histórica ni en su densidad cultural, sino en su capacidad de servir como telón de fondo fotogénico para la autopresentación. Los atractivos construidos a propósito y orientados a lo visual se han multiplicado en el mundo. Son diseñados para ser fotografiados y compartidos más que para ser vividos en el sentido convencional."
+  image: "https://live.staticflickr.com/65535/53931218293_7a0a721807_b.jpg"
+  image_alt: { en: "Giant red bench on a mountain meadow", es: "Banca gigante roja en un prado de montaña" }
+  focus: "50% 55%"
+  credit: { en: "Giant bench in the mountains. Photo: [Lorenzo Davico](https://www.flickr.com/photos/lorenzodavico/53931218293/), CC BY-SA 2.0", es: "Banca gigante en la montaña. Foto: [Lorenzo Davico](https://www.flickr.com/photos/lorenzodavico/53931218293/), CC BY-SA 2.0" }
   # Archivos descargables del trabajo (en public/activity/slides/, los mismos de la galería de Actividad).
   files:
     - file: "castillo-reina-acei-2026-built-to-be-photographed.pdf"
@@ -27,7 +29,7 @@ current:
 # El `id` enlaza con el campo `line` de publications.yaml.
 lines:
   - id: visual
-    period: "2025–"
+    period: "2026–"
     image: "visual-attractions.jpg"
     image_alt: { en: "Museum of Ice Cream, San Francisco", es: "Museum of Ice Cream, San Francisco" }
     focus: "50% 50%"
