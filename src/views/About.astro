@@ -24,7 +24,6 @@ const stats = order
       <div>
         <div class="label">{a.label}</div>
         <h1>{profile.name}</h1>
-        <p class="lead">{tr(profile.position, lang)} · {profile.institution}</p>
         <p class="intro" set:html={inline(tr(about.intro, lang))} />
         <div class="cta-row">
           <a class="btn cta" href={url(`/cv/${tr(profile.cv.files, lang)}`)} hreflang={lang}><Icon name="download" />{t.cvButton}</a>
@@ -183,7 +182,7 @@ const stats = order
   .reading-btn { margin-top: 2px; width: fit-content; justify-self: start; align-self: flex-start; color: var(--second); border-color: transparent; background: color-mix(in srgb, var(--second) 14%, transparent); }
   .reading-btn:hover { background: color-mix(in srgb, var(--second) 22%, transparent); }
   .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
-  .lead { color: var(--ink) !important; font-size: 1.1rem; margin-top: 12px !important; }
+
   .intro { max-width: 64ch; }
   .head-grid .cta-row { margin-top: 24px; }
   .portrait { width: 180px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); justify-self: end; }
