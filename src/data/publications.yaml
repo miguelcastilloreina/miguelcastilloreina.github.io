@@ -13,14 +13,15 @@
 # abstract: resumen desplegable (en/es). Si solo hay un idioma, se muestra ese en ambas versiones.
 # Formato: *cursiva*. Tu nombre se resalta solo.
 
-- type: working
+- type: policy
   year: 2025
   title: "Realidades de la población NiNi en Boyacá"
   authors: ["Castillo-Reina, M.", "Becerra, C.", "Vargas, E.", "Ruiz, I."]
   outlet: "ORMET Boyacá"
+  image: "ormet-nini-2025.jpg"
   venue:
-    en: "Regional Labour Market Observatory of Boyacá (ORMET), Gobernación de Boyacá and CREPIB, Tunja"
-    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET), Gobernación de Boyacá y CREPIB, Tunja"
+    en: "Regional Labour Market Observatory of Boyacá (ORMET), Gobernación de Boyacá and CREPIB"
+    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET), Gobernación de Boyacá y CREPIB"
   url: "https://ormet.boyaca.gov.co/wp-content/uploads/2025/12/Realidades-NiNi.pdf"
   url_label: { en: "Document (PDF)", es: "Documento (PDF)" }
   abstract:
