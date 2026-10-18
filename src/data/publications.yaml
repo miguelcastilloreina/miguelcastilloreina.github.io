@@ -20,8 +20,8 @@
   outlet: "ORMET Boyacá"
   image: "ormet-nini-2025.jpg"
   venue:
-    en: "Regional Labour Market Observatory of Boyacá (ORMET), Gobernación de Boyacá and CREPIB"
-    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET), Gobernación de Boyacá y CREPIB"
+    en: "Regional Labour Market Observatory of Boyacá (ORMET)"
+    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET)"
   url: "https://ormet.boyaca.gov.co/wp-content/uploads/2025/12/Realidades-NiNi.pdf"
   url_label: { en: "Document (PDF)", es: "Documento (PDF)" }
   abstract:
@@ -35,7 +35,7 @@
   title: "Yellow pitahaya (*Selenicereus megalanthus*) in Miraflores, Boyacá, Colombia: a social capital approach in a producer organisation"
   authors: ["Castillo-Reina, M.", "Pérez, N.", "Ruiz, I."]
   outlet: "Acta Agronómica"
-  image: "https://revistas.unal.edu.co/public/journals/10/cover_issue_6027_es_ES.jpg"
+  image: "acta-agronomica-71-4.jpg"
   venue: "*Acta Agronómica*, 71(4)"
   doi: "10.15446/acag.v71n4.100152"
   selected: true

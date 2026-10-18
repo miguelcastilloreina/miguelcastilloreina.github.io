@@ -159,9 +159,11 @@ p { margin: 0; }
 
 section.block { padding-block: 56px; border-bottom: 1px solid var(--line); }
 section.block:last-of-type { border-bottom: 0; }
-.block-head { display: grid; grid-template-columns: 200px 1fr; gap: 12px 48px; margin-bottom: 28px; align-items: baseline; }
-.block-head h2 { font-size: var(--step-2); }
-@media (max-width: 720px) { .block-head { grid-template-columns: 1fr; } }
+/* títulos de sección: el título y una línea fina que llega hasta el borde */
+.block-head { margin-bottom: 28px; }
+.block-head h2 { font-size: var(--step-2); display: flex; align-items: center; gap: 20px; }
+.block-head h2::after { content: ''; flex: 1; min-width: 24px; height: 1px; background: var(--line); }
+@media (max-width: 560px) { .block-head h2::after { display: none; } }
 
 .more { display: inline-block; margin-top: 20px; font-weight: 700; text-decoration: none; }
 .more::after { content: ' →'; }
