@@ -5,18 +5,22 @@ intro:
   en: "Economist and PhD candidate in Regional Science and Economic Geography at GSSI, with several years of experience in research, teaching, consulting and the design of science, technology and innovation (STI) policy in Colombian regions. Recognized as Junior Researcher by Colombia's Ministry of Science, Technology and Innovation."
   es: "Economista y doctorando en Ciencia Regional y Geografía Económica en el GSSI, con varios años de experiencia en investigación, docencia, consultoría y diseño de políticas de ciencia, tecnología e innovación (CTeI) en las regiones de Colombia. Reconocido como Investigador Junior por el Ministerio de Ciencia, Tecnología e Innovación."
 
+# logo: archivo en public/img/logos/ (PNG, JPG o SVG). Se muestra en miniatura junto a la entrada.
 education:
   - years: "2025–"
     degree: { en: "PhD in Regional Science and Economic Geography", es: "Doctorado en Ciencia Regional y Geografía Económica" }
     place: { en: "Gran Sasso Science Institute (GSSI), L'Aquila, Italy", es: "Gran Sasso Science Institute (GSSI), L'Aquila, Italia" }
+    logo: "gssi.png"
     note: { en: "Cohort XLI. Supervisors: Maria Giovanna Brandano and Alessandra Faggian.", es: "Cohorte XLI. Directoras: Maria Giovanna Brandano y Alessandra Faggian." }
   - years: "2021"
     degree: { en: "Master's in Economics", es: "Maestría en Economía" }
     place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    logo: "uptc.png"
     note: { en: "Thesis with distinction: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*.", es: "Tesis meritoria: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*." }
   - years: "2016"
     degree: { en: "BA in Economics", es: "Economista" }
     place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    logo: "uptc.png"
     note: { en: "Teaching assistant in Macroeconomics, 2014–2016.", es: "Monitor del área de Macroeconomía, 2014–2016." }
 
 experience:
@@ -91,18 +95,22 @@ affiliations:
     name: { en: "Latin American Society for the History of Economic Thought (ALAHPE)", es: "Asociación Latinoamericana de Historia del Pensamiento Económico (ALAHPE)" }
     role: { en: "Member", es: "Integrante" }
     url: "https://alahpe.org/en/"
+    logo: "alahpe.svg"
   - since: "2018"
     name: "Rethinking Economics"
     role: { en: "Member through ReDe and the Economics Student Council, UPTC", es: "Integrante a través de ReDe y del Consejo Estudiantil de Economía, UPTC" }
     url: "https://www.rethinkeconomics.org"
+    logo: "rethinking-economics.png"
   - since: "2018"
     name: "De América Soy"
     role: { en: "Co-founder and member", es: "Cofundador e integrante" }
     url: "https://deamericasoy.org"
+    logo: "de-america-soy.jpg"
   - since: "2016"
     name: "CREPIB, Boyacá"
     role: { en: "Researcher", es: "Investigador" }
     url: "https://www.crepib.org.co"
+    logo: "crepib.png"
 
 skills:
   - label: { en: "Data analysis", es: "Análisis de datos" }
