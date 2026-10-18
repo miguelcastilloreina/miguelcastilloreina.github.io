@@ -143,7 +143,9 @@ music:
     url: "https://www.goodreads.com/user/show/39964445-miguel-castillo"
   photo: "manantial-gachantiva.jpg"
   photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
-  caption: { en: "Miguel, Félix and José Castillo. Manantial music group (Gachantivá, Boyacá).", es: "Miguel, Félix y José Castillo. Agrupación musical Manantial (Gachantivá, Boyacá)." }
+  # Pie de foto en dos partes: quiénes aparecen y dónde.
+  caption: { en: "Miguel, Félix and José Castillo · Manantial music group", es: "Miguel, Félix y José Castillo · Agrupación Manantial" }
+  place: { en: "Gachantivá, Boyacá", es: "Gachantivá, Boyacá" }
   press:
     - title: "La familia Castillo, cultores de la música de cuerdas colombiana en Gachantivá"
       outlet: { en: "Conexión Zaquencipa (cultural magazine), No. 24, pp. 43–47, 2024", es: "Revista cultural Conexión Zaquencipa, n.º 24, pp. 43–47, 2024" }

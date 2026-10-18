@@ -90,7 +90,12 @@ const stats = order
         {about.music.photo && (
           <figure class="beyond-photo">
             <img src={url(`/img/about/${about.music.photo}`)} alt={tr(about.music.photo_alt, lang)} loading="lazy" width="1400" height="1050" />
-            {about.music.caption && <figcaption>{tr(about.music.caption, lang)}</figcaption>}
+            {about.music.caption && (
+              <figcaption>
+                <span class="bp-names">{tr(about.music.caption, lang)}</span>
+                {about.music.place && <span class="bp-place"><Icon name="pin" size={14} />{tr(about.music.place, lang)}</span>}
+              </figcaption>
+            )}
           </figure>
         )}
         <div class="beyond-cols">
@@ -237,9 +242,19 @@ const stats = order
     .closing-quote blockquote, .closing-quote figcaption { padding-left: 36px; }
   }
   .beyond-sec > h2 { font-size: 1.35rem; margin-bottom: 20px; }
-  .beyond-photo { margin: 0; }
-  .beyond-photo img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 30%; border-radius: 6px; }
-  .beyond-photo figcaption { margin-top: 8px; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+  .beyond-photo {
+    width: 94%; margin: 8px auto 0; padding: 12px 12px 0; background: #fff; border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 10px 28px rgb(0 0 0 / 0.10); transform: rotate(-0.6deg);
+  }
+  .beyond-photo img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 30%; border-radius: 2px; }
+  .beyond-photo figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; padding: 12px 4px 14px; }
+  .bp-names { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: #1f2a26; }
+  .bp-place { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #9a6f1c; }
+  @media (max-width: 560px) {
+    .beyond-photo { width: 100%; padding: 8px 8px 0; transform: rotate(-0.4deg); }
+    .beyond-photo img { aspect-ratio: 4 / 3; }
+    .beyond-photo figcaption { padding: 10px 2px 12px; }
+  }
   .beyond-cols { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 48px; margin-top: 28px; align-items: start; }
   .beyond-text { display: grid; gap: 1em; font-size: 1.12rem; line-height: 1.6; max-width: 56ch; }
   .beyond-cards { display: grid; gap: 14px; }
