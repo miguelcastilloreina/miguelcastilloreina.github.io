@@ -190,14 +190,17 @@ section.block:last-of-type { border-bottom: 0; }
 .pub .au { font-size: 0.94rem; color: var(--muted); margin-top: 4px; }
 .pub .au b { color: var(--ink); font-weight: 700; }
 .pub .v { font-size: 0.94rem; margin-top: 2px; }
-.pub .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.pub .links a {
-  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
-  font-size: 0.8rem; font-weight: 700; color: var(--accent);
-  padding: 3px 11px 3px 9px; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+/* enlaces de cada publicación en una fila: DOI · enlace · resumen */
+.pub .links { display: flex; flex-wrap: wrap; align-items: center; row-gap: 4px; margin-top: 8px; font-size: 0.84rem; }
+.pub .links > *:not(:last-child)::after { content: '·'; color: var(--muted); margin: 0 10px 0 5px; font-weight: 400; }
+.pub .links a, .pub .links button {
+  display: inline-flex; align-items: center; gap: 5px; padding: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-weight: 700; color: var(--accent); text-decoration: none;
 }
-.pub .links a:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
-.pub .links a .doi-id { font-family: var(--font-mono); font-weight: 400; font-size: 0.74rem; color: var(--muted); }
+.pub .links :is(a, button):hover .lbl { text-decoration: underline; text-underline-offset: 3px; }
+.pub .links .doi-id { font-family: var(--font-mono); font-weight: 400; font-size: 0.76rem; color: var(--muted); }
+.abs-toggle::before { content: '+'; font-family: var(--font-mono); width: 0.8em; text-align: center; }
+.abs-toggle[aria-expanded='true']::before { content: '–'; }
 .badge {
   display: inline-block; margin-left: 8px; vertical-align: 2px;
   font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
@@ -210,16 +213,7 @@ section.block:last-of-type { border-bottom: 0; }
 }
 
 /* resumen desplegable */
-.abs { margin-top: 8px; }
-.abs summary {
-  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
-  font-size: 0.82rem; font-weight: 700; color: var(--accent);
-  padding: 3px 10px 3px 8px; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-}
-.abs summary::-webkit-details-marker { display: none; }
-.abs summary::before { content: '+'; font-family: var(--font-mono); width: 0.8em; text-align: center; }
-.abs[open] summary::before { content: '–'; }
-.abs summary:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.abs-text[hidden] { display: none; }
 .abs-text { display: grid; gap: 0.8em; margin-top: 12px; padding-left: 14px; border-left: 2px solid var(--line); font-size: 0.94rem; max-width: 72ch; color: var(--ink); }
 
 /* publicaciones sin miniatura (portada): el año resalta */

@@ -24,19 +24,31 @@ const urlLabel = tr(pub.url_label, lang) ?? 'Link';
     </div>
     {pub.authors.length > 0 && <div class="au" set:html={authorsHtml(pub.authors)} />}
     <div class="v" set:html={inline(tr(pub.venue, lang))} />
-    {(pub.doi || pub.url) && (
+    {(pub.doi || pub.url || (abstract && absLang)) && (
       <div class="links">
-        {pub.doi && <a href={`https://doi.org/${pub.doi}`} title={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} />DOI <span class="doi-id">{pub.doi}</span></a>}
-        {pub.url && <a href={pub.url}><Icon name="external" size={14} />{urlLabel}</a>}
+        {pub.doi && <a href={`https://doi.org/${pub.doi}`} title={`https://doi.org/${pub.doi}`}><Icon name="doi" size={14} /><span class="lbl">DOI</span> <span class="doi-id">{pub.doi}</span></a>}
+        {pub.url && <a href={pub.url}><Icon name="external" size={14} /><span class="lbl">{urlLabel}</span></a>}
+        {abstract && absLang && (
+          <button type="button" class="abs-toggle" aria-expanded="false" aria-controls={`${pubId(pub)}-abs`}><span class="lbl">{absLabel}</span></button>
+        )}
       </div>
     )}
     {abstract && absLang && (
-      <details class="abs">
-        <summary>{absLabel}</summary>
-        <div class="abs-text" lang={absLang}>
-          {absText.split('\n').map((para) => <p set:html={inline(para)} />)}
-        </div>
-      </details>
+      <div class="abs-text" id={`${pubId(pub)}-abs`} lang={absLang} hidden>
+        {absText.split('\n').map((para) => <p set:html={inline(para)} />)}
+      </div>
     )}
   </div>
 </article>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.abs-toggle').forEach((b) => {
+    b.addEventListener('click', () => {
+      const box = document.getElementById(b.getAttribute('aria-controls') ?? '');
+      if (!box) return;
+      const open = b.getAttribute('aria-expanded') !== 'true';
+      b.setAttribute('aria-expanded', String(open));
+      box.hidden = !open;
+    });
+  });
+</script>
