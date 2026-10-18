@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import Contours from '../components/Contours.astro';
 import PubItem from '../components/PubItem.astro';
 import LineThumb from '../components/LineThumb.astro';
 import Icon from '../components/Icon.astro';
@@ -17,7 +16,8 @@ const interests: string[] = tr(profile.interests, lang);
 ---
 <Base lang={lang} route="home">
   <div class="hero">
-    <Contours />
+    <div class="hero-map" aria-hidden="true"></div>
+    <span class="map-credit">{lang === 'es' ? 'Mapa de L’Aquila' : 'Map of L’Aquila'} · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></span>
     <div class="wrap hero-grid">
       <div class="hero-text">
         <div class="label">{tr(profile.position, lang)}</div>
@@ -109,6 +109,9 @@ const interests: string[] = tr(profile.interests, lang);
 
 <style>
   .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .hero-map { position: absolute; inset: 0; background: var(--hero-map) center 45% / cover no-repeat; opacity: 0.22; pointer-events: none; }
+  .map-credit { position: absolute; right: 12px; bottom: 6px; font-size: 0.66rem; color: var(--muted); }
+  .map-credit a { color: inherit; }
   .hero-grid {
     position: relative;
     display: grid;

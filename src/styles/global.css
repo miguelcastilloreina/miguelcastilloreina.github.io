@@ -15,6 +15,7 @@
   --line: #dce2e0;
   --accent: #2c5e50;   /* verde páramo */
   --second: #9a6f1c;   /* ocre frailejón */
+  --hero-map: url('/img/hero/laquila-light.jpg');
   --cta: #8a5f12;      /* botón del CV (ocre oscuro, complementario al verde) */
   --on-cta: #ffffff;
 
@@ -39,12 +40,14 @@
     --line: #2a3439;
     --accent: #8dc6b1;
     --second: #e2b865;
+    --hero-map: url('/img/hero/laquila-dark.jpg');
     --cta: #e2b865;
     --on-cta: #1b1608;
     color-scheme: dark;
   }
 }
 :root[data-theme='dark'] {
+  --hero-map: url('/img/hero/laquila-dark.jpg');
   --bg: #111619;
   --surface: #192125;
   --ink: #e6eceb;
