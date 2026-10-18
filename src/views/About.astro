@@ -93,7 +93,21 @@ const stats = order
         )}
         <div class="beyond-cols">
           <div class="beyond-text">
+            <h3 class="sub-h">{lang === 'es' ? 'Música' : 'Music'}</h3>
             {(tr(about.music.text, lang) as unknown as string[]).map((para) => <p>{para}</p>)}
+            {about.music.coffee && (
+              <div class="beyond-sub">
+                <h3>{tr(about.music.coffee.title, lang)}</h3>
+                <p>{tr(about.music.coffee.text, lang)}</p>
+              </div>
+            )}
+            {about.music.reading?.url && (
+              <div class="beyond-sub">
+                <h3>{tr(about.music.reading.title, lang)}</h3>
+                <p>{tr(about.music.reading.text, lang)}</p>
+                <a class="btn outline" href={about.music.reading.url}><Icon name="book" />{tr(about.music.reading.label, lang)}</a>
+              </div>
+            )}
           </div>
           <div class="beyond-cards">
             {(about.music.tracks ?? []).length > 0 && (
@@ -166,6 +180,9 @@ const stats = order
 </script>
 
 <style>
+  .beyond-sub { margin-top: 26px; }
+  .beyond-sub h3, .sub-h { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--second); margin: 0 0 8px; }
+  .beyond-sub .btn { margin-top: 4px; }
   .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
   .lead { color: var(--ink) !important; font-size: 1.1rem; margin-top: 12px !important; }
   .intro { max-width: 64ch; }

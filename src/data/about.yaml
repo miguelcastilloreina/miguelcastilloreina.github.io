@@ -120,10 +120,21 @@ music:
   text:
     en:
       - "I play the Colombian tiple and the Venezuelan cuatro to sing bambucos, pasillos, torbellinos, joropos and other traditional rhythms with my family group «Manantial», from Gachantivá (Boyacá)."
-      - "I am also passionate about Colombian coffee."
     es:
       - "Toco el tiple colombiano y el cuatro venezolano para cantar bambucos, pasillos, torbellinos, joropos y otros ritmos tradicionales con la agrupación familiar «Manantial», de Gachantivá (Boyacá)."
-      - "También soy un apasionado del café colombiano."
+  # Bloques cortos después del texto de música. El de lectura solo aparece si `url` tiene la dirección de Goodreads.
+  coffee:
+    title: { en: "Coffee", es: "Café" }
+    text:
+      en: "I am passionate about Colombian coffee and keen on different brewing methods. Right now I am chasing the perfect cup with the V60, though the Melitta and the OXO Brewer already serve me quite well."
+      es: "Soy un apasionado del café colombiano y aficionado a distintos métodos de preparación. Ahora mismo busco la taza perfecta con la V60, aunque con la Melitta y la OXO Brewer me queda bastante bien."
+  reading:
+    title: { en: "Reading", es: "Lectura" }
+    text:
+      en: "I read to find answers to questions I have not yet asked myself. Here is what I have read, am reading and will read:"
+      es: "Leo para encontrar respuestas a preguntas que aún no me he hecho. Acá está lo que he leído, leo y leeré:"
+    label: { en: "My books on Goodreads", es: "Mis lecturas en Goodreads" }
+    url: ""
   photo: "manantial-gachantiva.jpg"
   photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
   caption: { en: "Miguel, Félix and José Castillo. Manantial music group (Gachantivá, Boyacá).", es: "Miguel, Félix y José Castillo. Agrupación musical Manantial (Gachantivá, Boyacá)." }
