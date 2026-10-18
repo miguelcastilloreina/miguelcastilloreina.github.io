@@ -8,12 +8,12 @@ intro:
 # logo: archivo en public/img/logos/ (PNG, JPG o SVG). Se muestra en miniatura junto a la entrada.
 education:
   - years: "2025–"
-    degree: { en: "PhD in Regional Science and Economic Geography", es: "Doctorado en Ciencia Regional y Geografía Económica" }
+    degree: { en: "PhD in Regional Science and Economic Geography", es: "Doctorando en Ciencia Regional y Geografía Económica" }
     place: { en: "Gran Sasso Science Institute (GSSI), L'Aquila, Italy", es: "Gran Sasso Science Institute (GSSI), L'Aquila, Italia" }
     logo: "gssi.png"
     note: { en: "Cohort XLI. Supervisors: Maria Giovanna Brandano and Alessandra Faggian.", es: "Cohorte XLI. Directoras: Maria Giovanna Brandano y Alessandra Faggian." }
   - years: "2021"
-    degree: { en: "Master's in Economics", es: "Maestría en Economía" }
+    degree: { en: "Master's in Economics", es: "Magíster en Economía" }
     place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
     logo: "uptc.png"
     note: { en: "Thesis with distinction: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*.", es: "Tesis meritoria: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*." }
