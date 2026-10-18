@@ -152,10 +152,17 @@ music:
       url: "https://drive.google.com/file/d/131Z2i4CvMZN8gKE0DIhIjdmTfaMINte5/view"
   tracks:
     - title: "Cambiaron los tiempos"
+      genre: { en: "Bambuco", es: "Bambuco" }
       url: "https://soundcloud.com/miguel-castillo-597028896/cambiaron-los-tiempos"
       credits:
         - { en: "Composer: Félix Alfredo Castillo Forero", es: "Compositor: Félix Alfredo Castillo Forero" }
         - { en: "On: *Gachantivá: un lugar mágico por descubrir* (2018)", es: "En: *Gachantivá: un lugar mágico por descubrir* (2018)" }
+      # Intérpretes: nombre e instrumento(s).
+      performers:
+        - { name: "Miguel Castillo", role: { en: "tiple and vocals", es: "tiple y voz" } }
+        - { name: "Félix Castillo", role: { en: "guitar and vocals", es: "guitarra y voz" } }
+        - { name: "José Castillo", role: { en: "bandola", es: "bandola" } }
+        - { name: "Julián Felipe Castillo", role: { en: "percussion", es: "percusión" } }
 
 # Cita al cierre de la página Sobre mí.
 # Texto original de Pigou (1920, dominio público); la versión en español es una traducción propia.
