@@ -59,7 +59,7 @@ const interests: string[] = tr(profile.interests, lang);
             {interests.map((x) => <li>{x}</li>)}
           </ul>
         </div>
-        <a class="btn outline about-btn" href={href('about', lang)}>{t.fullCv}<Icon name="arrow" size={15} /></a>
+        <a class="btn go about-btn" href={href('about', lang)}>{t.fullCv}<Icon name="arrow" size={15} /></a>
       </div>
     </section>
 
@@ -75,7 +75,7 @@ const interests: string[] = tr(profile.interests, lang);
           <h3>{tr(cur.title, lang)}</h3>
           <p set:html={inline(tr(cur.summary, lang))} />
           {cur.credit && <p class="feat-credit" set:html={inline(tr(cur.credit, lang))} />}
-          <a class="btn outline more-btn" href={href('projects', lang)}>{t.researchLines}<Icon name="arrow" size={15} /></a>
+          <a class="btn go more-btn" href={href('projects', lang)}>{t.researchLines}<Icon name="arrow" size={15} /></a>
         </div>
       </article>
     </section>
@@ -88,7 +88,7 @@ const interests: string[] = tr(profile.interests, lang);
       <div>
         {selected.map((p) => <PubItem pub={p} lang={lang} thumb={false} abstract={false} />)}
       </div>
-      <a class="btn outline more-btn" href={href('research', lang)}>{t.allPubs}<Icon name="arrow" size={15} /></a>
+      <a class="btn go more-btn" href={href('research', lang)}>{t.allPubs}<Icon name="arrow" size={15} /></a>
     </section>
 
     {profile.show_news && (
