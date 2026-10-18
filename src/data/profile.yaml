@@ -48,19 +48,19 @@ cv:
 
 education:
   - degree:
-      en: "PhD, Regional Science and Economic Geography"
+      en: "PhD in Regional Science and Economic Geography"
       es: "Doctorando en Ciencia Regional y Geografía Económica"
     place:
       en: "GSSI, Italy"
       es: "GSSI, Italia"
     years: "2025–"
   - degree:
-      en: "MSc Economics"
+      en: "Master's in Economics"
       es: "Magíster en Economía"
     place: "UPTC, Colombia"
     years: "2021"
   - degree:
-      en: "BA Economics"
+      en: "BA in Economics"
       es: "Economista"
     place: "UPTC, Colombia"
     years: "2016"
