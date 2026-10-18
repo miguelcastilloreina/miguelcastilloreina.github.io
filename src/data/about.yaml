@@ -145,5 +145,9 @@ quote:
     en: "If it were not for the hope that a scientific study of men’s social actions may lead, not necessarily directly or immediately, but at some time and in some way, to practical results in social improvement, not a few students of these actions would regard the time devoted to their study as time misspent."
     es: "Si no fuera por la esperanza de que el estudio científico de las acciones sociales de los hombres pueda conducir, no necesariamente de forma directa o inmediata, sino en algún momento y de algún modo, a resultados prácticos en favor del mejoramiento social, no pocos de quienes estudian estas acciones considerarían perdido el tiempo dedicado a su estudio."
   author: "Arthur C. Pigou"
+  # Retrato junto al nombre (se recorta en círculo). Puede ser un archivo en public/img/ o una dirección https://.
+  photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg/500px-Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg"
+  photo_alt: { en: "Portrait of Arthur Cecil Pigou", es: "Retrato de Arthur Cecil Pigou" }
+  photo_credit: { en: "Portrait: J. Palmer Clarke, c. 1918–1921. [Public domain](https://commons.wikimedia.org/wiki/File:Portrait_of_Arthur_Cecil_Pigou,_c._1918-1921.jpg)", es: "Retrato: J. Palmer Clarke, c. 1918–1921. [Dominio público](https://commons.wikimedia.org/wiki/File:Portrait_of_Arthur_Cecil_Pigou,_c._1918-1921.jpg)" }
   source: { en: "*The Economics of Welfare* (1920), ch. I, § 1", es: "*The Economics of Welfare* (1920), cap. I, § 1. Traducción propia." }
 

@@ -136,7 +136,14 @@ const stats = order
       <div class="wrap">
         <figure>
           <blockquote lang={lang}><p>{tr(about.quote.text, lang)}</p></blockquote>
-          <figcaption><strong>{about.quote.author}</strong><span set:html={inline(tr(about.quote.source, lang))} /></figcaption>
+          <figcaption>
+            {about.quote.photo && <img class="q-photo" src={/^https?:/.test(about.quote.photo) ? about.quote.photo : url(`/img/${about.quote.photo}`)} alt={tr(about.quote.photo_alt, lang) ?? about.quote.author} loading="lazy" width="72" height="72" />}
+            <span class="q-meta">
+              <strong>{about.quote.author}</strong>
+              <span set:html={inline(tr(about.quote.source, lang))} />
+              {about.quote.photo_credit && <small set:html={inline(tr(about.quote.photo_credit, lang))} />}
+            </span>
+          </figcaption>
         </figure>
       </div>
     </section>
@@ -203,7 +210,10 @@ const stats = order
     font-family: var(--font-head); font-weight: 500; letter-spacing: -0.01em;
     font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.7rem); line-height: 1.45; color: var(--ink); text-wrap: pretty;
   }
-  .closing-quote figcaption { margin-top: 22px; padding-left: 56px; display: grid; gap: 2px; font-size: 0.92rem; color: var(--muted); }
+  .closing-quote figcaption { margin-top: 26px; padding-left: 56px; display: flex; align-items: center; gap: 16px; font-size: 0.92rem; color: var(--muted); }
+  .q-photo { width: 72px; height: 72px; flex: none; border-radius: 50%; object-fit: cover; object-position: 50% 22%; filter: grayscale(1); border: 2px solid var(--line); }
+  .q-meta { display: grid; gap: 2px; }
+  .q-meta small { font-size: 0.72rem; margin-top: 2px; }
   .closing-quote figcaption strong { color: var(--ink); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
   @media (max-width: 560px) {
     .closing-quote figure { padding-block: 56px 48px; }

@@ -89,9 +89,9 @@ lines:
     image: "economics-education.jpg"
     focus: "50% 50%"
     credit: { en: "Rethinking Economics Gathering (Chaussy, France, 2018), where [De América Soy](https://deamericasoy.org) was born.", es: "Rethinking Economics Gathering (Chaussy, Francia, 2018). Allí nació [De América Soy](https://deamericasoy.org)." }
-    image_alt: { en: "Group photo at an economics education gathering", es: "Foto grupal en un encuentro sobre enseñanza de la economía" }
+    image_alt: { en: "Group photo at an economics teaching gathering", es: "Foto grupal en un encuentro sobre enseñanza de la economía" }
     title:
-      en: "Economics education"
+      en: "Economics teaching"
       es: "Enseñanza de la economía"
     text:
       en: "How economics is taught at Latin American universities (with a focus on Colombia) and its effects on the profession and on public policy."
