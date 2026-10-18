@@ -106,7 +106,7 @@ const stats = order
             )}
             {about.music.reading?.url && (
               <p>{tr(about.music.reading.text, lang)}</p>
-              <a class="btn outline reading-btn" href={about.music.reading.url}><Icon name="book" />{tr(about.music.reading.label, lang)}</a>
+              <a class="btn outline reading-btn" href={about.music.reading.url}><Icon name="shelf" />{tr(about.music.reading.label, lang)}</a>
             )}
           </div>
           <div class="beyond-cards">
@@ -180,7 +180,8 @@ const stats = order
 </script>
 
 <style>
-  .reading-btn { margin-top: 2px; width: fit-content; justify-self: start; align-self: flex-start; }
+  .reading-btn { margin-top: 2px; width: fit-content; justify-self: start; align-self: flex-start; color: var(--second); border-color: transparent; background: color-mix(in srgb, var(--second) 14%, transparent); }
+  .reading-btn:hover { background: color-mix(in srgb, var(--second) 22%, transparent); }
   .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
   .lead { color: var(--ink) !important; font-size: 1.1rem; margin-top: 12px !important; }
   .intro { max-width: 64ch; }
