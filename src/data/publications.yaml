@@ -13,6 +13,22 @@
 # abstract: resumen desplegable (en/es). Si solo hay un idioma, se muestra ese en ambas versiones.
 # Formato: *cursiva*. Tu nombre se resalta solo.
 
+- type: working
+  year: 2025
+  title: "Realidades de la población NiNi en Boyacá"
+  authors: ["Castillo-Reina, M.", "Becerra, C.", "Vargas, E.", "Ruiz, I."]
+  outlet: "ORMET Boyacá"
+  venue:
+    en: "Regional Labour Market Observatory of Boyacá (ORMET), Gobernación de Boyacá and CREPIB, Tunja"
+    es: "Observatorio Regional del Mercado de Trabajo de Boyacá (ORMET), Gobernación de Boyacá y CREPIB, Tunja"
+  url: "https://ormet.boyaca.gov.co/wp-content/uploads/2025/12/Realidades-NiNi.pdf"
+  url_label: { en: "Document (PDF)", es: "Documento (PDF)" }
+  abstract:
+    en: >-
+      This study analyses the situation of young people aged 15 to 28 who neither study nor work (NiNi, or NEET) in the department of Boyacá, Colombia, and the local factors that shape their life projects. It combines labour-market and living-conditions statistics from DANE (the GEIH household survey, 2015–2024; the National Quality of Life Survey; the National Time Use Survey; and population projections) with the voices of young people and of the institutions that work with them. It also reviews current public policies and programmes, and closes with conclusions and recommendations to reduce the share of young people who neither study nor work in the region.
+    es: >-
+      Este estudio analiza la situación de las personas jóvenes de 15 a 28 años que no estudian ni trabajan (NiNi) en el departamento de Boyacá y los factores locales que inciden en sus proyectos de vida. Combina estadísticas del mercado laboral y de condiciones de vida del DANE (Gran Encuesta Integrada de Hogares, 2015–2024; Encuesta Nacional de Calidad de Vida; Encuesta Nacional de Uso del Tiempo, y proyecciones de población) con las voces de las y los jóvenes y de las instituciones que trabajan con ellos. Además, revisa las políticas y programas públicos vigentes y cierra con conclusiones y recomendaciones para reducir la proporción de jóvenes que no estudian ni trabajan en la región.
+
 - type: article
   year: 2023
   title: "Yellow pitahaya (*Selenicereus megalanthus*) in Miraflores, Boyacá, Colombia: a social capital approach in a producer organisation"
