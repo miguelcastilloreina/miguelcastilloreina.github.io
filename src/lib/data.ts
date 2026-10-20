@@ -25,6 +25,7 @@ export interface Publication {
   abstract?: { en?: string; es?: string };
   selected?: boolean;
   line?: string;
+  hidden?: boolean;
 }
 
 export const profile = parse(profileRaw);
@@ -34,7 +35,8 @@ export const about = parse(aboutRaw);
 export const banners = parse(bannersRaw);
 /** Activity page and menu item only exist once there is at least one event. */
 export const hasActivity = (activity?.events ?? []).length > 0;
-export const publications: Publication[] = (parse(pubsRaw) ?? []).sort(
+/** Entries marked `hidden: true` stay in the YAML but are not published anywhere on the site. */
+export const publications: Publication[] = (parse(pubsRaw) ?? []).filter((p: Publication) => !p.hidden).sort(
   (a: Publication, b: Publication) => b.year - a.year,
 );
 

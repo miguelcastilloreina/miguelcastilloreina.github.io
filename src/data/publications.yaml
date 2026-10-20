@@ -8,6 +8,7 @@
 # status:   etiqueta opcional ("Submitted", "R&R", "Forthcoming"…), con versión en/es
 # selected: true -> aparece en la portada
 # line:     línea de investigación a la que pertenece (ver projects.yaml)
+# hidden:   true -> la entrada se conserva aquí pero no aparece en ninguna parte del sitio
 #
 # Los títulos van en su idioma original. `venue` puede ser un texto único o tener versión en/es.
 # abstract: resumen desplegable (en/es). Si solo hay un idioma, se muestra ese en ambas versiones.
