@@ -31,7 +31,7 @@ activity:
   focus: "center"
 
 about:
-  image: ""
-  alt: { en: "", es: "" }
-  caption: { en: "", es: "" }
-  focus: "center"
+  image: "monte-calvo-laquila.jpg"
+  alt: { en: "Autumn panorama from Monte Calvo over the Apennine valleys around L'Aquila", es: "Panorámica otoñal desde el Monte Calvo sobre los valles del Apenino alrededor de L'Aquila" }
+  place: { en: "Monte Calvo, Scoppito (L'Aquila, Italy) · October 2026", es: "Monte Calvo, Scoppito (L'Aquila, Italia) · octubre de 2026" }
+  focus: "center 60%"
