@@ -25,10 +25,18 @@ projects:
   full: true
 
 activity:
-  image: ""
-  alt: { en: "", es: "" }
-  caption: { en: "", es: "" }
-  focus: "center"
+  # images: varias fotos lado a lado. Cada una con su archivo, descripción y encuadre.
+  images:
+    - file: "iguaque-paramo-letrero.jpg"
+      alt: { en: "Trail sign 'Station 8: Páramo' in the Iguaque Fauna and Flora Sanctuary", es: "Letrero «Estación 8: Páramo» del Santuario de Fauna y Flora Iguaque" }
+      focus: "center 45%"
+    - file: "iguaque-frailejones.jpg"
+      alt: { en: "Frailejones in the páramo overlooking the valleys of Boyacá", es: "Frailejones en el páramo con vista a los valles de Boyacá" }
+      focus: "center 62%"
+    - file: "iguaque-valle.jpg"
+      alt: { en: "Lichen-covered tree and the valley seen from the Iguaque sanctuary", es: "Árbol cubierto de líquenes y el valle visto desde el santuario de Iguaque" }
+      focus: "center 68%"
+  place: { en: "Iguaque Fauna and Flora Sanctuary (Boyacá, Colombia) · 2025", es: "Santuario de Fauna y Flora Iguaque (Boyacá, Colombia) · 2025" }
 
 about:
   image: "monte-calvo-laquila.jpg"
