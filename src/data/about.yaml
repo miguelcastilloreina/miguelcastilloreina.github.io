@@ -199,6 +199,7 @@ music:
     - title: "La familia Castillo, cultores de la música de cuerdas colombiana en Gachantivá"
       outlet: { en: "Conexión Zaquencipa (cultural magazine), No. 24, pp. 43–47, 2024", es: "Revista cultural Conexión Zaquencipa, n.º 24, pp. 43–47, 2024" }
       url: "https://drive.google.com/file/d/131Z2i4CvMZN8gKE0DIhIjdmTfaMINte5/view"
+      cover: "conexion-zaquencipa-24.jpg"   # portada de la revista (public/img/about/)
   tracks:
     - title: "Cambiaron los tiempos"
       genre: { en: "Bambuco", es: "Bambuco" }
