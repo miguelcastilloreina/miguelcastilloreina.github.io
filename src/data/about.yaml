@@ -33,12 +33,12 @@ teaching:
   - years: "2021–2023"
     course: { en: "Microeconomics", es: "Microeconomía" }
     role: { en: "Lecturer", es: "Docente" }
-    place: "Fundación Universitaria de San Gil (UNISANGIL), Yopal"
+    place: "Fundación Universitaria de San Gil (UNISANGIL), Yopal (Casanare)"
     note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Curso en español." }
   - years: "2020–2021"
     course: { en: "Microeconomics · Economics", es: "Microeconomía · Economía" }
     role: { en: "Adjunct lecturer", es: "Profesor catedrático" }
-    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja (Boyacá)"
     note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Cursos en español." }
 
 experience:
@@ -55,7 +55,7 @@ experience:
     org: { en: "Organization of Ibero-American States (OEI), Bogotá", es: "Organización de Estados Iberoamericanos (OEI), Bogotá" }
   - years: "2021–2023"
     role: { en: "Research director, Yopal campus", es: "Director de Investigación, sede Yopal" }
-    org: { en: "Fundación Universitaria de San Gil (UNISANGIL), Yopal", es: "Fundación Universitaria de San Gil (UNISANGIL), Yopal" }
+    org: { en: "Fundación Universitaria de San Gil (UNISANGIL), Yopal (Casanare)", es: "Fundación Universitaria de San Gil (UNISANGIL), Yopal" }
     note: { en: "Led the university's research policy. General coordinator of project BPIN 2020000100435 on water quality information systems in Casanare.", es: "Coordinación de la política de investigación. Coordinador general del proyecto BPIN 2020000100435 sobre sistemas de información de calidad del agua en Casanare." }
   - years: "2022"
     role: { en: "Regional STI policy advisor", es: "Especialista en política regional de CTeI" }
