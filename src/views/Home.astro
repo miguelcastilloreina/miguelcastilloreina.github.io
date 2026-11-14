@@ -37,14 +37,15 @@ const interests: string[] = tr(profile.interests, lang);
 
   <div class="wrap">
     <section class="block about">
-      <aside class="facts">
-        <div class="label">{t.interests}</div>
-        <ul class="plain tags">
-          {interests.map((x) => <li>{x}</li>)}
-        </ul>
-      </aside>
+      <h2 class="about-h">{t.profile}</h2>
       <div class="prose">
         {bio.map((p) => <p set:html={inline(p)} />)}
+        <div class="interests">
+          <div class="label">{t.interests}</div>
+          <ul class="plain tags">
+            {interests.map((x) => <li>{x}</li>)}
+          </ul>
+        </div>
         <a class="btn go about-btn" href={href('about', lang)}>{t.fullCv}<Icon name="arrow" size={15} /></a>
       </div>
     </section>
@@ -120,16 +121,21 @@ const interests: string[] = tr(profile.interests, lang);
     .portrait { width: 136px; justify-self: start; order: -1; }
   }
 
-  .about { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+  .about { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; }
   .prose { max-width: 64ch; display: grid; gap: 1em; align-content: start; }
   .prose .about-btn { margin-top: 6px; justify-self: start; }
   .more-btn { margin-top: 20px; }
-  .facts { display: grid; gap: 4px; align-content: start; }
+  .interests { margin-top: 4px; }
+  .about-h {
+    align-self: start; padding: 14px 18px; font-size: 1.2rem;
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+  @media (max-width: 760px) { .about-h { justify-self: start; padding: 10px 16px; } }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .tags li { font-size: 0.85rem; padding: 3px 11px; border-radius: 99px; background: var(--surface); }
   @media (max-width: 760px) {
     .about { grid-template-columns: 1fr; gap: 32px; }
-    .facts { order: 2; }
   }
 
   .feature {
