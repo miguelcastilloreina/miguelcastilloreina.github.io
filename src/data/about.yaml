@@ -21,7 +21,25 @@ education:
     degree: { en: "BA in Economics", es: "Economista" }
     place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
     logo: "uptc.png"
-    note: { en: "Teaching assistant in Macroeconomics, 2014–2016.", es: "Monitor del área de Macroeconomía, 2014–2016." }
+
+# Docencia: cursos dictados, del más reciente al más antiguo.
+# course: nombre del curso · role: rol · place: institución y sede · note: nivel, programa e idioma.
+teaching:
+  - years: "2025"
+    course: { en: "Regional Economics", es: "Economía Regional" }
+    role: { en: "Lecturer", es: "Docente" }
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Aguazul (Casanare)"
+    note: { en: "Postgraduate. Specialization in Territorial Development Planning and Management. Taught in Spanish.", es: "Posgrado. Especialización en Planeación y Gestión del Desarrollo Territorial. Curso en español." }
+  - years: "2021–2023"
+    course: { en: "Microeconomics", es: "Microeconomía" }
+    role: { en: "Lecturer", es: "Docente" }
+    place: "Fundación Universitaria de San Gil (UNISANGIL), Yopal"
+    note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Curso en español." }
+  - years: "2020–2021"
+    course: { en: "Microeconomics · Economics", es: "Microeconomía · Economía" }
+    role: { en: "Adjunct lecturer", es: "Profesor catedrático" }
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja"
+    note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Cursos en español." }
 
 experience:
   - years: "2023–2025"
