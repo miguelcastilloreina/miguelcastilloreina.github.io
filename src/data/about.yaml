@@ -186,6 +186,10 @@ music:
       es: "Leo para encontrar respuestas a preguntas que aún no me he hecho. Acá está lo que he leído, leo y leeré:"
     label: { en: "My books on Goodreads", es: "Mis lecturas en Goodreads" }
     url: "https://www.goodreads.com/user/show/39964445-miguel-castillo"
+    # Ilustración junto a la invitación a Goodreads (archivo en public/img/about/).
+    image: "quentin-blake-lector-paraguas.jpg"
+    image_alt: { en: "Ink drawing by Quentin Blake: a man reads under an umbrella on a windy beach", es: "Dibujo a tinta de Quentin Blake: un hombre lee bajo un paraguas en una playa con viento" }
+    image_credit: { en: "Illustration: Quentin Blake. © Quentin Blake, all rights reserved. Source: [Country Life](https://www.countrylife.co.uk/luxury/art-and-antiques/quentin-blake-even-age-ipad-smart-phone-books-offer-things-cannot-209385)", es: "Ilustración: Quentin Blake. © Quentin Blake, todos los derechos reservados. Fuente: [Country Life](https://www.countrylife.co.uk/luxury/art-and-antiques/quentin-blake-even-age-ipad-smart-phone-books-offer-things-cannot-209385)" }
   photo: "manantial-gachantiva.jpg"
   photo_alt: { en: "Miguel, Félix and José Castillo with their string instruments", es: "Miguel, Félix y José Castillo con sus instrumentos de cuerda" }
   # Pie de foto en dos partes: quiénes aparecen y dónde.
