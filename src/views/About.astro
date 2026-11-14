@@ -59,7 +59,7 @@ const stats = order
             {e.logo ? <span class="logo"><img src={url(`/img/logos/${e.logo}`)} alt="" loading="lazy" /></span> : <span />}
             <div>
               <strong>{tr(e.degree, lang)}</strong>
-              <span class="where">{tr(e.place, lang)}</span>
+              <span class="where-row"><span class="where">{tr(e.place, lang)}</span>{e.city && <span class="city"><Icon name="pin" size={13} />{tr(e.city, lang)}</span>}</span>
               {e.note && <p class="note" set:html={inline(tr(e.note, lang))} />}
             </div>
           </li>
@@ -76,7 +76,7 @@ const stats = order
               <span class="when">{c.years}</span>
               <div>
                 <strong>{tr(c.course, lang)}</strong>
-                <span class="where">{tr(c.role, lang)} · {tr(c.place, lang)}</span>
+                <span class="where-row"><span class="where">{tr(c.role, lang)} · {tr(c.place, lang)}</span>{c.city && <span class="city"><Icon name="pin" size={13} />{tr(c.city, lang)}</span>}</span>
                 {c.note && <p class="note" set:html={inline(tr(c.note, lang))} />}
               </div>
             </li>
@@ -245,6 +245,19 @@ const stats = order
     .tl .when { grid-column: 1 / -1; }
     .tl .logo { height: 44px; padding: 5px 7px; }
   }
+
+  /* Institución en una línea y ciudad debajo, con ícono; así la ciudad nunca se parte. */
+  .where-row { display: grid; gap: 1px; }
+  .city { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; font-size: 0.86rem; color: var(--muted); }
+  .city :global(.icon) { color: var(--second); flex: none; }
+
+  /* Títulos de Áreas, Formación, Docencia y Afiliaciones: recuadro con barra de acento, fijo al desplazarse. */
+  .sec > h2 {
+    align-self: start; position: sticky; top: 88px; padding: 14px 18px; font-size: 1.2rem;
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+  @media (max-width: 760px) { .sec > h2 { position: static; justify-self: start; padding: 10px 16px; } }
 
   /* Docencia: misma línea de tiempo que Formación, sin columna de logo. */
   .teach .tl > li { grid-template-columns: 96px minmax(0, 1fr); }

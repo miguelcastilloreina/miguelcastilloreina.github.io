@@ -5,40 +5,47 @@ intro:
   en: "Economist and PhD candidate in Regional Science and Economic Geography at GSSI, with several years of experience in research, teaching, consulting and the design of science, technology and innovation (STI) policy in Colombian regions. Recognized as Junior Researcher by Colombia's Ministry of Science, Technology and Innovation."
   es: "Economista y doctorando en Ciencia Regional y Geografía Económica en el GSSI, con varios años de experiencia en investigación, docencia, consultoría y diseño de políticas de ciencia, tecnología e innovación (CTeI) en las regiones de Colombia. Reconocido como Investigador Junior por el Ministerio de Ciencia, Tecnología e Innovación."
 
+# place: institución · city: ciudad y país (se muestra aparte, con un ícono de ubicación).
 # logo: archivo en public/img/logos/ (PNG, JPG o SVG). Se muestra en miniatura junto a la entrada.
 education:
   - years: "2025–"
     degree: { en: "PhD candidate in Regional Science and Economic Geography", es: "Doctorando en Ciencia Regional y Geografía Económica" }
-    place: { en: "Gran Sasso Science Institute (GSSI), L'Aquila, Italy", es: "Gran Sasso Science Institute (GSSI), L'Aquila, Italia" }
+    place: "Gran Sasso Science Institute (GSSI)"
+    city: { en: "L'Aquila, Italy", es: "L'Aquila, Italia" }
     logo: "gssi.png"
     note: { en: "Cohort XLI. Supervisors: Maria Giovanna Brandano and Alessandra Faggian.", es: "Cohorte XLI. Directoras: Maria Giovanna Brandano y Alessandra Faggian." }
   - years: "2021"
     degree: { en: "Master's in Economics", es: "Magíster en Economía" }
-    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja, Colombia"
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    city: "Tunja, Colombia"
     logo: "uptc.png"
     note: { en: "Thesis with distinction: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*.", es: "Tesis meritoria: *Puentes y escaleras como caminos. El «desarrollo» y el capital social en el municipio de Gachantivá en Boyacá, 2020*." }
   - years: "2016"
     degree: { en: "BA in Economics", es: "Economista" }
-    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja, Colombia"
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    city: "Tunja, Colombia"
     logo: "uptc.png"
 
 # Docencia: cursos dictados, del más reciente al más antiguo.
-# course: nombre del curso · role: rol · place: institución y sede · note: nivel, programa e idioma.
+# course: nombre del curso · role: rol · place: institución · city: municipio (departamento) · note: nivel, programa e idioma.
 teaching:
   - years: "2025"
     course: { en: "Regional Economics", es: "Economía Regional" }
     role: { en: "Lecturer", es: "Docente" }
-    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Aguazul (Casanare)"
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    city: "Aguazul (Casanare)"
     note: { en: "Postgraduate. Specialization in Territorial Development Planning and Management. Taught in Spanish.", es: "Posgrado. Especialización en Planeación y Gestión del Desarrollo Territorial. Curso en español." }
   - years: "2021–2023"
     course: { en: "Microeconomics", es: "Microeconomía" }
     role: { en: "Lecturer", es: "Docente" }
-    place: "Fundación Universitaria de San Gil (UNISANGIL), Yopal (Casanare)"
+    place: "Fundación Universitaria de San Gil (UNISANGIL)"
+    city: "Yopal (Casanare)"
     note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Curso en español." }
   - years: "2020–2021"
     course: { en: "Microeconomics · Economics", es: "Microeconomía · Economía" }
     role: { en: "Adjunct lecturer", es: "Profesor catedrático" }
-    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC), Tunja (Boyacá)"
+    place: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    city: "Tunja (Boyacá)"
     note: { en: "Undergraduate. Taught in Spanish.", es: "Pregrado. Cursos en español." }
 
 experience:
