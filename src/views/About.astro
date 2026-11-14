@@ -4,6 +4,7 @@ import PageBanner from '../components/PageBanner.astro';
 import Icon from '../components/Icon.astro';
 import { profile, about, publications, url, tr, inline, type Lang, type Publication } from '../lib/data';
 import { ui } from '../lib/i18n';
+import '@fontsource/caveat/600.css';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -14,6 +15,10 @@ const interests: string[] = tr(profile.interests, lang);
 
 // Cifras calculadas a partir de publications.yaml.
 const order: Publication['type'][] = ['article', 'chapter', 'book', 'working', 'policy'];
+// Idiomas: escala del Marco Común Europeo.
+const cefrScale = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const cefrFill = (lv: string) => (lv === 'native' ? cefrScale.length : cefrScale.indexOf(lv) + 1);
+
 const stats = order
   .map((type) => ({ type, n: publications.filter((p) => p.type === type).length }))
   .filter((s) => s.n > 0);
@@ -100,6 +105,30 @@ const stats = order
         ))}
       </ul>
     </section>
+
+    {(about.languages ?? []).length > 0 && (
+      <section class="block sec">
+        <h2>{a.languages}</h2>
+        <div>
+          <ul class="plain langs">
+            {about.languages.map((l: any) => {
+              const n = cefrFill(l.cefr);
+              return (
+                <li class="lang-card">
+                  <span class="hello" lang={l.code}>{l.greeting}</span>
+                  <strong>{tr(l.name, lang)}</strong>
+                  <span class="lvl">{tr(l.level, lang)}</span>
+                  <span class="cefr" aria-label={l.cefr === 'native' ? tr(l.level, lang) : `${a.cefr}: ${l.cefr}`}>
+                    {cefrScale.map((c, i) => <span class:list={['step', { on: i < n }]} aria-hidden="true">{c}</span>)}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+          <p class="cefr-note">{a.cefrNote}</p>
+        </div>
+      </section>
+    )}
 
     {about.music && (
       <section class="block beyond-sec">
@@ -258,6 +287,17 @@ const stats = order
     background: color-mix(in srgb, var(--accent) 9%, transparent);
   }
   @media (max-width: 760px) { .sec > h2 { position: static; justify-self: start; padding: 10px 16px; } }
+
+  /* Idiomas: tarjetas con saludo manuscrito y escala del Marco Común Europeo. */
+  .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  .lang-card { display: grid; gap: 2px; align-content: start; padding: 16px 18px 18px; border-radius: 10px; background: var(--surface); }
+  .hello { font-family: 'Caveat', cursive; font-weight: 600; font-size: 2.3rem; line-height: 1; color: var(--second); transform: rotate(-3deg); transform-origin: left; margin-bottom: 10px; }
+  .lang-card strong { font-family: var(--font-head); font-size: 1.1rem; }
+  .lvl { color: var(--muted); font-size: 0.88rem; line-height: 1.35; min-height: 2.7em; }
+  .cefr { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; margin-top: 10px; }
+  .cefr .step { font-family: var(--font-mono); font-size: 0.62rem; text-align: center; padding: 2px 0; border-radius: 3px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); }
+  .cefr .step.on { background: var(--accent); color: var(--bg); }
+  .cefr-note { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
 
   /* Docencia: misma línea de tiempo que Formación, sin columna de logo. */
   .teach .tl > li { grid-template-columns: 96px minmax(0, 1fr); }

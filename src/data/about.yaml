@@ -137,6 +137,26 @@ affiliations:
     url: "https://www.crepib.org.co"
     logo: "crepib.png"
 
+# Idiomas (sección propia en About / Sobre mí). El saludo se muestra en letra manuscrita.
+# code: código del idioma (es, en, it…), para que el navegador lea bien el saludo.
+# cefr: nivel del Marco Común Europeo (A1, A2, B1, B2, C1, C2) o "native" para la lengua materna.
+languages:
+  - name: { en: "Spanish", es: "Español" }
+    code: es
+    greeting: "¡Hola!"
+    level: { en: "Native", es: "Lengua materna" }
+    cefr: native
+  - name: { en: "English", es: "Inglés" }
+    code: en
+    greeting: "Hello!"
+    level: { en: "Advanced · IELTS Academic 7.0", es: "Avanzado · IELTS Academic 7.0" }
+    cefr: C1
+  - name: { en: "Italian", es: "Italiano" }
+    code: it
+    greeting: "Ciao!"
+    level: { en: "Beginner, learning in L'Aquila", es: "Básico, en aprendizaje en L'Aquila" }
+    cefr: A1
+
 skills:
   - label: { en: "Data analysis", es: "Análisis de datos" }
     value: "Stata, R (RStudio), Tableau"
