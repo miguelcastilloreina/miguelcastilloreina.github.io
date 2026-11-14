@@ -115,8 +115,7 @@ const stats = order
               const n = cefrFill(l.cefr);
               return (
                 <li class="lang-card">
-                  <span class="hello" lang={l.code}>{l.greeting}</span>
-                  <strong>{tr(l.name, lang)}</strong>
+                  <span class="lang-name">{tr(l.name, lang)}</span>
                   <span class="lvl">{tr(l.level, lang)}</span>
                   <span class="cefr" aria-label={l.cefr === 'native' ? tr(l.level, lang) : `${a.cefr}: ${l.cefr}`}>
                     {cefrScale.map((c, i) => <span class:list={['step', { on: i < n }]} aria-hidden="true">{c}</span>)}
@@ -308,15 +307,14 @@ const stats = order
   @media (max-width: 760px) { .sec > h2 { position: static; justify-self: start; padding: 10px 16px; } }
 
   /* Idiomas: tarjetas con saludo manuscrito y escala del Marco Común Europeo. */
-  .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
-  .lang-card { display: grid; gap: 2px; align-content: start; padding: 16px 18px 18px; border-radius: 10px; background: var(--surface); }
-  .hello { font-family: 'Caveat', cursive; font-weight: 600; font-size: 2.3rem; line-height: 1; color: var(--second); transform: rotate(-3deg); transform-origin: left; margin-bottom: 10px; }
-  .lang-card strong { font-family: var(--font-head); font-size: 1.1rem; }
-  .lvl { color: var(--muted); font-size: 0.88rem; line-height: 1.35; min-height: 2.7em; }
-  .cefr { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; margin-top: 10px; }
-  .cefr .step { font-family: var(--font-mono); font-size: 0.62rem; text-align: center; padding: 2px 0; border-radius: 3px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); }
-  .cefr .step.on { background: var(--accent); color: var(--bg); }
-  .cefr-note { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
+  .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+  .lang-card { display: grid; gap: 2px; align-content: start; padding: 10px 14px 12px; border-radius: 8px; background: var(--surface); }
+  .lang-name { font-family: 'Caveat', cursive; font-weight: 600; font-size: 1.55rem; line-height: 1.05; color: var(--ink); }
+  .lvl { color: var(--muted); font-size: 0.8rem; line-height: 1.35; }
+  .cefr { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; margin-top: 8px; }
+  .cefr .step { font-family: var(--font-mono); font-size: 0.55rem; line-height: 1; text-align: center; padding: 2px 0; border-radius: 2px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); }
+  .cefr .step.on { background: color-mix(in srgb, var(--accent) 75%, var(--bg)); color: var(--bg); }
+  .cefr-note { margin-top: 8px; font-size: 0.72rem; color: var(--muted); }
 
   /* Docencia: misma línea de tiempo que Formación, sin columna de logo. */
   .teach .tl > li { grid-template-columns: 96px minmax(0, 1fr); }
