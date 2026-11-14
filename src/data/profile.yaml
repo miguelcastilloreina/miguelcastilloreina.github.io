@@ -34,8 +34,8 @@ bio:
 
 # Áreas de interés: las mismas que en tu perfil de Google Scholar.
 interests:
-  en: ["History of Economic Thought", "Regional Development", "Economics Teaching", "Labor Economics", "Tourism"]
-  es: ["Historia del pensamiento económico", "Desarrollo regional", "Enseñanza de la economía", "Economía laboral", "Turismo"]
+  en: ["History of Economic Thought", "Regional Development", "Economics Teaching", "Cultural Economics", "Tourism"]
+  es: ["Historia del pensamiento económico", "Desarrollo regional", "Enseñanza de la economía", "Economía de la cultura", "Turismo"]
 
 # CV en PDF (archivos en public/cv/) y fecha de actualización que se muestra junto al botón.
 cv:
