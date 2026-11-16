@@ -61,7 +61,6 @@ export const ui = {
     projects: {
       label: 'Projects',
       title: 'Research lines',
-      intro: 'My doctoral project on visual tourist attractions, and the questions on territory and development I keep coming back to.',
       related: 'Related publications',
       since: 'Since',
       pubOne: 'publication',
@@ -71,7 +70,6 @@ export const ui = {
     activity: {
       label: 'Activity',
       title: 'Workshops, conferences and seminars',
-      intro: 'Photos and slides from the events I take part in.',
       slides: 'Slides (PDF)',
       photos: 'Photos',
       page: 'Event page',
@@ -156,7 +154,6 @@ export const ui = {
     projects: {
       label: 'Proyectos',
       title: 'Líneas de investigación',
-      intro: 'Mi proyecto doctoral sobre atractivos turísticos visuales y las preguntas sobre territorio y desarrollo a las que siempre vuelvo.',
       related: 'Publicaciones relacionadas',
       since: 'Desde',
       pubOne: 'publicación',
@@ -166,7 +163,6 @@ export const ui = {
     activity: {
       label: 'Actividad',
       title: 'Talleres, congresos y seminarios',
-      intro: 'Fotos y presentaciones de los eventos en los que participo.',
       slides: 'Presentación (PDF)',
       photos: 'Fotos',
       page: 'Página del evento',
