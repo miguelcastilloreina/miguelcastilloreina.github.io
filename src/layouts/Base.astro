@@ -60,6 +60,8 @@ const address: string[] = tr(profile.address, lang);
       // Aplica el modo elegido antes de pintar la página (evita un destello del modo equivocado).
       try { var th = localStorage.getItem('theme'); if (th === 'light' || th === 'dark') document.documentElement.dataset.theme = th; } catch (e) {}
     </script>
+    <!-- Estadísticas de visitas (GoatCounter: sin cookies ni datos personales). Panel: https://miguelcastilloreina.goatcounter.com -->
+    <script is:inline data-goatcounter="https://miguelcastilloreina.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
