@@ -24,7 +24,9 @@ const stats = order
   .filter((s) => s.n > 0);
 ---
 <Base lang={lang} route="about" title={a.title} description={a.metaDesc}>
-  <div class="page-head">
+  <div class="page-head with-map">
+    <div class="head-map" aria-hidden="true"></div>
+    <span class="map-credit">{lang === 'es' ? 'Mapa de L’Aquila' : 'Map of L’Aquila'} · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></span>
     <div class="wrap head-grid">
       <div>
         <div class="label">{a.label}</div>
@@ -264,7 +266,12 @@ const stats = order
 </script>
 
 <style>
-  .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
+  /* Mapa de L'Aquila detrás del encabezado, igual que en la portada */
+  .with-map { position: relative; overflow: hidden; }
+  .head-map { position: absolute; inset: 0; background: var(--hero-map) center 45% / cover no-repeat; opacity: 0.22; pointer-events: none; }
+  .map-credit { position: absolute; right: 12px; bottom: 6px; font-size: 0.66rem; color: var(--muted); }
+  .map-credit a { color: inherit; }
+  .head-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; }
 
   .intro { max-width: 64ch; }
   .head-grid .cta-row { margin-top: 24px; }
